@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Wrapper = styled.div`
 height: 100vh;
@@ -15,7 +16,7 @@ align-items: center;
     .image {
         background-color: darkgrey;
         width: 440px;
-        height: 240px;
+        height: 200px;
     }
     .content {
         min-height: 400px;
@@ -38,7 +39,7 @@ export default function Services(){
     return(
         <Wrapper id="services">
             <div className="service-box">
-                <div className="image"></div>
+                <div className="image"><StaticImage src="../../images/Motoschool.png" alt="A dinosaur" /></div>
                 <div className="content">
                     <h2>Business Marketing Websites</h2>
                     <p>Want to Impress potential clients?</p>
@@ -50,7 +51,7 @@ export default function Services(){
                 </div>
             </div>
             <div className="service-box">
-                <div className="image"></div>
+                <div className="image"><StaticImage src="../../images/CA.png" alt="A dinosaur" /></div>
                 <div className="content">
                     <h2>Eccomerce / Sell Online </h2>
                     <p>If you have products or services you want to sell online we can showcase these with the best technology and design  based on your vision/budget.</p>
@@ -59,7 +60,7 @@ export default function Services(){
                 </div>
             </div>
             <div className="service-box">
-                <div className="image"></div>
+                <div className="image"><StaticImage src="../../images/Glacier.png" alt="A dinosaur" /></div>
                 <div className="content">
                     <h2>Custom Solutions</h2>
                     <p>Not just design.</p>

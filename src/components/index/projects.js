@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import GlacierVideo from "../../videos/GlacierVideo.mp4"
+import CAVideo from "../../videos/CAVideo.mp4"
 
 const Wrapper = styled.div`
 display: flex;
@@ -8,6 +9,9 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 margin-top: 200px;
+h2 {
+    font-size: 50px;
+}
 .view-all {
     display: inline-block;
     background-color: #D9D9D9;
@@ -59,6 +63,7 @@ margin-top: 200px;
 export default function Projects(){
     return(
         <Wrapper id="recent-projects">
+            <h2>Our Client Success Stories</h2>
             <div className="project">
                 <div className="content">
                     <p>Testimonial or project breakdown: "Daniel delivered above and beyond for us with a highly professional end to end service. A high performance website was the delivered result which expressed clear communication to our customers about our product, services and a hassle free payment gateway as our main call to action for marketing. We enjoyed the development process and ongoing support is appreciated so thank you from myself and the Glacier International team."</p>
@@ -94,7 +99,24 @@ export default function Projects(){
                         <a href="#">Read Case Study</a>
                     </div>
                 </div>
-                <div className="image"></div>
+                <div className="image">
+                <video
+                disablePictureInPicture
+                id="BgVideo"
+                title="Central Aero Project"
+                height="100%"
+                width="100%"
+                loop
+                muted
+                autoPlay={true}
+                playsInline 
+                preload="auto"
+                type="video/mp4"
+                style={{objectFit:"cover"}}
+                >
+                    <source src={CAVideo} type="video/mp4" />
+                </video>
+                </div>
             </div>
             <div className="project">
                 <div className="content">

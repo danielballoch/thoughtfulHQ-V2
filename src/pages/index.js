@@ -11,8 +11,8 @@ export default function Indexpage(){
     <Layout>
       <Hero/>
       <Services/>
-      <Projects/>
       <Features/>
+      <Projects/>
       <Contact/>
     </Layout>
   )

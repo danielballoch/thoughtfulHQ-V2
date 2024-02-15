@@ -44,9 +44,9 @@ export default function Nav(){
         <Wrapper id="top">
             <a href="/" className="logo"><StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /></a>
             <div className="middle-content">
-                <a href="#">Services</a>
-                <a href="#">Recent Work</a>
-                <a href="#">FAQ</a>
+                <a href="/#services">Services</a>
+                <a href="/#recent-projects">Recent Work</a>
+                <a href="/frequently-asked-questions">FAQ</a>
             </div>
             <div className="book-button">
                 <a href="#">Book A Free Discovery Call</a>
