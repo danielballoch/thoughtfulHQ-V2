@@ -19,4 +19,4 @@ export default function Indexpage(){
 }
 
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>Web Design & Development, Hamilton, New Zealand | thoughtfulHQ</title>

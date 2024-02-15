@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
-import Logo from "../images/thoughtfulHQlogo.webp"
 
 const Wrapper = styled.div`
 display: flex;
@@ -42,8 +41,8 @@ box-sizing: border-box;
 
 export default function Nav(){
     return(
-        <Wrapper>
-            <div className="logo"><StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /></div>
+        <Wrapper id="top">
+            <a href="/" className="logo"><StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /></a>
             <div className="middle-content">
                 <a href="#">Services</a>
                 <a href="#">Recent Work</a>

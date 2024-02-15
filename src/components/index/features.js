@@ -69,7 +69,7 @@ export default function Features(){
             <div className="content-left">
                 <h2>Sick of feeling like just another number??</h2>
                 <p><b>We're a small business and don't bite off more than we can chew.</b></p>
-                <p>That means if your work with us:</p>
+                <p>That means if you work with us:</p>
                 <br></br>
                 <p>1. Your project will be a priority.</p>
                 <p>2. We’ll offer fair and competitive pricing.</p>

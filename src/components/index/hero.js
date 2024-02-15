@@ -26,7 +26,7 @@ align-items: center;
 
 export default function Hero(){
     return(
-        <Wrapper>
+        <Wrapper >
             <div className="center-content">
                 <h1>Websites built for your needs.</h1>
                 <p>we study your business & competitors &#8594; create a unique solution with you &#8594; take feedback onboard &#8594; improve the product & launch &#8594; provide active support & upgrades on request</p>

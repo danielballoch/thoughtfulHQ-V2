@@ -36,7 +36,7 @@ align-items: center;
 
 export default function Services(){
     return(
-        <Wrapper>
+        <Wrapper id="services">
             <div className="service-box">
                 <div className="image"></div>
                 <div className="content">
