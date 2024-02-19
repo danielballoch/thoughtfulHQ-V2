@@ -25,22 +25,24 @@ h2 {
     display: flex;
     flex-direction: row-reverse;
     width: 1300px;
-    height: 400px;
+    height: 500px;
     margin: 80px 0;
     // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     .image, video {
         background-color: grey;
-        width: 700px;
-        height: 400px;
+        width: 885px;
+        height: 500px;
     }
+
     .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 600px;
-        height: 400px;
+        width: 500px;
+        height: 500px;
+        padding: 20px;
         p {
             max-width: 500px;
             text-align: center;
@@ -48,9 +50,9 @@ h2 {
         a {
             display: inline-block;
             background-color: #D9D9D9;
-            padding: 15px 30px; 
+            padding: 15px 10px; 
             margin: 20px 10px 0;
-            width: 155px;
+            width: 130px;
             color: black;
             text-align: center;
             text-decoration: none;
