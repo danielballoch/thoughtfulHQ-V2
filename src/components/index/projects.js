@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import GlacierVideo from "../../videos/GlacierVideo.mp4"
 import CAVideo from "../../videos/CAVideo.mp4"
+import Manor from "../../videos/Manor.mp4"
 
 const Wrapper = styled.div`
 display: flex;
@@ -22,10 +23,12 @@ h2 {
 }
 .project {
     display: flex;
+    flex-direction: row-reverse;
     width: 1300px;
     height: 400px;
     margin: 80px 0;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     .image, video {
         background-color: grey;
         width: 700px;
@@ -66,10 +69,11 @@ export default function Projects(){
             <h2>Our Client Success Stories</h2>
             <div className="project">
                 <div className="content">
-                    <p>Testimonial or project breakdown: "Daniel delivered above and beyond for us with a highly professional end to end service. A high performance website was the delivered result which expressed clear communication to our customers about our product, services and a hassle free payment gateway as our main call to action for marketing. We enjoyed the development process and ongoing support is appreciated so thank you from myself and the Glacier International team."</p>
+                    <p>"Daniel delivered above and beyond for us with a highly professional end to end service. A high performance website was the delivered result which expressed clear communication to our customers about our product, services and a hassle free payment gateway as our main call to action for marketing. We enjoyed the development process and ongoing support is appreciated so thank you from myself and the Glacier International team."</p>
+                    <p><i>-Malcom King, Glacier International</i></p>
                     <div className="button-div">
                         <a href="https://www.glacier.nz" target="_blank">View Website</a>
-                        <a href="#">Read Case Study</a>
+                        <a href="/case-studies/glacier-international">Read Case Study</a>
                     </div>
                 </div>
                 <div className="image">
@@ -93,10 +97,11 @@ export default function Projects(){
             </div>
             <div className="project">
                 <div className="content">
-                    <p>Testimonial or project breakdown: "Daniel delivered above and beyond for us with a highly professional end to end service. A high performance website was the delivered result which expressed clear communication to our customers about our product, services and a hassle free payment gateway as our main call to action for marketing. We enjoyed the development process and ongoing support is appreciated so thank you from myself and the Glacier International team."</p>
+                    <p>"Great communication throughout the whole process, very accommodating and helpful when working with a beginner like me!"</p>
+                    <p><i>-Hamish Ross, Central Aero</i></p>
                     <div className="button-div">
-                        <a href="#" target="_blank">View Website</a>
-                        <a href="#">Read Case Study</a>
+                        <a href="https://www.centralaero.co.nz" target="_blank">View Website</a>
+                        <a href="/case-studies/central-aero">Read Case Study</a>
                     </div>
                 </div>
                 <div className="image">
@@ -120,13 +125,31 @@ export default function Projects(){
             </div>
             <div className="project">
                 <div className="content">
-                    <p>Testimonial or project breakdown: "Daniel delivered above and beyond for us with a highly professional end to end service. A high performance website was the delivered result which expressed clear communication to our customers about our product, services and a hassle free payment gateway as our main call to action for marketing. We enjoyed the development process and ongoing support is appreciated so thank you from myself and the Glacier International team."</p>
+                    <p>insert testimonial</p>
+                    <p><i>-Josh Sprosen, Brander (Design Agency)</i></p>
                     <div className="button-div">
-                        <a href="#" target="_blank">View Website</a>
-                        <a href="#">Read Case Study</a>
+                        <a href="https://www.manorrealty.co.nz" target="_blank">View Website</a>
+                        <a href="/case-studies/manor-realty">Read Case Study</a>
                     </div>
                 </div>
-                <div className="image"></div>
+                <div className="image">
+                <video
+                disablePictureInPicture
+                id="BgVideo"
+                title="Manor Realty"
+                height="100%"
+                width="100%"
+                loop
+                muted
+                autoPlay={true}
+                playsInline 
+                preload="auto"
+                type="video/mp4"
+                style={{objectFit:"cover"}}
+                >
+                    <source src={Manor} type="video/mp4" />
+                </video>
+                </div>
             </div>
             <a className="view-all" href="#">View All Projects</a>
         </Wrapper>

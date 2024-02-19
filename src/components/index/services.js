@@ -65,7 +65,7 @@ export default function Services(){
                     <h2>Custom Solutions</h2>
                     <p>Not just design.</p>
                     <p>If you own a complex business and want to integrate tools that simplify work for your team, we can help.</p>
-                    <p>That could mean creating a product customization section for your store, hooking up CRM, CMS, dynamic content, bookings, fiance tracking, internal communication - whatever the case, we’ve got your back.</p>
+                    <p>That could mean creating a product customization section for your store, hooking up CRM, CMS, dynamic content, bookings, finance tracking, internal communication - whatever the case, we’ve got your back.</p>
                     <a href="#">Request a Quote</a>
                 </div>
             </div>
