@@ -42,10 +42,9 @@ export default function Services(){
                 <div className="image"><StaticImage src="../../images/Motoschool.png" alt="A dinosaur" /></div>
                 <div className="content">
                     <h2>Business Marketing Websites</h2>
-                    <p>Want to Impress potential clients?</p>
+                    <p>Want to impress customers?</p>
+                    <p>Land more jobs?</p>
                     <p>Create a base for future marketing? </p>
-                    <p>Earn more sales? </p>
-                    <p>Find new employees?</p>
                     <p>We would love to get to know your business and create something which speaks your customers language, shows the services you provide, and makes it a no-brainer to get in touch with you.</p>
                     <a href="#">Request a Quote</a>
                 </div>
