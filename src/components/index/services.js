@@ -3,71 +3,104 @@ import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Wrapper = styled.div`
-height: 100vh;
 display: flex;
+padding: 200px 0;
 // background-color: lightgrey;
 justify-content: center;
 align-items: center;
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 .service-box {
-    background-color: white;
+    background-color: #f8f8f8;
+    color: black;
+    text-decoration: none;
     margin: 0 10px;
-    height: fit-content;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    transition: .3s;
+    // height: fit-content;
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     .image {
-        background-color: darkgrey;
         width: 440px;
         height: 200px;
+        padding: 4px;
     }
     .content {
-        min-height: 400px;
+        min-height: 290px;
         max-width: 440px;
         padding: 20px;
         box-sizing: border-box;
+        p {
+            font-size: 15px;
+        }
         a {
+            font-weight: bold;
+            font-size: 17px;
             display: inline-block;
-            background-color: #D9D9D9;
-            padding: 15px 30px; 
+            // background-color: #D9D9D9;
+            // padding: 15px 30px; 
             margin-top: 20px;
-            color: black;
+            color: #001F40;
             text-decoration: none;
         }
     }
+    :hover {
+        cursor: pointer;
+        transform: translateY(-3%);
+        filter: brightness(98%);
+        // background: linear-gradient(-45deg, #FFFF66, #50C878, #0080FF);
+        // background-size: 400% 400%;
+        // animation: gradient 3s ease infinite;
+        
+    }
+    // :hover:first-of-type {
+    //     background-color: #FFFF66;
+    // }
+    // :hover:nth-of-type(2) {
+    //     background-color: #50C878;
+    // }
+    // :hover:nth-of-type(3) {
+    //     background-color: #0080FF;
+    // }
 }
 `
 
 export default function Services(){
     return(
         <Wrapper id="services">
-            <div className="service-box">
+            <a href="#contact" className="service-box">
                 <div className="image"><StaticImage src="../../images/Motoschool.png" alt="A dinosaur" /></div>
                 <div className="content">
-                    <h2>Business Marketing Websites</h2>
-                    <p>Want to impress customers?</p>
-                    <p>Land more jobs?</p>
-                    <p>Create a base for future marketing? </p>
+                    <h2>Branding Websites</h2>
+                    <p>Want to impress clients? Land more jobs? Create a <br/>home-base for future marketing?</p>
                     <p>We would love to get to know your business and create something which speaks your customers language, shows the services you provide, and makes it a no-brainer to get in touch with you.</p>
-                    <a href="#">Request a Quote</a>
+                    <a href="#contact">Learn More →</a>
                 </div>
-            </div>
-            <div className="service-box">
-                <div className="image"><StaticImage src="../../images/CA.png" alt="A dinosaur" /></div>
-                <div className="content">
-                    <h2>Eccomerce / Sell Online </h2>
-                    <p>If you have products or services you want to sell online we can showcase these with the best technology and design  based on your vision/budget.</p>
-                    <p>Whether your starting out and want to save money (while being able to upgrade in the future) or have an established business and want to create a stunning experience for your customers with all the bells & whistles. </p>
-                    <a href="#">Request a Quote</a>
-                </div>
-            </div>
-            <div className="service-box">
+            </a>
+            <a href="#contact" className="service-box">
                 <div className="image"><StaticImage src="../../images/Glacier.png" alt="A dinosaur" /></div>
                 <div className="content">
-                    <h2>Custom Solutions</h2>
-                    <p>Not just design.</p>
-                    <p>If you own a complex business and want to integrate tools that simplify work for your team, we can help.</p>
-                    <p>That could mean creating a product customization section for your store, hooking up CRM, CMS, dynamic content, bookings, finance tracking, internal communication - whatever the case, we’ve got your back.</p>
-                    <a href="#">Request a Quote</a>
+                    <h2>Eccomerce Stores / Sell Online </h2>
+                    <p>We can create an amazing online store on a platform of your choice or using custom code. This includes features like product search, updatable products and stock, simple and secure payment gateways etc.</p>
+                    <a href="#contact">Learn More →</a>
                 </div>
-            </div>
+            </a>
+            <a href="#contact" className="service-box">
+                <div className="image"><StaticImage src="../../images/CA.png" alt="A dinosaur" /></div>
+                <div className="content">
+                    <h2>Custom Solutions</h2>
+                    <p>If you own a complex business and want to integrate tools that simplify work for your team, we can help.</p>
+                    <p>That could mean creating a product builder for your store, price estimator, hooking up CRM, CMS, bookings, finance tracking - whatever the case, we’ve got your back.</p>
+                    <a href="#contact">Learn More →</a>
+                </div>
+            </a>
         </Wrapper>
     )
 }

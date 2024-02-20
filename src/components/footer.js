@@ -6,8 +6,9 @@ const Wrapper = styled.div`
 display: flex;
 justify-content: center;
 width: 100vw;
-background-color: black;
-color: white;
+// background-color: #0a2540;
+background-color: #f8f8f8;
+color: black;
 .main-footer {
 display: flex;
 .section1, .section2, .section3, .section4 {
@@ -17,7 +18,7 @@ display: flex;
     margin: 100px 0;
     padding: 0 60px;
     a {
-        color: white;
+        color: black;
         text-decoration: none;
     }
 }
@@ -39,7 +40,7 @@ display: flex;
    }
 }
 .section3 {
-    border-left: 1px solid white;
+    border-left: 1px solid black;
     a {
         display: inline-block;
         padding: 5px 0;
@@ -48,7 +49,7 @@ display: flex;
 }
 .logo {
     height: 80px;
-    filter: invert(100%);
+    // filter: invert(100%);
     margin-left: -8 px;
     img {
         height: 80px;
@@ -60,7 +61,7 @@ display: flex;
         padding: 10px;
     }
     img {
-        filter: invert(100%);
+        // filter: invert(100%);
     }
 }
 }
@@ -71,7 +72,8 @@ display: flex;
         font-size: 14px;
         padding: 10px;
         margin: 10px 0;
-        color: white;
+        // color: white;
+        color: black;
         text-decoration: none;
     }
 }
@@ -97,8 +99,8 @@ export default function Nav(){
                     </div> */}
                     <div className="section3">
                         <p><b>Navigation</b></p>
+                        <a href="/#recent-projects">Work</a>
                         <a href="/#services">Services</a>
-                        <a href="/#recent-projects">Recent Projects</a>
                         <a href="/frequently-asked-questions">FAQ</a>
                         <a href="/#contact">Contact</a>
                     </div>

@@ -18,8 +18,15 @@ align-items: center;
     .middle-p {
         margin: 30px;
     }
+    a {
+        color: #635bff;
+        text-decoration: none;
+    }
     .book-button {
-        background-color: #D9D9D9;
+        // background-color: #D9D9D9;
+        // color: black;
+        background-color: #635bff;
+        color: white;
         padding: 15px;
         margin: auto;
         width: 300px;
@@ -27,7 +34,6 @@ align-items: center;
         box-sizing: border-box;
         text-align: center;
         border-radius: 20px;
-        color: black;
         text-decoration: none;
     } 
 }

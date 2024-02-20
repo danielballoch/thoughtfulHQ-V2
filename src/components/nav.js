@@ -3,16 +3,23 @@ import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Wrapper = styled.div`
+// filter: invert(100%);
+background-color: white;
 display: flex;
 width: 100vw;
 justify-content: space-between;
 box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-height: 120px;
-padding: 0 50px;
+z-index: 200;
+height: 80px;
+padding: 0 100px;
 align-items: center;
 box-sizing: border-box;
 .logo {
-    width: 260px;
+    text-align: center;
+    width: 480px;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
 }
 .middle-content {
     a {
@@ -24,17 +31,23 @@ box-sizing: border-box;
     }
 }
 .book-button {
-    width: 260px;
+    width: 480px;
     a {
-        background-color: #D9D9D9;
+        width: 260px;
+        margin: auto;
+        background-color: black;
+        color: white;
         padding: 15px;
-        width: 100%;
+        // width: 100%;
         display: block;
         box-sizing: border-box;
         text-align: center;
         border-radius: 20px;
-        color: black;
         text-decoration: none;
+        transition: .3s;
+        :hover {
+            background-color: #635bff;
+        }
     }
 }
 `
@@ -42,7 +55,10 @@ box-sizing: border-box;
 export default function Nav(){
     return(
         <Wrapper id="top">
-            <a href="/" className="logo"><StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /></a>
+            <a href="/" className="logo">
+                {/* <StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /> */}
+                ORDINARY DITIGAL &copy;
+                </a>
             <div className="middle-content">
                 <a href="/#recent-projects">Work</a>
                 <a href="/#services">Services</a>

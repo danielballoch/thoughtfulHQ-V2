@@ -3,8 +3,11 @@ import styled from "@emotion/styled"
 import ScrollAnimation from "./scrollAnimation"
 
 const Wrapper = styled.div`
+filter: invert(100%);
 height: calc(100vh - 120px);
 display: flex;
+// background-color: black;
+color: white;
 justify-content: center;
 align-items: center;
 .center-content {
@@ -29,7 +32,7 @@ export default function Hero(){
         <Wrapper >
             <div className="center-content">
                 <h1>Websites built for your needs.</h1>
-                <p>we study your business & competitors &#8594; create a unique solution with you &#8594; take feedback onboard &#8594; improve the product & launch &#8594; provide active support & upgrades on request</p>
+                <p>we study your business & competitors &#8594; create a unique solution with you &#8594; take feedback onboard &#8594; improve the website & launch &#8594; provide hosting, active support & upgrades on request</p>
                 <ScrollAnimation/>
             </div>
         </Wrapper>
