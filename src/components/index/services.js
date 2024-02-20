@@ -76,7 +76,7 @@ export default function Services(){
     return(
         <Wrapper id="services">
             <a href="#contact" className="service-box">
-                <div className="image"><StaticImage src="../../images/Motoschool.png" alt="A dinosaur" /></div>
+                {/* <div className="image"><StaticImage src="../../images/Motoschool.png" alt="A dinosaur" /></div> */}
                 <div className="content">
                     <h2>Branding Websites</h2>
                     <p>Want to impress clients? Land more jobs? Create a <br/>home-base for future marketing?</p>
@@ -85,7 +85,7 @@ export default function Services(){
                 </div>
             </a>
             <a href="#contact" className="service-box">
-                <div className="image"><StaticImage src="../../images/Glacier.png" alt="A dinosaur" /></div>
+                {/* <div className="image"><StaticImage src="../../images/Glacier.png" alt="A dinosaur" /></div> */}
                 <div className="content">
                     <h2>Eccomerce Stores / Sell Online </h2>
                     <p>We can create an amazing online store on a platform of your choice or using custom code. This includes features like product search, updatable products and stock, simple and secure payment gateways etc.</p>
@@ -93,7 +93,7 @@ export default function Services(){
                 </div>
             </a>
             <a href="#contact" className="service-box">
-                <div className="image"><StaticImage src="../../images/CA.png" alt="A dinosaur" /></div>
+                {/* <div className="image"><StaticImage src="../../images/CA.png" alt="A dinosaur" /></div> */}
                 <div className="content">
                     <h2>Custom Solutions</h2>
                     <p>If you own a complex business and want to integrate tools that simplify work for your team, we can help.</p>
