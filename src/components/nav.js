@@ -11,12 +11,15 @@ justify-content: space-between;
 box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 z-index: 200;
 height: 80px;
-padding: 0 100px;
+padding: 0 250px;
 align-items: center;
 box-sizing: border-box;
 .logo {
     text-align: center;
-    width: 480px;
+    width: 260px;
+    img {
+        width: 260px;
+    }
     text-decoration: none;
     color: black;
     font-size: 24px;
@@ -31,7 +34,7 @@ box-sizing: border-box;
     }
 }
 .book-button {
-    width: 480px;
+    width: 260px;
     a {
         width: 260px;
         margin: auto;
@@ -56,9 +59,9 @@ export default function Nav(){
     return(
         <Wrapper id="top">
             <a href="/" className="logo">
-                {/* <StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /> */}
-                ORDINARY DITIGAL &copy;
-                </a>
+                <StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" />
+                {/* ORDINARY DIGITAL &copy; */}
+            </a>
             <div className="middle-content">
                 <a href="/#recent-projects">Work</a>
                 <a href="/#services">Services</a>

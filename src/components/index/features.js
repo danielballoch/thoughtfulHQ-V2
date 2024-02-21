@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
-import GlacierFeatures from "../../videos/GlacierMenu.mp4"
-import CMSFeatures from "../../videos/CMSUpdate.mp4"
+import GlacierFeatures from "../../videos/GlacierF.mp4"
+import CMSFeatures from "../../videos/CMSF.mp4"
 import CAFeatures from "../../videos/CAFeatures.mp4"
 
 const Wrapper = styled.div`
@@ -149,7 +149,7 @@ export default function Features(){
                 </div>
                 <div className="content-large">
                     <h3>Easy Updates</h3>
-                    <p>Easy to use CMS systems for website updates. Automated CRM/Emails/SMS so customers always know the important stuff.</p>
+                    <p>Simple interfaces for website updates. Automated CRM/Emails/SMS so customers always know the important stuff.</p>
                     <div className="image">
                     <video
                     disablePictureInPicture
