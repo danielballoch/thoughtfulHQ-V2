@@ -59,7 +59,7 @@ export default function Nav(){
     return(
         <Wrapper id="top">
             <a href="/" className="logo">
-                <StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" />
+                <StaticImage src="../images/thoughtfulHQlogo.webp" alt="thoughtfulHQ" />
                 {/* ORDINARY DIGITAL &copy; */}
             </a>
             <div className="middle-content">
@@ -68,7 +68,7 @@ export default function Nav(){
                 <a href="/frequently-asked-questions">FAQ</a>
             </div>
             <div className="book-button">
-                <a href="#">Book A Free Discovery Call</a>
+                <a target="_blank" href="https://calendly.com/thoughtfulhq/30min">Book A Free Discovery Call</a>
             </div>
         </Wrapper>
     )

@@ -10,16 +10,20 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 margin-top: 200px;
+margin-bottom: 200px;
 h2 {
     font-size: 50px;
 }
 .view-all {
     display: inline-block;
-    background-color: #D9D9D9;
+    background-color: #343a40;
     padding: 20px 120px; 
     margin-top: 20px;
-    color: black;
+    color: white;
     text-decoration: none;
+    :hover {
+        background-color: #2b3035;
+    }
 }
 .project {
     display: flex;
@@ -33,32 +37,46 @@ h2 {
         background-color: grey;
         width: 885px;
         height: 500px;
+        border-right: solid 1px #efefef;
     }
 
     .content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: end;
         align-items: center;
         width: 500px;
         height: 500px;
-        padding: 20px;
+        box-sizing: border-box;
+        .quote {
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
         p {
+            padding: 20px 20px 0 20px;
             max-width: 500px;
             text-align: center;
         }
         a {
             display: inline-block;
-            background-color: #D9D9D9;
-            padding: 15px 10px; 
-            margin: 20px 10px 0;
+            background-color: #343a40;
+            color: white;
+            padding: 15px 18px; 
+            // border-radius: 5px;
+            margin: auto 5px 0 5px;
             width: 130px;
-            color: black;
             text-align: center;
             text-decoration: none;
+            :hover {
+                background-color: #2b3035;
+            }
         }
         .button-div {
             // display: flex;
+            // margin-top: auto;
+            justify-self: flex-end;
 
         }
     }
@@ -71,11 +89,13 @@ export default function Projects(){
             <h2>Our Client Success Stories</h2>
             <div className="project">
                 <div className="content">
-                    <p>"Daniel delivered above and beyond for us with a highly professional end to end service. A high performance website was the delivered result which expressed clear communication to our customers about our product, services and a hassle free payment gateway as our main call to action for marketing. We enjoyed the development process and ongoing support is appreciated so thank you from myself and the Glacier International team."</p>
-                    <p><i>-Malcom King, Glacier International</i></p>
+                    <div className="quote">
+                        <p>"Daniel delivered above and beyond for us with a highly professional end to end service. A high performance website was the delivered result which expressed clear communication to our customers about our product, services and a hassle free payment gateway as our main call to action for marketing. We enjoyed the development process and ongoing support is appreciated so thank you from myself and the Glacier International team."</p>
+                        <p><i>-Malcom King, Glacier International</i></p>
+                    </div>
                     <div className="button-div">
                         <a href="https://www.glacier.nz" target="_blank">View Website</a>
-                        <a href="/case-studies/glacier-international">Read Case Study</a>
+                        {/* <a href="/case-studies/glacier-international">Read Case Study</a> */}
                     </div>
                 </div>
                 <div className="image">
@@ -99,11 +119,13 @@ export default function Projects(){
             </div>
             <div className="project">
                 <div className="content">
+                    <div className="quote">
                     <p>"Great communication throughout the whole process, very accommodating and helpful when working with a beginner like me!"</p>
                     <p><i>-Hamish Ross, Central Aero</i></p>
+                    </div>
                     <div className="button-div">
                         <a href="https://www.centralaero.co.nz" target="_blank">View Website</a>
-                        <a href="/case-studies/central-aero">Read Case Study</a>
+                        {/* <a href="/case-studies/central-aero">Read Case Study</a> */}
                     </div>
                 </div>
                 <div className="image">
@@ -127,11 +149,13 @@ export default function Projects(){
             </div>
             <div className="project">
                 <div className="content">
+                    <div className="quote">
                     <p>insert testimonial</p>
                     <p><i>-Josh Sprosen, Brander (Design Agency)</i></p>
+                    </div>
                     <div className="button-div">
                         <a href="https://www.manorrealty.co.nz" target="_blank">View Website</a>
-                        <a href="/case-studies/manor-realty">Read Case Study</a>
+                        {/* <a href="/case-studies/manor-realty">Read Case Study</a> */}
                     </div>
                 </div>
                 <div className="image">

@@ -49,7 +49,7 @@ export default function Contact(){
             <div className="image"><StaticImage src="../../images/PhoneIcon.png" alt="A dinosaur" /></div>
             <div className="content">
                 <h3>Want to have a chat?</h3>
-                <a href="#" className="book-button">Book A Free Discovery Call</a>
+                <a target="_blank" href="https://calendly.com/thoughtfulhq/30min" className="book-button">Book A Free Discovery Call</a>
                 <p className="middle-p">Or</p>
                 <p>Call Daniel at <a href="tel:+64220780868">+64 22 078 0868</a> / Email <a href="mailto:daniel@thoughtfulhq.com">daniel@thoughtfulhq.com</a></p>
             </div>

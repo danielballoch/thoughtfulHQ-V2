@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { StaticImage } from "gatsby-plugin-image"
 import GlacierFeatures from "../../videos/GlacierF.mp4"
 import CMSFeatures from "../../videos/CMSF.mp4"
 import CAFeatures from "../../videos/CAFeatures.mp4"
@@ -16,8 +17,8 @@ padding: 200px 0;
 // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#001F40", endColorstr="#000000", GradientType=1 );
 
 background: #8E0E00;  /* fallback for old browsers */
-background: -webkit-radial-gradient(circle, #635bff, #0076CE);  /* Chrome 10-25, Safari 5.1-6 */
-background: radial-gradient(circle,  #635bff,#0076CE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: -webkit-radial-gradient(circle, #635bff, #006bba);  /* Chrome 10-25, Safari 5.1-6 */
+background: radial-gradient(circle,  #635bff,#006bba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
 
@@ -58,20 +59,33 @@ h2 {
     .content-small {
         background-color: #f8f8f8;
         margin: 40px 0;
+        height: 140px;
         display: flex;
         .image {
-            flex-basis: 200px;
-            width: 200px;
-            height: 200px;
-            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // flex-basis: 200px;
+            // width: 100px;
+            margin: 0 20px;
+            img {
+                width: 80%;
+                margin: auto;
+            }
+            // height: 200px;
+            // background-color: grey;
         }
         .content {
             h4 {
                 font-size: 25px;
                 margin: 0;
             }
+            p {
+                margin-bottom: 0;
+                margin-top: 0;
+            }
             display: flex;
-            padding: 10px;
+            padding: 20px 0;
             flex-direction: column;
             justify-content: center;
             width: 80%;
@@ -170,28 +184,36 @@ export default function Features(){
                     </div>
                 </div>
                 <div className="content-small">
-                    <div className="image"></div>
+                    <div className="image">
+                    <StaticImage src="../../images/seoicon.png" alt="target" />
+                    </div>
                     <div className="content">
                         <h4>Search Engine Optimization (SEO)</h4>
                         <p>Our websites use the latest SEO best practises direct from google to make sure your business, services and products stand out from the competition.</p>
                     </div>
                 </div>
                 <div className="content-small">
-                    <div className="image"></div>
+                    <div className="image">
+                    <StaticImage src="../../images/copyicon.png" alt="target" />
+                    </div>
                     <div className="content">
                         <h4>Effective Copy Writing</h4>
                         <p>Written communication is key in turning leads into customers.. so we don’t skimp on the script. We work with you to select the best words to use on each page to land your ideal clients.</p>
                     </div>
                 </div>
                 <div className="content-small">
-                    <div className="image"></div>
+                    <div className="image">
+                    <StaticImage src="../../images/securityicon.png" alt="target" />
+                    </div>
                     <div className="content">
                         <h4>Secure Servers & Payments</h4>
                         <p>SLL Certificates & HTTPS are provided on all website so your users know they're safe browsing your website.</p>
                     </div>
                 </div>
                 <div className="content-small">
-                    <div className="image"></div>
+                    <div className="image">
+                    <StaticImage src="../../images/performanceicon.png" alt="target" />
+                    </div>
                     <div className="content">
                         <h4>Amazing Site Performance</h4>
                         <p>We use the latest stable tools & technologies. When revamping websites we’ve consistently seen google performance audits go from scores of 50-70 out of 100 to over 95+</p>
