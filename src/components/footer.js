@@ -77,6 +77,33 @@ display: flex;
         text-decoration: none;
     }
 }
+@media(max-width: 1000px){
+    .main-footer {
+        flex-direction: column;
+        .section1 {
+            .logo {
+                img {
+                    object-fit: contain!important;
+                }
+            }
+            max-width: 400px; 
+            width: 90%;
+        }
+        .section1, .section2, .section3, .section4 {
+            margin: 50px 0;
+        }
+        .section3, .section4 {
+            width: fit-content;
+            margin-left: 60px;
+        }
+    }
+}
+@media(max-width: 520px){
+    .bottom-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 `
 
 export default function Nav(){

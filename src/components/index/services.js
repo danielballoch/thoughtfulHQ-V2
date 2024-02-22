@@ -70,6 +70,18 @@ align-items: center;
     //     background-color: #0080FF;
     // }
 }
+@media(max-width: 1192px){
+    .content {
+        min-height: 322px!important;
+    }
+}
+@media(max-width: 982px){
+    flex-direction: column;
+    padding: 100px 0;
+    .service-box {
+        margin-bottom: 80px;
+    }
+}
 `
 
 export default function Services(){

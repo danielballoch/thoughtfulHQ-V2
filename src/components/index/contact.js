@@ -42,15 +42,17 @@ align-items: center;
     transform: scale(1.05);
 }
 .image {
+    margin: 20px;
     transition: .3s;
     display: grid;
     grid-template-areas: "main";
-    width: 220px;
+    // width: 240px;
     height: fit-content;
     .Typewriter {
         font-size: 15px;
         grid-area: main;
         width: 162px;
+        padding: 10px;
         height: 35px;
         margin: auto;
         z-index: 200;
@@ -59,6 +61,17 @@ align-items: center;
     }
     .gatsby-image-wrapper {
         grid-area: main;
+    }
+}
+@media(max-width: 860px){
+    height: 50vh;
+    .content {
+        padding: 20px;
+        width: 100%!important;
+    }
+    padding-bottom: 100px;
+    .image {
+        display: none;
     }
 }
 `

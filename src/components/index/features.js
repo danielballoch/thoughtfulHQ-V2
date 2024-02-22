@@ -97,6 +97,33 @@ h2 {
         }
     }
 }
+@media(max-width: 900px){
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    .content-left {
+        position: relative;
+        box-sizing: border-box;
+        top: unset;
+        width: 90%;
+        margin: 0 40px;
+        padding: 20px;
+    }
+    .content-right {
+        box-sizing: border-box;
+        width: 90%;
+    }
+    .content-small {
+        height: fit-content!important;
+        .content {
+            padding: 20px 20px 20px 0!important;
+            h4 {
+                font-size: 20px!important;
+                margin-bottom: 10px!important;
+            }
+        }
+    }
+}
 `
 
 export default function Features(){

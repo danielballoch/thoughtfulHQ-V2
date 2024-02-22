@@ -81,6 +81,35 @@ h2 {
         }
     }
 }
+@media(max-width: 1325px){
+    h2 {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        font-size: 40px;
+    }
+.project {
+    flex-direction: column-reverse;
+    height: fit-content;
+    margin: 60px 0;
+    width: 90%;
+    max-width: 885px;
+    .image, video {
+        max-width: 885px;
+        height: auto;
+        width: 100%;
+        background-color: white;
+    }
+    .content {
+        width: 100%;
+        height: fit-content;
+        .quote {
+            height: fit-content;
+            padding: 40px 0;
+        }
+    }
+}
+}
 `
 
 export default function Projects(){
