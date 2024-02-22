@@ -1,6 +1,7 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
+import Typewriter from 'typewriter-effect';
 
 const Wrapper = styled.div`
 display: flex;
@@ -37,23 +38,64 @@ align-items: center;
         text-decoration: none;
     } 
 }
+.active {
+    transform: scale(1.05);
+}
 .image {
-    width: 200px;
+    transition: .3s;
+    display: grid;
+    grid-template-areas: "main";
+    width: 220px;
     height: fit-content;
+    .Typewriter {
+        font-size: 15px;
+        grid-area: main;
+        width: 162px;
+        height: 35px;
+        margin: auto;
+        z-index: 200;
+        color: black;
+        opacity: .4;
+    }
+    .gatsby-image-wrapper {
+        grid-area: main;
+    }
 }
 `
 
 export default function Contact(){
+    const [active, setActive] = useState(false);
+
+    useEffect(() => {
+        console.log("active: ", active);
+    })
     return(
         <Wrapper id="contact">
-            <div className="image"><StaticImage src="../../images/PhoneIcon.png" alt="A dinosaur" /></div>
+            <div className={active? "image active" : "image"}>
+                <Typewriter
+                options={{
+                    strings: ['Loading your website...'],
+                    autoStart: true,
+                    loop: true,
+                }}
+                />
+                <StaticImage src="../../images/PhoneIcon.png" alt="A dinosaur" />
+                </div>
             <div className="content">
                 <h3>Want to have a chat?</h3>
-                <a target="_blank" href="https://calendly.com/thoughtfulhq/30min" className="book-button">Book A Free Discovery Call</a>
+                <a onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} target="_blank" href="https://calendly.com/thoughtfulhq/30min" className="book-button">Book A Free Discovery Call</a>
                 <p className="middle-p">Or</p>
                 <p>Call Daniel at <a href="tel:+64220780868">+64 22 078 0868</a> / Email <a href="mailto:daniel@thoughtfulhq.com">daniel@thoughtfulhq.com</a></p>
             </div>
-            <div className="image"><StaticImage src="../../images/PhoneIcon.png" alt="A dinosaur" /></div>
+            <div className={active? "image active" : "image"}>
+            <Typewriter
+            options={{
+                strings: ['Loading your website...'],
+                autoStart: true,
+                loop: true,
+            }}
+            />
+            <StaticImage src="../../images/PhoneIcon.png" alt="A dinosaur" /></div>
         </Wrapper>
     )
 }

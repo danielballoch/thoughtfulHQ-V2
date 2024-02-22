@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
-import GlacierFeatures from "../../videos/GlacierF.mp4"
+import ResponsiveVideo from "../../videos/res.mp4"
 import CMSFeatures from "../../videos/CMSF.mp4"
 import CAFeatures from "../../videos/CAFeatures.mp4"
 
@@ -37,6 +37,9 @@ h2 {
     font-weight: 200;
 }
 }
+.vcrop {
+    transform: scale(1.1)
+}
 .content-right {
     width: 40%;
     .content-large {
@@ -62,6 +65,7 @@ h2 {
         height: 140px;
         display: flex;
         .image {
+           
             display: flex;
             justify-content: center;
             align-items: center;
@@ -70,6 +74,7 @@ h2 {
             margin: 0 20px;
             img {
                 width: 80%;
+                overflow: none;
                 margin: auto;
             }
             // height: 200px;
@@ -135,7 +140,7 @@ export default function Features(){
                     type="video/mp4"
                     style={{objectFit:"cover"}}
                     >
-                        <source src={GlacierFeatures} type="video/mp4" />
+                        <source src={CAFeatures} type="video/mp4" />
                     </video>
                     </div>
                 </div>
@@ -144,6 +149,7 @@ export default function Features(){
                     <p>Approximately 58.67% website usage is mobile. Our websites have the same focus of turning users into buyers on all devices.</p>
                     <div className="image">
                     <video
+                    className="vcrop"
                     disablePictureInPicture
                     id="BgVideo"
                     title="Glacier International Project"
@@ -157,7 +163,7 @@ export default function Features(){
                     type="video/mp4"
                     style={{objectFit:"cover"}}
                     >
-                        <source src={CAFeatures} type="video/mp4" />
+                        <source src={ResponsiveVideo} type="video/mp4" />
                     </video>
                     </div>
                 </div>
