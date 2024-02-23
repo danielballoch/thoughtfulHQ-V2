@@ -80,14 +80,17 @@ display: flex;
 @media(max-width: 1000px){
     .main-footer {
         flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
         .section1 {
+            width: unset;
             .logo {
                 img {
                     object-fit: contain!important;
                 }
             }
-            max-width: 400px; 
-            width: 90%;
+            // max-width: 400px;
+            // width: 90%;
         }
         .section1, .section2, .section3, .section4 {
             margin: 50px 0;

@@ -30,7 +30,7 @@ align-items: center;
         color: white;
         padding: 15px;
         margin: auto;
-        width: 300px;
+        max-width: 300px;
         display: block;
         box-sizing: border-box;
         text-align: center;

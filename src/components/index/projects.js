@@ -17,8 +17,11 @@ h2 {
 .view-all {
     display: inline-block;
     background-color: #343a40;
-    padding: 20px 120px; 
+    padding: 20px 0; 
+    text-align: center;
+    max-width: 360px;
     margin-top: 20px;
+    width: 80vw;
     color: white;
     text-decoration: none;
     :hover {

@@ -54,7 +54,6 @@ h2 {
         .image {
             width: 100%;
             height: 300px;
-            background-color: grey;
             // padding: 20px;
             box-sizing: border-box;
         }
@@ -112,6 +111,13 @@ h2 {
     .content-right {
         box-sizing: border-box;
         width: 90%;
+        .image {
+            height: auto!important;
+        }
+        video {
+            object-fit: contain!important;
+            height: auto;
+        }
     }
     .content-small {
         height: fit-content!important;
