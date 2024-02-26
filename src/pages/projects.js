@@ -9,6 +9,7 @@ padding: 100px 0;
 margin: auto;
 h1 {
     margin-bottom: 50px;
+    padding: 0 20px;
     text-align: center;
 }
 .projects-wrapper {
@@ -23,7 +24,7 @@ h1 {
     position: relative;
 }
 .image {
-    width: 350px;
+    max-width: 350px;
     height: 600px;
     background-color: grey;
     img {
