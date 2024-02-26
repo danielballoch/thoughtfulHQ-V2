@@ -4,12 +4,12 @@
 module.exports = {
   siteMetadata: {
     title: `thoughtfulhq`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.thoughtfulhq.com`
   },
   plugins: [ "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": "src/images/favicon.png"
     }
   }, "gatsby-transformer-sharp", {
     resolve: `gatsby-plugin-sharp`,

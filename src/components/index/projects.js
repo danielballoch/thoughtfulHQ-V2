@@ -209,7 +209,7 @@ export default function Projects(){
                 </video>
                 </div>
             </div>
-            <a className="view-all" href="#">View All Projects</a>
+            <a className="view-all" href="/projects">View All Projects</a>
         </Wrapper>
     )
 }
