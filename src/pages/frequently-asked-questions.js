@@ -166,5 +166,9 @@ export default function FAQPage(){
   )
 }
 
-
-export const Head = () => <title>FAQ | thoughtfulHQ</title>
+export const Head = () => (
+  <>
+    <title>FAQ | thoughtfulHQ</title>
+    <meta name="description" content="We want to create great websites and results for clients and are open about our process, pricing and capabilities."/>
+  </>
+)

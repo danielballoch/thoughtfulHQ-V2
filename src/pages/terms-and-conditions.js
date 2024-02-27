@@ -45,4 +45,9 @@ export default function TermsPage(){
 }
 
 
-export const Head = () => <title>Terms & Conditions</title>
+export const Head = () => (
+  <>
+    <title>Terms & Conditions</title>
+    <meta name="description" content="Read our privacy policy and terms & conditions which apply on use of the website." />
+  </>
+)
