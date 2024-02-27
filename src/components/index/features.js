@@ -181,7 +181,7 @@ export default function Features(){
                     </div>
                 </div>
                 <div className="content-large">
-                    <h3>Responsive & Mobile Focused</h3>
+                    <h3>Responsive Design: PC/Tablets/Mobile</h3>
                     <p>Approximately 58.67% website usage is mobile. Our websites have the same focus of turning users into buyers on all devices.</p>
                     <div className="image">
                     <video
@@ -205,7 +205,7 @@ export default function Features(){
                 </div>
                 <div className="content-large">
                     <h3>Easy Updates</h3>
-                    <p>Simple interfaces for website updates. Automated CRM/Emails/SMS so customers always know the important stuff.</p>
+                    <p>Simple interfaces for website updates. Automated CRM/Emails/SMS so customers are never left confused or guessing.</p>
                     <div className="image">
                     <video
                     disablePictureInPicture

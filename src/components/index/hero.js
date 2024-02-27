@@ -3,17 +3,16 @@ import styled from "@emotion/styled"
 import ScrollAnimation from "./scrollAnimation"
 
 const Wrapper = styled.div`
-filter: invert(100%);
+// filter: invert(100%);
 height: calc(100vh - 120px);
 display: flex;
 // background-color: black;
-color: white;
+color: black;
 justify-content: center;
 align-items: center;
 .center-content {
     max-width: 760px;
     text-align: center;
-    padding-bottom: 200px;
     margin: 20px;
     h1 {
         font-size: 50px;
