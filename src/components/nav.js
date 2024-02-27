@@ -135,11 +135,11 @@ export default function Nav(){
                 <Hamburger setActive={() => setActive(!active)} active={active}/>
             </div>
             <div className={active? "sidedrawer" : "sidedrawer drawertoggle"}>
-                <a href="/#top">Home</a>
+                <a href="/#top" onClick={() => setActive(!active)}>Home</a>
                 <a href="/projects">Work</a>
-                <a href="/#services">Services</a>
+                <a href="/#services" onClick={() => setActive(!active)}>Services</a>
                 <a href="/frequently-asked-questions">FAQ</a>
-                <a href="/#contact">Contact</a>
+                <a href="/#contact" onClick={() => setActive(!active)}>Contact</a>
             </div>
         </Wrapper>
     )
