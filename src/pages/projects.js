@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 
 const Wrapper = styled.div`
 max-width: 1110px;
-padding: 100px 0;
+padding: 200px 0;
 margin: auto;
 h1 {
     margin-bottom: 50px;

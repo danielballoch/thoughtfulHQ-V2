@@ -38,7 +38,7 @@ h2 {
 }
 }
 .vcrop {
-    transform: scale(1.1)
+    transform: scale(1.01);
 }
 .content-right {
     width: 40%;
@@ -53,9 +53,13 @@ h2 {
         }
         .image {
             width: 100%;
-            height: 300px;
+            height: auto;
             // padding: 20px;
             box-sizing: border-box;
+            overflow: hidden;
+            video {
+                object-fit: contain!important;
+            }
         }
     }
     .content-small {
@@ -64,7 +68,6 @@ h2 {
         height: 140px;
         display: flex;
         .image {
-           
             display: flex;
             justify-content: center;
             align-items: center;

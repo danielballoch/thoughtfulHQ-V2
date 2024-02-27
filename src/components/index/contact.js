@@ -65,6 +65,9 @@ align-items: center;
 }
 @media(max-width: 860px){
     height: 50vh;
+
+    scroll-margin-block-start: 250px;
+
     .content {
         padding: 20px;
         width: 100%!important;

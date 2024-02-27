@@ -23,7 +23,8 @@ display: flex;
     }
 }
 .section1 {
-    width: 400px;
+    
+    width: 360px;
 }
 
 .section1 .blurb {
@@ -48,11 +49,11 @@ display: flex;
     }
 }
 .logo {
-    height: 80px;
+    height: 70px;
     // filter: invert(100%);
     margin-left: -8 px;
     img {
-        height: 80px;
+        height: 70px;
     }
 }
 .socials-div {
@@ -116,7 +117,7 @@ export default function Nav(){
                 <div className="main-footer">
                     <div className="section1">
                         <a href="/" className="logo"><StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /></a>
-                        <div className="blurb">Helping New Zealand business owners share their brand online, simplify workflows, and increase profits.</div>
+                        <div className="blurb">Helping New Zealand business's look profesional online, simplify workflows, and increase profits.</div>
                         <div className="socials-div">
                             <a target="_blank" href="https://www.facebook.com/thoughtfulHQ"><StaticImage src="../images/fb-icon.svg" alt="A dinosaur" /></a>
                             <a target="_blank" href="https://www.instagram.com/thoughtful_hq/"><StaticImage src="../images/insta-icon.svg" alt="A dinosaur" /></a>

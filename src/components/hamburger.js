@@ -6,6 +6,7 @@ display: none;
 margin: 0 20px;
 // background-color: yellow;
 height: 40px;
+z-index: 200;
 box-sizing: border-box;
   .burger {
     display: flex;
@@ -54,10 +55,10 @@ box-sizing: border-box;
 }
 `
 
-export default function Hamburger(){
-    const [active, setActive] = useState(false)
+export default function Hamburger({setActive, active}){
+    // const [active, setActive] = useState(false)
     return(
-        <Wrapper onClick={() => setActive(!active)}>
+        <Wrapper onClick={(active) => setActive(!active)}>
             <button class={active? "burger active" : "burger"}  ></button>
         </Wrapper>
     )

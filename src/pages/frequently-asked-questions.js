@@ -4,24 +4,30 @@ import styled from "@emotion/styled"
 import SupportForm from "../components/support-form"
 
 const Wrapper = styled.div`
-padding: 100px 0;
+padding: 200px 0;
 max-width: 800px;
 margin: auto;
 
 h1 {
-  margin-bottom: 100px;
-  text-align: center;
+  
+  // text-align: center;
+  padding-left: 30px;
+}
+.subtitle {
+  padding: 0 30px;
+  margin-bottom: 50px;
 }
 `
 
 const ContentBox = styled.div`
-width: 800px;
+max-width: 800px;
 display: flex;
 flex-direction: row;
 margin-bottom: 10px;
 /* border-radius: 10px; */
 background-color: #f8f8f8;
 padding: 20px;
+box-sizing: border-box;
 color: black;
 :hover {
   cursor: pointer;
@@ -91,7 +97,8 @@ p {
     }
 }
 @media(max-width: 940px){
-    width: 100%;
+    width: 95%;
+    margin: 10px auto;
 }
 `
 
@@ -121,7 +128,7 @@ const Questions = [
     answer: ["Yes, while we don’t have lock in contracts, we would love to host your site and offer competitive per project pricing.","This is generally the easiest option especially for more complex websites. ","If you need updates to your website, you may be able to do these yourself if a CMS has been set up, otherwise more complex changes can be made at an agreed upon rate. "]
   },
   {
-    question: "I already have an old website, can you just update it?", 
+    question: "I already have a website can you just update it?", 
     answer: ["The short answer is yes.","If you have an old website and want additional content or functionality added the best thing to do is call or send us an email explaining the situation.","From there we can advise on your options, what they would cost and the pros and cons of each."]
   }
 ]
@@ -147,7 +154,7 @@ export default function FAQPage(){
     <Layout>
       <Wrapper>
         <h1>Frequently Asked Questions</h1>
-        {/* <p>It’s hard to know who to work with for any project. We want happy customers and are open about our process, pricing and capabilities. If there’s anything you're unsure about we'd love to have a chat.</p> */}
+        <p className="subtitle">It’s hard to know who to work with for any project. We want happy customers and are open about our process, pricing and capabilities. If there’s anything you're unsure about we'd love to have a chat.</p>
         <div className="faq"> 
           {Questions.map((question, i) => (
               <Content question={question.question} answer={question.answer} i={i}/>
