@@ -121,7 +121,7 @@ const Questions = [
   },
   {
     question: "What does owning my website mean?", 
-    answer: ["Honesty, respect, and doing what’s best for our clients is at the core of thoughtfulHQ.","We don’t have lock-in contracts or force clients to continue to work with us for a set time.","Thus owning your website means:","1. You’ll always have full access to your website files upon request.","2. You can decide to host your website with anyone.","3. If you want another agency or contractor to work on or maintain your website we’ll cooperate fully."]
+    answer: ["We don’t have lock-in contracts or force clients to continue to work with us for a set time.","1. You’ll always have full access to your website files upon request.","2. You can decide to host your website with anyone.","3. If you want another agency or contractor to work on or maintain your website we’ll cooperate fully."]
   },
   {
     question: "Do you offer hosting, support and maintenance?", 
