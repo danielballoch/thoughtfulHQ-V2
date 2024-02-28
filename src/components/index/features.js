@@ -31,7 +31,7 @@ background: radial-gradient(circle,  #635bff,#006bba); /* W3C, IE 10+/ Edge, Fir
 width: 35%;
 height: fit-content;
 position: sticky;
-top: 100px;
+top: calc(50vh - 268.8px);
 margin-right: 40px;
 margin-top: 50px;
 margin-bottom: 50px;
@@ -157,16 +157,27 @@ export default function Features(){
         //   });
           let boxes = gsap.utils.toArray('.image');
           const boxAdd = gsap.utils.toArray('.content-small')
-          const update = boxes.concat(...boxAdd)
-          console.log(update)
-          update.forEach((box) => {
+          boxes.forEach((box) => {
             gsap.to(box, {
                 duration: 1,
                 y: 0,
                 scale: 1,
               scrollTrigger: {
                 trigger: box,
-                start: '-200px bottom',
+                start: 'top bottom',
+                end: 'top 50%',
+                scrub: true
+              },
+            });
+          });
+          boxAdd.forEach((box) => {
+            gsap.to(box, {
+                duration: 1,
+                y: 0,
+                scale: 1,
+              scrollTrigger: {
+                trigger: box,
+                start: '-300px bottom',
                 end: 'top 50%',
                 scrub: true
               },
