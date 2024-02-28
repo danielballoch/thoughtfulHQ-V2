@@ -1,15 +1,19 @@
-import React from "react"
+import React, { useRef } from "react"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 import ResponsiveVideo from "../../videos/res.mp4"
 import CMSFeatures from "../../videos/CMSF.mp4"
 import CAFeatures from "../../videos/CAFeatures.mp4"
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
 
 const Wrapper = styled.div`
 display: flex;
 justify-content: center;
 padding: 200px 0;
-
+clip-path: inset(0 0 0 0);
+overflow: clip;
 // background: hsla(211, 100%, 13%, 1);
 // background: radial-gradient(circle, hsla(211, 100%, 13%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
 // background: -moz-radial-gradient(circle, hsla(211, 100%, 13%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
@@ -52,6 +56,7 @@ h2 {
             margin: 0;
         }
         .image {
+            transform: scale(2) translateY(130px);
             width: 100%;
             height: auto;
             // padding: 20px;
@@ -63,6 +68,7 @@ h2 {
         }
     }
     .content-small {
+        transform: scale(2) translateY(130px);
         background-color: #f8f8f8;
         margin: 40px 0;
         height: 140px;
@@ -136,8 +142,41 @@ h2 {
 `
 
 export default function Features(){
+    const featurebox = useRef();
+    useGSAP(
+        () => {
+        //   gsap.to(".content-left", {
+        //     scrollTrigger: {
+        //       trigger: ".content-left",
+        //       start: "center center",
+        //       end: "2000px center",
+        //       scrub: true,
+        //       pin: true,
+        //       markers: true
+        //     }
+        //   });
+          let boxes = gsap.utils.toArray('.image');
+          const boxAdd = gsap.utils.toArray('.content-small')
+          const update = boxes.concat(...boxAdd)
+          console.log(update)
+          update.forEach((box) => {
+            gsap.to(box, {
+                duration: 1,
+                y: 0,
+                scale: 1,
+              scrollTrigger: {
+                trigger: box,
+                start: '-200px bottom',
+                end: 'top 50%',
+                scrub: true
+              },
+            });
+          });
+        },
+        { scope: featurebox }
+    );
     return(
-        <Wrapper>
+        <Wrapper ref={featurebox}>
             <div className="content-left">
                 <h2>Sick of feeling like just another number??</h2>
                 <p><b>We're a small business and don't bite off more than we can chew.</b></p>
@@ -181,7 +220,7 @@ export default function Features(){
                     </div>
                 </div>
                 <div className="content-large">
-                    <h3>Responsive Design: PC/Tablets/Mobile</h3>
+                    <h3>Responsive Design</h3>
                     <p>Approximately 58.67% website usage is mobile. Our websites have the same focus of turning users into buyers on all devices.</p>
                     <div className="image">
                     <video

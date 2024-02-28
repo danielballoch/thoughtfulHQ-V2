@@ -1,5 +1,8 @@
-import React from "react"
+import React, { useRef } from "react"
 import styled from "@emotion/styled"
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
 import { StaticImage } from "gatsby-plugin-image"
 
 const Wrapper = styled.div`
@@ -20,6 +23,7 @@ align-items: center;
 	}
 }
 .service-box {
+    opacity: 0;
     background-color: #f8f8f8;
     color: black;
     text-decoration: none;
@@ -83,11 +87,43 @@ align-items: center;
     }
 }
 `
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Services(){
+    const main = useRef();
+    const { contextSafe } = useGSAP({scope: main});
+
+    const onHoverGood = contextSafe((service) => {
+        console.log(service)
+        gsap.to(service, {duration: .1, y: -45});
+    })
+    const onLeaveGood = contextSafe((service) => {
+        console.log(service)
+        gsap.to(service, {duration: .1, y: -40});
+    })
+    
+    useGSAP(
+        () => {
+          const boxes = gsap.utils.toArray('.service-box');
+          boxes.forEach((box) => {
+            gsap.to(box, {
+                y: -40,
+                opacity: 1,
+              scrollTrigger: {
+                trigger: box,
+                start: '50% bottom',
+                end: 'top 50%',
+                scrub: true,
+              },
+            });
+          });
+        },
+        { scope: main }
+    );
+
     return(
-        <Wrapper id="services">
-            <a href="#contact" className="service-box">
+        <Wrapper id="services" ref={main}>
+            <a href="#contact" className="service-box service1" onMouseEnter={() => onHoverGood(".service1")} onMouseLeave={() => onLeaveGood(".service1")}>
                 {/* <div className="image"><StaticImage src="../../images/Motoschool.png" alt="A dinosaur" /></div> */}
                 <div className="content">
                     <h2>Branding Websites</h2>
@@ -96,7 +132,7 @@ export default function Services(){
                     <a href="#contact">Learn More →</a>
                 </div>
             </a>
-            <a href="#contact" className="service-box">
+            <a href="#contact" className="service-box service2" onMouseEnter={() => onHoverGood(".service2")} onMouseLeave={() => onLeaveGood(".service2")}>
                 {/* <div className="image"><StaticImage src="../../images/Glacier.png" alt="A dinosaur" /></div> */}
                 <div className="content">
                     <h2>Eccomerce Stores / Sell Online </h2>
@@ -104,7 +140,7 @@ export default function Services(){
                     <a href="#contact">Learn More →</a>
                 </div>
             </a>
-            <a href="#contact" className="service-box">
+            <a href="#contact" className="service-box service3" onMouseEnter={() => onHoverGood(".service3")} onMouseLeave={() => onLeaveGood(".service3")}>
                 {/* <div className="image"><StaticImage src="../../images/CA.png" alt="A dinosaur" /></div> */}
                 <div className="content">
                     <h2>Custom Solutions</h2>

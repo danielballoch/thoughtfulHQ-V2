@@ -14,6 +14,7 @@ align-items: center;
     max-width: 760px;
     text-align: center;
     margin: 20px;
+    padding: 20px 0;
     h1 {
         font-size: 50px;
         font-weight: 200;

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import styled from "@emotion/styled"
 import GlacierVideo from "../../videos/GlacierVideo.mp4"
 import CAVideo from "../../videos/CAVideo.mp4"
@@ -29,6 +29,10 @@ h2 {
     }
 }
 .project {
+    transition: .3s;
+    :hover {
+        transform: scale(1.05);
+    }
     display: flex;
     flex-direction: row-reverse;
     width: 1300px;
@@ -116,10 +120,16 @@ h2 {
 `
 
 export default function Projects(){
+    const video1 = useRef();
+    const video2 = useRef();
+    const video3 = useRef();
     return(
         <Wrapper id="recent-projects">
             <h2>Our Client Success Stories</h2>
-            <div className="project">
+            <div className="project"
+                onMouseOver={() => video1.current.play()}
+                onMouseOut={() => video1.current.pause()}
+            >
                 <div className="content">
                     <div className="quote">
                         <p>"Daniel delivered above and beyond for us with a highly professional end to end service. A high performance website was the delivered result which expressed clear communication to our customers about our product, services and a hassle free payment gateway as our main call to action for marketing. We enjoyed the development process and ongoing support is appreciated so thank you from myself and the Glacier International team."</p>
@@ -132,6 +142,7 @@ export default function Projects(){
                 </div>
                 <div className="image">
                 <video
+                ref={video1}
                 disablePictureInPicture
                 id="BgVideo"
                 title="Glacier International Project"
@@ -139,7 +150,6 @@ export default function Projects(){
                 width="100%"
                 loop
                 muted
-                autoPlay={true}
                 playsInline 
                 preload="auto"
                 type="video/mp4"
@@ -149,7 +159,10 @@ export default function Projects(){
                 </video>
                 </div>
             </div>
-            <div className="project">
+            <div className="project"
+                onMouseOver={() => video2.current.play()}
+                onMouseOut={() => video2.current.pause()}
+            >
                 <div className="content">
                     <div className="quote">
                     <p>"Great communication throughout the whole process, very accommodating and helpful when working with a beginner like me!"</p>
@@ -162,6 +175,7 @@ export default function Projects(){
                 </div>
                 <div className="image">
                 <video
+                ref={video2}
                 disablePictureInPicture
                 id="BgVideo"
                 title="Central Aero Project"
@@ -169,7 +183,6 @@ export default function Projects(){
                 width="100%"
                 loop
                 muted
-                autoPlay={true}
                 playsInline 
                 preload="auto"
                 type="video/mp4"
@@ -179,7 +192,10 @@ export default function Projects(){
                 </video>
                 </div>
             </div>
-            <div className="project">
+            <div className="project"
+                onMouseOver={() => video3.current.play()}
+                onMouseOut={() => video3.current.pause()}
+            >
                 <div className="content">
                     <div className="quote">
                     <p>insert testimonial</p>
@@ -192,6 +208,7 @@ export default function Projects(){
                 </div>
                 <div className="image">
                 <video
+                ref={video3}
                 disablePictureInPicture
                 id="BgVideo"
                 title="Manor Realty"
@@ -199,7 +216,6 @@ export default function Projects(){
                 width="100%"
                 loop
                 muted
-                autoPlay={true}
                 playsInline 
                 preload="auto"
                 type="video/mp4"

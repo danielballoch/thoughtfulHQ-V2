@@ -1,7 +1,9 @@
-import React, {useState} from "react"
+import React, {useRef, useState} from "react"
 import Layout from "../components/layout"
 import styled from "@emotion/styled"
 import SupportForm from "../components/support-form"
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 const Wrapper = styled.div`
 padding: 200px 0;
@@ -35,11 +37,7 @@ color: black;
 img {
     border-radius: 2px;
 }
-.toggle {
-  display: none;
-}
 div {
-    transition: .3s;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -65,17 +63,29 @@ p {
     /* align-items: center; */
     align-items: start;
 }
-.answer {
-  box-sizing: border-box;
+.toggle {
+  max-height: 0px!important;
+  // margin: 0 0!important;
+}
+.answer-inner {
   margin: 20px 0;
   padding: 0 10px;
+}
+.answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  height: auto;
+  max-height: 400px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: .4s;
   p {
     margin: 5px 0;
   }
 }
 .arrow {
   margin-top: 5px;
-  transition: .2s;
+  transition: .5s;
   margin-left: 20px;
   height: 3px;
   width: 3px;
@@ -133,16 +143,20 @@ const Questions = [
   }
 ]
 
+gsap.registerPlugin(useGSAP);
+
 const Content = ({question, answer,i}) => {
   const [toggle, setToggle] = useState(true);
   return (
-      <ContentBox  onClick={() => {setToggle(!toggle)}}>
+      <ContentBox   onClick={() => {setToggle(!toggle)}}>
           <div key={"question " + i}>
               <h3><p className="question">{question}<span className={toggle ? "arrow" : "arrow down"}/></p></h3>
               <div className={toggle ? "answer toggle" : "answer"}>
+                <div className="answer-inner">
                   {answer.map((answer, i) => (
                     <p>{answer}</p>
                   ))}
+                </div>
               </div>
           </div>
       </ContentBox>
@@ -150,9 +164,17 @@ const Content = ({question, answer,i}) => {
 } 
 
 export default function FAQPage(){
+  const main = useRef();
+
+  // const { contextSafe } = useGSAP({scope: main});
+
+  // const onClickGood = contextSafe((service) => {
+  //   gsap.to(service, {duration: .1, y: -45});
+  // })
+
   return(
     <Layout>
-      <Wrapper>
+      <Wrapper ref={main}>
         <h1>Frequently Asked Questions</h1>
         <p className="subtitle">It’s hard to know who to work with for any project. We want happy customers and are open about our process, pricing and capabilities. If there’s anything you're unsure about we'd love to have a chat.</p>
         <div className="faq"> 
