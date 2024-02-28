@@ -5,6 +5,9 @@ import { useGSAP } from '@gsap/react'
 import GlacierVideo from "../../videos/GlacierVideo.mp4"
 import CAVideo from "../../videos/CAVideo.mp4"
 import Manor from "../../videos/Manor.mp4"
+import GlacierPoster from "../../images/project-posters/GlacierPoster.png"
+import CAPoster from "../../images/project-posters/CAPoster.png"
+import ManorPoster from "../../images/project-posters/ManorPoster.png"
 
 const Wrapper = styled.div`
 display: flex;
@@ -164,7 +167,7 @@ export default function Projects(){
                 </div>
                 <div className="image">
                 <video
-                poster="../images/project-posters/GlacierPoster.png"
+                poster={GlacierPoster}
                 ref={video1}
                 disablePictureInPicture
                 id="BgVideo"
@@ -198,7 +201,7 @@ export default function Projects(){
                 </div>
                 <div className="image">
                 <video
-                poster="../images/project-posters/CAPoster.png"
+                poster={CAPoster}
                 ref={video2}
                 disablePictureInPicture
                 id="BgVideo"
@@ -232,7 +235,7 @@ export default function Projects(){
                 </div>
                 <div className="image">
                 <video
-                poster="../images/project-posters/ManorPoster.png"
+                poster={ManorPoster}
                 ref={video3}
                 disablePictureInPicture
                 id="BgVideo"
