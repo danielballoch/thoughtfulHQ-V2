@@ -2,7 +2,7 @@ import React, { useRef } from "react"
 import styled from "@emotion/styled"
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import GlacierVideo from "../../videos/GlacierVideo.mp4#t=0.5"
+import GlacierVideo from "../../videos/GlacierVideo.mp4"
 import CAVideo from "../../videos/CAVideo.mp4"
 import Manor from "../../videos/Manor.mp4"
 
@@ -164,7 +164,7 @@ export default function Projects(){
                 </div>
                 <div className="image">
                 <video
-                preload="metadata"
+                poster="../images/project-posters/GlacierPoster.png"
                 ref={video1}
                 disablePictureInPicture
                 id="BgVideo"
@@ -198,7 +198,7 @@ export default function Projects(){
                 </div>
                 <div className="image">
                 <video
-                preload="metadata"
+                poster="../images/project-posters/CAPoster.png"
                 ref={video2}
                 disablePictureInPicture
                 id="BgVideo"
@@ -232,6 +232,7 @@ export default function Projects(){
                 </div>
                 <div className="image">
                 <video
+                poster="../images/project-posters/ManorPoster.png"
                 ref={video3}
                 disablePictureInPicture
                 id="BgVideo"
