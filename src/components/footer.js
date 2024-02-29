@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Wrapper = styled.div`
@@ -116,7 +117,7 @@ export default function Nav(){
             <div>
                 <div className="main-footer">
                     <div className="section1">
-                        <a href="/" className="logo"><StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /></a>
+                        <Link to="/" className="logo"><StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /></Link>
                         <div className="blurb">Helping New Zealand businesses look profesional online, simplify workflows, and increase profits.</div>
                         <div className="socials-div">
                             <a target="_blank" href="https://www.facebook.com/thoughtfulHQ"><StaticImage src="../images/fb-icon.svg" alt="A dinosaur" /></a>
@@ -130,10 +131,10 @@ export default function Nav(){
                     </div> */}
                     <div className="section3">
                         <p><b>Navigation</b></p>
-                        <a href="/#recent-projects">Work</a>
-                        <a href="/#services">Services</a>
-                        <a href="/frequently-asked-questions">FAQ</a>
-                        <a href="/#contact">Contact</a>
+                        <Link to="/projects">Work</Link>
+                        <Link to="/#services">Services</Link>
+                        <Link to="/frequently-asked-questions">FAQ</Link>
+                        <Link to="/#contact">Contact</Link>
                     </div>
                     <div className="section3">
                         <p><b>Contact</b></p>
@@ -142,9 +143,9 @@ export default function Nav(){
                     </div>
                 </div>
                 <div className="bottom-footer">
-                    <a href="/">© 2024  thoughtfulHQ</a>
-                    <a href="/terms-and-conditions">Terms & Conditons</a>
-                    <a href="#top">Back To The Top</a>
+                    <Link to="/">© 2024  thoughtfulHQ</Link>
+                    <Link to="/terms-and-conditions">Terms & Conditons</Link>
+                    <Link to="#top">Back To The Top</Link>
                 </div>
             </div>
         </Wrapper>

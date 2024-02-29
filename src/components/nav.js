@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 import Hamburger from "../components/hamburger"
@@ -120,14 +121,14 @@ export default function Nav(){
     return(
         <Wrapper id="top">
             <div className="navbar">
-                <a href="/#top" className="logo">
+                <Link to="/#top" className="logo">
                     <StaticImage src="../images/thoughtfulHQlogo.webp" alt="thoughtfulHQ" />
                     {/* ORDINARY DIGITAL &copy; */}
-                </a>
+                </Link>
                 <div className="middle-content">
-                    <a href="/projects">Work</a>
-                    <a href="/#services">Services</a>
-                    <a href="/frequently-asked-questions">FAQ</a>
+                    <Link to="/projects">Work</Link>
+                    <Link to="/#services">Services</Link>
+                    <Link to="/frequently-asked-questions">FAQ</Link>
                 </div>
                 <div className="book-button">
                     <a target="_blank" href="https://calendly.com/thoughtfulhq/30min">Book A Free Discovery Call</a>
@@ -135,11 +136,11 @@ export default function Nav(){
                 <Hamburger setActive={() => setActive(!active)} active={active}/>
             </div>
             <div className={active? "sidedrawer" : "sidedrawer drawertoggle"}>
-                <a href="/#top" onClick={() => setActive(!active)}>Home</a>
-                <a href="/projects">Work</a>
-                <a href="/#services" onClick={() => setActive(!active)}>Services</a>
-                <a href="/frequently-asked-questions">FAQ</a>
-                <a href="/#contact" onClick={() => setActive(!active)}>Contact</a>
+                <Link to="/#top" onClick={() => setActive(!active)}>Home</Link>
+                <Link to="/projects">Work</Link>
+                <Link to="/#services" onClick={() => setActive(!active)}>Services</Link>
+                <Link to="/frequently-asked-questions">FAQ</Link>
+                <Link to="/#contact" onClick={() => setActive(!active)}>Contact</Link>
             </div>
         </Wrapper>
     )

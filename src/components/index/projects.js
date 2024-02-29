@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react"
 import styled from "@emotion/styled"
+import { Link } from "gatsby"
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -295,7 +296,7 @@ export default function Projects(){
                 </video>
                 </div>
             </div>
-            <a className="view-all" href="/projects">View All Projects</a>
+            <Link className="view-all" to="/projects#top">View All Projects</Link>
         </Wrapper>
     )
 }
