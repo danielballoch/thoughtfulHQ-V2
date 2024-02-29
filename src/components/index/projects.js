@@ -1,7 +1,8 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import styled from "@emotion/styled"
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import GlacierVideo from "../../videos/GlacierVideo.mp4"
 import CAVideo from "../../videos/CAVideo.mp4"
 import Manor from "../../videos/Manor.mp4"
@@ -36,11 +37,14 @@ h2 {
         background-color: #2b3035;
     }
 }
+.project-toggle {
+    transform: scale(1.05);
+}
 .project {
     transition: .3s;
-    :hover {
-        transform: scale(1.05);
-    }
+    // :hover {
+    //     transform: scale(1.05);
+    // }
     display: flex;
     flex-direction: row-reverse;
     width: 1300px;
@@ -127,6 +131,7 @@ h2 {
 `
 
 export default function Projects(){
+    const [toggle1, setToggle1] = useState(false);
     const text = useRef();
     const video1 = useRef();
     const video2 = useRef();
@@ -144,6 +149,16 @@ export default function Projects(){
                 scrub: true
               },
             })
+            ScrollTrigger.create({
+                trigger: ".project1",
+                start: 'top 50%',
+                end: 'bottom 50%',
+                markers: true,
+                onEnter: () => {video1.current.play(); setToggle1(true)},
+                onEnterBack: () => {video1.current.play(); setToggle1(true)},
+                onLeave: () => {video1.current.pause(); setToggle1(false)},
+                onLeaveBack: () => {video1.current.pause(); setToggle1(false)},
+            })
         },
         { scope: text }
     );
@@ -151,9 +166,9 @@ export default function Projects(){
     return(
         <Wrapper id="recent-projects" ref={text}>
             <h2  className="animate-text">Our Client Success Stories</h2>
-            <div className="project"
-                onMouseOver={() => video1.current.play()}
-                onMouseOut={() => video1.current.pause()}
+            <div className={toggle1? "project project1 project-toggle" :"project project1"}
+                // onMouseOver={() => video1.current.play()}
+                // onMouseOut={() => video1.current.pause()}
             >
                 <div className="content">
                     <div className="quote">
