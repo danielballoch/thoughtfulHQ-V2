@@ -115,7 +115,7 @@ p {
 const Questions = [
   {
   question: "How much does a website cost?", 
-  answer: ["Website costs range from $2000-$8000+ according to the size and complexity of the project.","Initial meetings are always free.","Hosting costs can also vary.","A business marketing website will generally be $20 monthly, whereas a more complex Ecommerce or API heavy website could be more depending on the costs involved."]
+  answer: ["Website costs range from $2000-$8000+ according to the size and complexity of the project.","Initial meetings are always free.","Hosting costs can also vary.","Hosting a business marketing website will generally be around $20 a month, whereas a more complex Ecommerce or API heavy website could be more depending on the costs involved."]
   },
   {
   question: "What will we talk about in the initial meeting?", 
