@@ -67,6 +67,11 @@ h2 {
         height: 500px;
         box-sizing: border-box;
         .quote {
+            h3 {
+                font-size: 30px;
+                margin-bottom: 0;
+                text-align: center;
+            }
             height: 450px;
             display: flex;
             flex-direction: column;
@@ -191,8 +196,9 @@ export default function Projects(){
             >
                 <div className="content">
                     <div className="quote">
+                        <h3>Glacier International</h3>
                         <p>"Daniel delivered above and beyond for us with a highly professional end to end service. A high performance website was the delivered result which expressed clear communication to our customers about our product, services and a hassle free payment gateway as our main call to action for marketing. We enjoyed the development process and ongoing support is appreciated so thank you from myself and the Glacier International team."</p>
-                        <p><i>-Malcom King, Glacier International</i></p>
+                        <p><i>-Malcom King, CEO</i></p>
                     </div>
                     <div className="button-div">
                         <a href="https://www.glacier.nz" target="_blank">View Website</a>
@@ -225,8 +231,9 @@ export default function Projects(){
             >
                 <div className="content">
                     <div className="quote">
-                    <p>"Great communication throughout the whole process, very accommodating and helpful when working with a beginner like me!"</p>
-                    <p><i>-Hamish Ross, Central Aero</i></p>
+                        <h3>Central Aero</h3>
+                        <p>"Great communication throughout the whole process, very accommodating and helpful when working with a beginner like me!"</p>
+                        <p><i>-Hamish Ross, Owner & Electrical Director</i></p>
                     </div>
                     <div className="button-div">
                         <a href="https://www.centralaero.co.nz" target="_blank">View Website</a>
@@ -259,8 +266,9 @@ export default function Projects(){
             >
                 <div className="content">
                     <div className="quote">
-                    <p>Daniel played a pivotal role in the success of our recent project. His expertise in integrating a variety of third-party APIs enabled seamless automatic updates across our client's CRM and website platform. Daniel's excellent communication skills and extensive knowledge made working with him a pleasure, as he effortlessly tackled every task we presented. I highly recommend Daniel and the ThoughtfulHQ team for their exceptional work.</p>
-                    <p><i>-Josh Sprosen, Brander (Design Agency)</i></p>
+                        <h3>Manor Realty</h3>
+                        <p>"Daniel played a pivotal role in the success of our recent project. His expertise in integrating a variety of third-party APIs enabled seamless automatic updates across our client's CRM and website platform. Daniel's excellent communication skills and extensive knowledge made working with him a pleasure, as he effortlessly tackled every task we presented. I highly recommend Daniel and the ThoughtfulHQ team for their exceptional work."</p>
+                        <p><i>-Josh Sprosen, Digital Lead (Brander)</i></p>
                     </div>
                     <div className="button-div">
                         <a href="https://www.manorrealty.co.nz" target="_blank">View Website</a>
