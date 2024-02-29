@@ -119,7 +119,7 @@ const Questions = [
   },
   {
   question: "What will we talk about in the initial meeting?", 
-  answer: ["The initial call is for me to learn the basics of your business, your problems, goals and vision for a website so we can come to an agreed vision for the project or I can make a suggestion on your best path forward if not with thoughtfulHQ."]
+  answer: ["The initial call is for me to learn the basics of your business, your problems, goals and vision for a website so we can come to an agreed vision for the project or I can make a suggestion on your best path forward."]
   },
   {
     question: "How does the rest of the process look?", 
