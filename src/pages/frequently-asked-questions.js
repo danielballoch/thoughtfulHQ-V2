@@ -68,6 +68,7 @@ p {
   // margin: 0 0!important;
 }
 .answer-inner {
+  box-sizing: border-box;
   margin: 20px 0;
   padding: 0 10px;
 }
