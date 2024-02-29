@@ -15,7 +15,7 @@ z-index: 200;
     position: absolute;
     background-color: white;
     display: flex;
-    width: 100vw;
+    // width: 100vw;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     z-index: 200;

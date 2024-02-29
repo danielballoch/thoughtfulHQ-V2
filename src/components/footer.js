@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const Wrapper = styled.div`
 display: flex;
 justify-content: center;
-width: 100vw;
+// width: 100vw;
 // background-color: #0a2540;
 background-color: #f8f8f8;
 color: black;
