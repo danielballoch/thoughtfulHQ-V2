@@ -132,6 +132,8 @@ h2 {
 
 export default function Projects(){
     const [toggle1, setToggle1] = useState(false);
+    const [toggle2, setToggle2] = useState(false);
+    const [toggle3, setToggle3] = useState(false);
     const text = useRef();
     const video1 = useRef();
     const video2 = useRef();
@@ -153,11 +155,28 @@ export default function Projects(){
                 trigger: ".project1",
                 start: 'top 50%',
                 end: 'bottom 50%',
-                markers: true,
                 onEnter: () => {video1.current.play(); setToggle1(true)},
                 onEnterBack: () => {video1.current.play(); setToggle1(true)},
                 onLeave: () => {video1.current.pause(); setToggle1(false)},
                 onLeaveBack: () => {video1.current.pause(); setToggle1(false)},
+            })
+            ScrollTrigger.create({
+                trigger: ".project2",
+                start: 'top 50%',
+                end: 'bottom 50%',
+                onEnter: () => {video2.current.play(); setToggle2(true)},
+                onEnterBack: () => {video2.current.play(); setToggle2(true)},
+                onLeave: () => {video2.current.pause(); setToggle2(false)},
+                onLeaveBack: () => {video2.current.pause(); setToggle2(false)},
+            })
+            ScrollTrigger.create({
+                trigger: ".project3",
+                start: 'top 50%',
+                end: 'bottom 50%',
+                onEnter: () => {video3.current.play(); setToggle3(true)},
+                onEnterBack: () => {video3.current.play(); setToggle3(true)},
+                onLeave: () => {video3.current.pause(); setToggle3(false)},
+                onLeaveBack: () => {video3.current.pause(); setToggle3(false)},
             })
         },
         { scope: text }
@@ -200,9 +219,9 @@ export default function Projects(){
                 </video>
                 </div>
             </div>
-            <div className="project"
-                onMouseOver={() => video2.current.play()}
-                onMouseOut={() => video2.current.pause()}
+            <div className={toggle2? "project project2 project-toggle" :"project project2"}
+                // onMouseOver={() => video2.current.play()}
+                // onMouseOut={() => video2.current.pause()}
             >
                 <div className="content">
                     <div className="quote">
@@ -234,9 +253,9 @@ export default function Projects(){
                 </video>
                 </div>
             </div>
-            <div className="project"
-                onMouseOver={() => video3.current.play()}
-                onMouseOut={() => video3.current.pause()}
+            <div className={toggle3? "project project3 project-toggle" :"project project3"}
+                // onMouseOver={() => video3.current.play()}
+                // onMouseOut={() => video3.current.pause()}
             >
                 <div className="content">
                     <div className="quote">
