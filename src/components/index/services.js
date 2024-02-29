@@ -3,7 +3,6 @@ import styled from "@emotion/styled"
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import { StaticImage } from "gatsby-plugin-image"
 
 const Wrapper = styled.div`
 display: flex;
@@ -94,11 +93,9 @@ export default function Services(){
     const { contextSafe } = useGSAP({scope: main});
 
     const onHoverGood = contextSafe((service) => {
-        console.log(service)
         gsap.to(service, {duration: .1, y: -45});
     })
     const onLeaveGood = contextSafe((service) => {
-        console.log(service)
         gsap.to(service, {duration: .1, y: -40});
     })
     

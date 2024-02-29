@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 import Typewriter from 'typewriter-effect';
@@ -81,10 +81,6 @@ align-items: center;
 
 export default function Contact(){
     const [active, setActive] = useState(false);
-
-    useEffect(() => {
-        console.log("active: ", active);
-    })
     return(
         <Wrapper id="contact">
             <div className={active? "image active" : "image"}>
@@ -95,7 +91,7 @@ export default function Contact(){
                     loop: true,
                 }}
                 />
-                <StaticImage src="../../images/PhoneIcon.png" alt="A dinosaur" />
+                <StaticImage src="../../images/PhoneIcon.png" alt="Phone silhouette" />
                 </div>
             <div className="content">
                 <h3>Want to have a chat?</h3>
@@ -111,7 +107,7 @@ export default function Contact(){
                 loop: true,
             }}
             />
-            <StaticImage src="../../images/PhoneIcon.png" alt="A dinosaur" /></div>
+            <StaticImage src="../../images/PhoneIcon.png" alt="Phone silhouette" /></div>
         </Wrapper>
     )
 }

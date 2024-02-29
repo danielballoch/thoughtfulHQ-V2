@@ -10,6 +10,7 @@ import Manor from "../../videos/Manor.mp4"
 import GlacierPoster from "../../images/project-posters/GlacierPoster.png"
 import CAPoster from "../../images/project-posters/CAPoster.png"
 import ManorPoster from "../../images/project-posters/ManorPoster.png"
+import captions from "file-loader!../../videos/captions.vtt"
 
 const Wrapper = styled.div`
 display: flex;
@@ -211,7 +212,6 @@ export default function Projects(){
                 poster={GlacierPoster}
                 ref={video1}
                 disablePictureInPicture
-                id="BgVideo"
                 title="Glacier International Project"
                 height="100%"
                 width="100%"
@@ -223,6 +223,7 @@ export default function Projects(){
                 style={{objectFit:"cover"}}
                 >
                     <source src={GlacierVideo} type="video/mp4" />
+                    <track src={captions} kind="captions" srclang="en" label="english_captions"></track>
                 </video>
                 </div>
             </div>
@@ -246,7 +247,6 @@ export default function Projects(){
                 poster={CAPoster}
                 ref={video2}
                 disablePictureInPicture
-                id="BgVideo"
                 title="Central Aero Project"
                 height="100%"
                 width="100%"
@@ -258,6 +258,7 @@ export default function Projects(){
                 style={{objectFit:"cover"}}
                 >
                     <source src={CAVideo} type="video/mp4" />
+                    <track src={captions} kind="captions" srclang="en" label="english_captions"></track>
                 </video>
                 </div>
             </div>
@@ -281,8 +282,7 @@ export default function Projects(){
                 poster={ManorPoster}
                 ref={video3}
                 disablePictureInPicture
-                id="BgVideo"
-                title="Manor Realty"
+                title="Manor Realty Project"
                 height="100%"
                 width="100%"
                 loop
@@ -293,6 +293,7 @@ export default function Projects(){
                 style={{objectFit:"cover"}}
                 >
                     <source src={Manor} type="video/mp4" />
+                    <track src={captions} kind="captions" srclang="en" label="english_captions"></track>
                 </video>
                 </div>
             </div>

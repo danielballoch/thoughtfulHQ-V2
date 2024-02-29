@@ -59,7 +59,7 @@ export default function Hamburger({setActive, active}){
     // const [active, setActive] = useState(false)
     return(
         <Wrapper onClick={(active) => setActive(!active)}>
-            <button class={active? "burger active" : "burger"}  ></button>
+            <button aria-label="Mobile Menu" class={active? "burger active" : "burger"}  ></button>
         </Wrapper>
     )
 }

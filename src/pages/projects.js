@@ -125,6 +125,7 @@ export default function Projectspage(){
 
 export const Head = () => (
     <>
+      <html lang="en" />
       <title>Client Projects | thoughtfulHQ</title>
       <meta name="description" content="Explore our recent New Zealand Web Design & Development projects."/>
     </>

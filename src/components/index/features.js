@@ -5,8 +5,8 @@ import ResponsiveVideo from "../../videos/res.mp4"
 import CMSFeatures from "../../videos/CMSF.mp4"
 import CAFeatures from "../../videos/CAFeatures.mp4"
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
+import captions from "file-loader!../../videos/captions.vtt"
 
 const Wrapper = styled.div`
 display: flex;
@@ -145,16 +145,6 @@ export default function Features(){
     const featurebox = useRef();
     useGSAP(
         () => {
-        //   gsap.to(".content-left", {
-        //     scrollTrigger: {
-        //       trigger: ".content-left",
-        //       start: "center center",
-        //       end: "2000px center",
-        //       scrub: true,
-        //       pin: true,
-        //       markers: true
-        //     }
-        //   });
           let boxes = gsap.utils.toArray('.image');
           const boxAdd = gsap.utils.toArray('.content-small')
           boxes.forEach((box) => {
@@ -198,13 +188,6 @@ export default function Features(){
                 <p>3. You'll own and have full control of your website.</p>
                 <p>4. We'll be <b>responsive with communication.</b></p>
                 <p>5. You'll be supporting us do what we love.</p>
-                {/* <p>1. Your project will be a priority.</p>
-                <p>2. We’ll offer fair and competitive pricing.</p>
-                <p>3. You'll get personalised service.</p>
-                <p>4. We'll be responsive with communication.</p>
-                <p>5. You'll own and have full control of your website.</p>
-                <p>6. We'll offer advice if we can't take on your project.</p>
-                <p>7. You'll be supporting us do what we love.</p> */}
                 <p></p>
             </div>
             <div className="content-right">
@@ -214,8 +197,7 @@ export default function Features(){
                     <div className="image">
                     <video
                     disablePictureInPicture
-                    id="BgVideo"
-                    title="Glacier International Project"
+                    title="Wow Customers Video"
                     height="100%"
                     width="100%"
                     loop
@@ -227,6 +209,7 @@ export default function Features(){
                     style={{objectFit:"cover"}}
                     >
                         <source src={CAFeatures} type="video/mp4" />
+                        <track src={captions} kind="captions" srclang="en" label="english_captions"></track>
                     </video>
                     </div>
                 </div>
@@ -237,8 +220,7 @@ export default function Features(){
                     <video
                     className="vcrop"
                     disablePictureInPicture
-                    id="BgVideo"
-                    title="Glacier International Project"
+                    title="Responsive Design Video"
                     height="100%"
                     width="100%"
                     loop
@@ -250,6 +232,7 @@ export default function Features(){
                     style={{objectFit:"cover"}}
                     >
                         <source src={ResponsiveVideo} type="video/mp4" />
+                        <track src={captions} kind="captions" srclang="en" label="english_captions"></track>
                     </video>
                     </div>
                 </div>
@@ -259,8 +242,7 @@ export default function Features(){
                     <div className="image">
                     <video
                     disablePictureInPicture
-                    id="BgVideo"
-                    title="Glacier International Project"
+                    title="Easy Updates Video"
                     height="100%"
                     width="100%"
                     loop
@@ -272,6 +254,7 @@ export default function Features(){
                     style={{objectFit:"cover"}}
                     >
                         <source src={CMSFeatures} type="video/mp4" />
+                        <track src={captions} kind="captions" srclang="en" label="english_captions"></track>
                     </video>
                     </div>
                 </div>
@@ -286,7 +269,7 @@ export default function Features(){
                 </div>
                 <div className="content-small">
                     <div className="image">
-                    <StaticImage src="../../images/copyicon.png" alt="target" />
+                    <StaticImage src="../../images/copyicon.png" alt="book & pen" />
                     </div>
                     <div className="content">
                         <h4>Effective Copy Writing</h4>
@@ -295,7 +278,7 @@ export default function Features(){
                 </div>
                 <div className="content-small">
                     <div className="image">
-                    <StaticImage src="../../images/securityicon.png" alt="target" />
+                    <StaticImage src="../../images/securityicon.png" alt="padlock" />
                     </div>
                     <div className="content">
                         <h4>Secure Servers & Payments</h4>
@@ -304,7 +287,7 @@ export default function Features(){
                 </div>
                 <div className="content-small">
                     <div className="image">
-                    <StaticImage src="../../images/performanceicon.png" alt="target" />
+                    <StaticImage src="../../images/performanceicon.png" alt="graph" />
                     </div>
                     <div className="content">
                         <h4>Amazing Site Performance</h4>

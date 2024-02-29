@@ -48,6 +48,7 @@ export default NotFoundPage
 
 export const Head = () => (
   <>
+    <html lang="en" />
     <title>Page Not Found | thoughtfulHQ</title>
   </>
 )
