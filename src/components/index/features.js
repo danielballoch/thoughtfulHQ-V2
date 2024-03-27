@@ -9,6 +9,8 @@ import { useGSAP } from '@gsap/react'
 import captions from "file-loader!../../videos/captions.vtt"
 
 const Wrapper = styled.div`
+position: relative;
+z-index: 10;
 display: flex;
 justify-content: center;
 padding: 200px 0;

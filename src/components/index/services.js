@@ -5,8 +5,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 
 const Wrapper = styled.div`
+position: relative;
+z-index: 10;
 display: flex;
 padding: 200px 0;
+background-color: white;
 // background-color: lightgrey;
 justify-content: center;
 align-items: center;

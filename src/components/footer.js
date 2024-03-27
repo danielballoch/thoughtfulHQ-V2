@@ -4,21 +4,35 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Wrapper = styled.div`
+position:sticky;
+bottom: 0;
+left: 0;
+z-index:0;
 display: flex;
 justify-content: center;
 // width: 100vw;
 // background-color: #0a2540;
 background-color: #f8f8f8;
 color: black;
+background-color: #343a40;
+// color: white;
+.wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 .main-footer {
 display: flex;
 .section1, .section2, .section3, .section4 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    margin: 100px 0;
+    margin: 40px 0;
     padding: 0 60px;
     a {
+        font-size: 14px;
         color: black;
         text-decoration: none;
     }
@@ -33,13 +47,12 @@ display: flex;
     font-size: 14px;
 }
 .section2 {
-    
-   a {
-    padding: 10px 30px;
-    margin: 10px;
-    background-color: white;
-    color: black;
-   }
+    border-left: 1px solid black;
+    a {
+        display: inline-block;
+        padding: 5px 0;
+        margin: 5px 0;
+    }
 }
 .section3 {
     border-left: 1px solid black;
@@ -70,6 +83,8 @@ display: flex;
 .bottom-footer {
     display: flex;
     justify-content: center;
+    // background-color: #22262a;
+    width: 100%;
     a {
         font-size: 14px;
         padding: 10px;
@@ -97,7 +112,7 @@ display: flex;
         .section1, .section2, .section3, .section4 {
             margin: 50px 0;
         }
-        .section3, .section4 {
+        .section2, .section3, .section4 {
             width: fit-content;
             margin-left: 60px;
         }
@@ -114,7 +129,7 @@ display: flex;
 export default function Nav(){
     return(
         <Wrapper>
-            <div>
+            <div className="wrap">
                 <div className="main-footer">
                     <div className="section1">
                         <Link to="/" className="logo"><StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /></Link>
@@ -129,7 +144,7 @@ export default function Nav(){
                         <a>Gatsby Partner</a>
                         <a>Google Partner</a>
                     </div> */}
-                    <div className="section3">
+                    <div className="section2">
                         <p><b>Navigation</b></p>
                         <Link to="/projects">Work</Link>
                         <Link to="/#services">Services</Link>
@@ -138,8 +153,8 @@ export default function Nav(){
                     </div>
                     <div className="section3">
                         <p><b>Contact</b></p>
-                        <a href="mailto:daniel@thoughtfulhq.com">daniel@thoughtfulhq.com</a>
-                        <a href="tel:+64220780868">+64 22 078 0868</a>
+                        <a href="mailto:daniel@thoughtfulhq.com">e: daniel@thoughtfulhq.com</a>
+                        <a href="tel:+64220780868">m: +64 22 078 0868</a>
                     </div>
                 </div>
                 <div className="bottom-footer">

@@ -3,10 +3,12 @@ import styled from "@emotion/styled"
 import ScrollAnimation from "./scrollAnimation"
 
 const Wrapper = styled.div`
+position: relative;
+z-index: 10;
 // filter: invert(100%);
 height: calc(100vh - 120px);
 display: flex;
-// background-color: black;
+background-color: white;
 color: black;
 justify-content: center;
 align-items: center;

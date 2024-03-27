@@ -13,12 +13,15 @@ import ManorPoster from "../../images/project-posters/ManorPoster.png"
 import captions from "file-loader!../../videos/captions.vtt"
 
 const Wrapper = styled.div`
+position: relative;
+z-index: 10;
 display: flex;
 flex-direction: column;
 justify-content: center;
+background-color: white;
 align-items: center;
-margin-top: 200px;
-margin-bottom: 200px;
+padding-top: 200px;
+padding-bottom: 200px;
 .animate-text {
     opacity: 0;
 }
@@ -44,6 +47,7 @@ h2 {
 }
 .project {
     transition: .3s;
+    background-color: white;
     // :hover {
     //     transform: scale(1.05);
     // }
