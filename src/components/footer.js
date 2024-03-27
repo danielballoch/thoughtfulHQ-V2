@@ -29,8 +29,8 @@ display: flex;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    margin: 40px 0;
-    padding: 0 60px;
+    margin: 40px 0px;
+    padding: 0 80px;
     a {
         font-size: 14px;
         color: black;
@@ -46,8 +46,13 @@ display: flex;
     padding: 10px;
     font-size: 14px;
 }
+.head {
+    font-size: 16px!important;
+    margin: 0!important;
+    padding: 10px 0!important;
+}
 .section2 {
-    border-left: 1px solid black;
+    border-left: 1px solid rgba(0,0,0,0.2);
     a {
         display: inline-block;
         padding: 5px 0;
@@ -55,7 +60,10 @@ display: flex;
     }
 }
 .section3 {
-    border-left: 1px solid black;
+    border-left: 1px solid rgba(0,0,0,0.2);
+    b {
+
+    }
     a {
         display: inline-block;
         padding: 5px 0;
@@ -145,14 +153,14 @@ export default function Nav(){
                         <a>Google Partner</a>
                     </div> */}
                     <div className="section2">
-                        <p><b>Navigation</b></p>
+                        <p className="head"><b>Navigation</b></p>
                         <Link to="/projects">Work</Link>
                         <Link to="/#services">Services</Link>
                         <Link to="/frequently-asked-questions">FAQ</Link>
-                        <Link to="/#contact">Contact</Link>
+                        {/* <Link to="/#contact">Contact</Link> */}
                     </div>
                     <div className="section3">
-                        <p><b>Contact</b></p>
+                        <Link to="/#contact" className="head"><b>Contact</b></Link>
                         <a href="mailto:daniel@thoughtfulhq.com">e: daniel@thoughtfulhq.com</a>
                         <a href="tel:+64220780868">m: +64 22 078 0868</a>
                     </div>
