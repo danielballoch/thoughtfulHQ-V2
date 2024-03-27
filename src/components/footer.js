@@ -38,7 +38,7 @@ display: flex;
     }
 }
 .section1 {
-    
+    padding-left: 0;
     width: 360px;
 }
 
@@ -61,9 +61,7 @@ display: flex;
 }
 .section3 {
     border-left: 1px solid rgba(0,0,0,0.2);
-    b {
-
-    }
+    padding-right: 0;
     a {
         display: inline-block;
         padding: 5px 0;
@@ -103,11 +101,14 @@ display: flex;
     }
 }
 @media(max-width: 1000px){
+    position: relative;
     .main-footer {
         flex-direction: column;
         width: 100vw;
         overflow: hidden;
         .section1 {
+            padding: 0 80px;
+            max-width: 340px;
             width: unset;
             .logo {
                 img {
@@ -127,6 +128,9 @@ display: flex;
     }
 }
 @media(max-width: 520px){
+    .section1 {
+        padding: 0 20px!important;
+    }
     .bottom-footer {
         flex-direction: column;
         align-items: center;
