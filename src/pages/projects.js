@@ -4,9 +4,16 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 
 const Wrapper = styled.div`
-max-width: 1110px;
+position: relative;
+
+.wrap {
+    margin: auto;
+    max-width: 1110px;
+}
+background-color: white;
 padding: 200px 0;
 margin: auto;
+z-index: 20;
 h1 {
     margin-bottom: 50px;
     padding: 0 20px;
@@ -58,65 +65,67 @@ export default function Projectspage(){
   return(
     <Layout>
         <Wrapper>
-            <h1>Explore Our Recent Client Projects</h1>
-            <div className="projects-wrapper">
-                <a target="_blank" href="https://www.glacier.nz/" className="project">
-                    {/* <div className="image"></div> */}
-                    <StaticImage className="image" src="../images/project-images/glacierinternational.jpg" alt="target" />
-                    <div className="content">
-                        <h3>Glacier International</h3>
-                        <p>Custom Ecommerce</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://www.centralaero.nz/" className="project">
-                    <StaticImage className="image" src="../images/project-images/centralaero.jpg" alt="target" />
-                    <div className="content">
-                        <h3>Central Aero</h3>
-                        <p>Custom Solution</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://manorrealty.co.nz/" className="project">
-                    <StaticImage className="image" src="../images/project-images/manorrealty.jpg" alt="target" />
-                    <div className="content">
-                        <h3>Manor Realty / Brander</h3>
-                        <p>Webflow Conversion + API Integration</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://www.motoschool.co.nz/" className="project">
-                    <StaticImage className="image" src="../images/project-images/motoschool.jpg" alt="target" />
-                    <div className="content">
-                        <h3>Motoschool</h3>
-                        <p>Custom Ecommerce</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://www.coastsweep.co.nz/" className="project">
-                    <StaticImage className="image" src="../images/project-images/coastsweep.jpg" alt="target" />
-                    <div className="content">
-                        <h3>Coast Sweep</h3>
-                        <p>Branding Website</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://www.robquin.co.nz/" className="project">
-                    <StaticImage className="image" src="../images/project-images/robquinlaw.jpg" alt="target" />
-                    <div className="content">
-                        <h3>Rob Quin Law</h3>
-                        <p>Branding Website</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://tech2u.nz/" className="project">
-                    <StaticImage className="image" src="../images/project-images/tech2u.jpg" alt="target" />
-                    <div className="content">
-                        <h3>Tech2U</h3>
-                        <p>Website Conversion + Hosting</p>
-                    </div>
-                </a>
-                <a target="_blank" href="https://www.raglanlandscapesupplies.co.nz/" className="project">
-                    <StaticImage className="image" src="../images/project-images/raglanlandscapesupplies.jpg" alt="target" />
-                    <div className="content">
-                        <h3>Raglan Landscape Supplies / Brander</h3>
-                        <p>Material Calculater Script</p>
-                    </div>
-                </a>
+            <div className="wrap">
+                <h1>Explore Our Recent Client Projects</h1>
+                <div className="projects-wrapper">
+                    <a target="_blank" href="https://www.glacier.nz/" className="project">
+                        {/* <div className="image"></div> */}
+                        <StaticImage className="image" src="../images/project-images/glacierinternational.jpg" alt="target" />
+                        <div className="content">
+                            <h3>Glacier International</h3>
+                            <p>Custom Ecommerce</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://www.centralaero.nz/" className="project">
+                        <StaticImage className="image" src="../images/project-images/centralaero.jpg" alt="target" />
+                        <div className="content">
+                            <h3>Central Aero</h3>
+                            <p>Custom Solution</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://manorrealty.co.nz/" className="project">
+                        <StaticImage className="image" src="../images/project-images/manorrealty.jpg" alt="target" />
+                        <div className="content">
+                            <h3>Manor Realty / Brander</h3>
+                            <p>Webflow Conversion + API Integration</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://www.motoschool.co.nz/" className="project">
+                        <StaticImage className="image" src="../images/project-images/motoschool.jpg" alt="target" />
+                        <div className="content">
+                            <h3>Motoschool</h3>
+                            <p>Custom Ecommerce</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://www.coastsweep.co.nz/" className="project">
+                        <StaticImage className="image" src="../images/project-images/coastsweep.jpg" alt="target" />
+                        <div className="content">
+                            <h3>Coast Sweep</h3>
+                            <p>Branding Website</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://www.robquin.co.nz/" className="project">
+                        <StaticImage className="image" src="../images/project-images/robquinlaw.jpg" alt="target" />
+                        <div className="content">
+                            <h3>Rob Quin Law</h3>
+                            <p>Branding Website</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://tech2u.nz/" className="project">
+                        <StaticImage className="image" src="../images/project-images/tech2u.jpg" alt="target" />
+                        <div className="content">
+                            <h3>Tech2U</h3>
+                            <p>Website Conversion + Hosting</p>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://www.raglanlandscapesupplies.co.nz/" className="project">
+                        <StaticImage className="image" src="../images/project-images/raglanlandscapesupplies.jpg" alt="target" />
+                        <div className="content">
+                            <h3>Raglan Landscape Supplies / Brander</h3>
+                            <p>Material Calculater Script</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </Wrapper>
     </Layout>

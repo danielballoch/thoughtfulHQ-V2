@@ -7,9 +7,15 @@ import { useGSAP } from '@gsap/react'
 
 const Wrapper = styled.div`
 padding: 200px 0;
-max-width: 800px;
-margin: auto;
+.wrap {
+  max-width: 800px;
+  margin: auto;
+}
 
+position: relative;
+background-color: white;
+margin: auto;
+z-index: 20;
 h1 {
   
   // text-align: center;
@@ -176,6 +182,7 @@ export default function FAQPage(){
   return(
     <Layout>
       <Wrapper ref={main}>
+        <div className="wrap">
         <h1>Frequently Asked Questions</h1>
         <p className="subtitle">It’s hard to know who to work with for any project. We want happy customers and are open about our process, pricing and capabilities. If there’s anything you're unsure about we'd love to have a chat.</p>
         <div className="faq"> 
@@ -184,6 +191,7 @@ export default function FAQPage(){
           ))}
         </div>
         {/* <SupportForm/> */}
+        </div>
       </Wrapper>
     </Layout>
   )
