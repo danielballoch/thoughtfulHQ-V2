@@ -127,7 +127,7 @@ export default function Services(){
                 {/* <div className="image"><StaticImage src="../../images/Motoschool.png" alt="A dinosaur" /></div> */}
                 <div className="content">
                     <h2>Branding Websites</h2>
-                    <p>Want to impress clients? Land more jobs? Create a <br/>home-base for future marketing?</p>
+                    <p>Want to impress clients, land more jobs, and create a <br/>home-base for future marketing with a new website?</p>
                     <p>We would love to get to know your business and create something which speaks your customers language, shows the services you provide, and makes it a no-brainer to get in touch with you.</p>
                     <a href="#contact">Learn More →</a>
                 </div>
