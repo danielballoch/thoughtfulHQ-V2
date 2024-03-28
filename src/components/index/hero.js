@@ -18,15 +18,15 @@ align-items: center;
     margin: 20px;
     padding-bottom: 20px;
     h1 {
-        font-size: 48px;
-        font-weight: 200;
+        font-size: 42px;
+        font-weight: 600;
         margin-top: 0;
         margin-bottom: 20px;
     }
     p {
-        max-width: 700px;
+        max-width: 800px;
         margin: auto;
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 `
@@ -35,8 +35,8 @@ export default function Hero(){
     return(
         <Wrapper >
             <div className="center-content">
-                <h1>Digital Solutions: Business Growth</h1>
-                <p>Helping New Zealand businesses look professional online → simplify workflows → and increase profits.</p>
+                <h1>Hamilton Based Website Development</h1>
+                <p>We help businesses: Look professional online → Simplify workflows → Increase profits.</p>
                 <ScrollAnimation/>
             </div>
         </Wrapper>
