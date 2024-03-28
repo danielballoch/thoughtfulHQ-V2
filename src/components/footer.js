@@ -145,7 +145,7 @@ export default function Nav(){
                 <div className="main-footer">
                     <div className="section1">
                         <Link to="/" className="logo"><StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /></Link>
-                        <div className="blurb">Helping New Zealand businesses look profesional online, simplify workflows, and increase profits.</div>
+                        <div className="blurb">Helping New Zealand businesses look professional online, simplify workflows, and increase profits.</div>
                         <div className="socials-div">
                             <a target="_blank" href="https://www.facebook.com/thoughtfulHQ"><StaticImage src="../images/fb-icon.svg" alt="A dinosaur" /></a>
                             <a target="_blank" href="https://www.instagram.com/thoughtful_hq/"><StaticImage src="../images/insta-icon.svg" alt="A dinosaur" /></a>
