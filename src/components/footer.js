@@ -1,18 +1,22 @@
-import React from "react"
+import React, { useRef } from "react"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
 
 const Wrapper = styled.div`
-position:sticky;
+// position:sticky;
 bottom: 0;
+transform: translateY(-304px);
 left: 0;
 z-index:0;
 display: flex;
 justify-content: center;
 // width: 100vw;
 // background-color: #0a2540;
-background-color: #f8f8f8;
+// background-color: #f8f8f8;
 color: black;
 background-color: #343a40;
 // color: white;
@@ -139,9 +143,32 @@ display: flex;
 `
 
 export default function Nav(){
+
+    const footer = useRef();
+    const { contextSafe } = useGSAP({scope: footer});
+    
+    useGSAP(
+        () => {
+            gsap.to("#main", {
+                opacity: 1,
+                background: 'white',
+                y: 0,
+              scrollTrigger: {
+                trigger: "#main",
+                start: '304px bottom',
+                end: '608px bottom',
+                scrub: true,
+              },
+            })
+        },
+        { scope: footer }
+    );
+
+
     return(
-        <Wrapper>
-            <div className="wrap">
+        <div ref={footer} style={{padding:"0"}}>
+        <Wrapper id="main">
+            <div className="wrap" >
                 <div className="main-footer">
                     <div className="section1">
                         <Link to="/" className="logo"><StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /></Link>
@@ -176,5 +203,6 @@ export default function Nav(){
                 </div>
             </div>
         </Wrapper>
+        </div>
     )
 }
