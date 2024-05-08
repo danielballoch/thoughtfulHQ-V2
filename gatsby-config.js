@@ -11,7 +11,8 @@ module.exports = {
     options: {
       "icon": "src/images/favicon.png"
     }
-  }, "gatsby-transformer-sharp", {
+  }, "gatsby-transformer-sharp",
+  {
     resolve: `gatsby-plugin-sharp`,
     options: {
       defaults: {

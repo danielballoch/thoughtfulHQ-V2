@@ -23,8 +23,11 @@ overflow: clip;
 // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#001F40", endColorstr="#000000", GradientType=1 );
 
 background: #8E0E00;  /* fallback for old browsers */
-background: -webkit-radial-gradient(circle, #635bff, #006bba);  /* Chrome 10-25, Safari 5.1-6 */
-background: radial-gradient(circle,  #635bff,#006bba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+// background: -webkit-radial-gradient(circle, #635bff, #006bba); 
+// background: radial-gradient(circle,  #635bff,#006bba); 
+
+background: -webkit-radial-gradient(circle, #766fff,#0060a6); 
+background: radial-gradient(circle,  #766fff,#0060a6); 
 
 
 
@@ -33,7 +36,7 @@ background: radial-gradient(circle,  #635bff,#006bba); /* W3C, IE 10+/ Edge, Fir
 width: 35%;
 height: fit-content;
 position: sticky;
-top: calc(50vh - 268.8px);
+top: calc(50vh - 271px - 10px);
 margin-right: 40px;
 margin-top: 50px;
 margin-bottom: 50px;
@@ -42,16 +45,33 @@ h2 {
     font-size: 45px;
     font-weight: 200;
 }
+p {
+    font-size: 20px;
+}
+.chew-text {
+    font-size: 20px;
+}
+.mobile-show {
+    display: none;
+}
 }
 .vcrop {
     transform: scale(1.01);
 }
 .content-right {
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #343a40;
+    // padding: 0 40px;
     width: 40%;
+    
     .content-large {
+        :first-of-type {
+            border-radius: 20px 20px 0 0;
+        }
         text-align: center;
         padding: 40px;
-        margin: 40px 0;
+        margin: 20px;
         background-color: #f8f8f8;
         h3 {
             font-size: 50px;
@@ -70,9 +90,12 @@ h2 {
         }
     }
     .content-small {
+        :last-of-type {
+            border-radius: 0 0 20px 20px;
+        }
         transform: scale(2) translateY(130px);
         background-color: #f8f8f8;
-        margin: 40px 0;
+        margin: 20px;
         height: 140px;
         display: flex;
         .image {
@@ -117,7 +140,19 @@ h2 {
         top: unset;
         width: 90%;
         margin: 0 40px;
-        padding: 20px;
+        padding: 40px 20px;
+        .mobile-hide {
+            display: none;
+        }
+        .mobile-show {
+            display: block;
+        }
+        h2 {
+            font-size: 55px;
+        }
+        p {
+            font-size: 16px;
+        }
     }
     .content-right {
         box-sizing: border-box;
@@ -128,6 +163,11 @@ h2 {
         video {
             object-fit: contain!important;
             height: auto;
+        }
+    }
+    .content-large {
+        h3 {
+            font-size: 40px!important;
         }
     }
     .content-small {
@@ -181,10 +221,11 @@ export default function Features(){
     return(
         <Wrapper ref={featurebox}>
             <div className="content-left">
-                <h2>Sick of feeling like just another number??</h2>
-                <p><b>We're a small business and don't bite off more than we can chew.</b></p>
-                <p>That means if you work with us:</p>
+                <h2>Sick of<br className="mobile-show"/> feeling like <br /><i>just another number??</i></h2>
+                <p className="chew-text"><b>We're a small business and don't bite off more <br className="mobile-hide"/>than we can chew.</b></p>
+                
                 <br></br>
+                <p><b>That means, if you work with us:</b></p>
                 <p>1. Your project will be a <b>priority.</b></p>
                 <p>2. We’ll offer <b>fair and competitive pricing.</b></p>
                 <p>3. You'll own and have full control of your website.</p>
