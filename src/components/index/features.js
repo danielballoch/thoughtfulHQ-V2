@@ -66,6 +66,10 @@ p {
     width: 40%;
     
     .content-large {
+
+        :nth-of-type(3) {
+            border-radius: 0 0 20px 20px;
+        }
         :first-of-type {
             border-radius: 20px 20px 0 0;
         }
@@ -90,9 +94,7 @@ p {
         }
     }
     .content-small {
-        :last-of-type {
-            border-radius: 0 0 20px 20px;
-        }
+        border-radius: 20px;
         transform: scale(2) translateY(130px);
         background-color: #f8f8f8;
         margin: 20px;
