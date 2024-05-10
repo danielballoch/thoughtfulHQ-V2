@@ -1,32 +1,51 @@
 import React from "react"
 import styled from "@emotion/styled"
 import ScrollAnimation from "./scrollAnimation"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Wrapper = styled.div`
 position: relative;
 z-index: 10;
-// filter: invert(100%);
-height: calc(100vh - 120px);
+min-height: 100vh;
 display: flex;
 background-color: white;
 color: black;
 justify-content: center;
 align-items: center;
-.center-content {
-    max-width: 800px;
-    text-align: center;
-    margin: 20px;
-    padding-bottom: 20px;
+.content-left {
+width: 50%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+.text {
+    max-width: 500px;
+    
     h1 {
-        font-size: 42px;
-        font-weight: 600;
-        margin-top: 0;
-        margin-bottom: 20px;
+        font-size: 55px;
+        font-weight: 300;
+        color: #222;
     }
     p {
-        max-width: 800px;
-        margin: auto;
-        font-size: 18px;
+        font-size: 24px;
+        color: #222;
+    }
+}
+}
+.content-right {
+    width: 50%;
+    height: 100%;
+}
+@media(max-width: 1060px){
+    display: grid;
+    .content-left {
+        margin-top: 100px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .content-right {
+        width: 100%;
     }
 }
 `
@@ -34,11 +53,13 @@ align-items: center;
 export default function Hero(){
     return(
         <Wrapper >
-            <div className="center-content">
-                <h1>Hamilton Based Website Development</h1>
-                <p>We help businesses: Look professional online → Simplify workflows → Increase profits.</p>
-                <ScrollAnimation/>
+            <div className="content-left"> 
+                <div className="text">
+                    <h1>New Zealand Based Digital Agency</h1>
+                    <p>We’re dedicated to helping good businesses: look <b>professional</b> online, <b>simplify workflows,</b> and sustainably <b>increase profits.</b></p>
+                </div>  
             </div>
+            <StaticImage className="content-right" src="../../images/manorrealty.jpg" alt="project image" />
         </Wrapper>
     )
 }

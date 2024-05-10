@@ -10,7 +10,7 @@ z-index: 10;
 display: flex;
 padding: 200px 0;
 background-color: white;
-// background-color: lightgrey;
+// background-color: #282617;
 justify-content: center;
 align-items: center;
 @keyframes gradient {
