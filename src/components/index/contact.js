@@ -37,7 +37,7 @@ align-items: center;
         display: block;
         box-sizing: border-box;
         text-align: center;
-        border-radius: 20px;
+        border-radius: 15px;
         text-decoration: none;
     } 
 }

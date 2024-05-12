@@ -2,16 +2,23 @@ import React, {useState} from "react"
 import styled from "@emotion/styled"
 
 const Wrapper = styled.div`
-display: none;
+// display: none;
+transition: .3s;
+:hover {
+  background: #635bff;
+}
 margin: 0 20px;
-// background-color: yellow;
-height: 40px;
+padding: 0 10px;
+border-radius: 15px;
+margin-right: 10%;
+background-color: #000000;
+height: 48px;
 z-index: 200;
 box-sizing: border-box;
   .burger {
     display: flex;
     outline: none;
-    height: 40px;
+    height: 48px;
     width: 30px;
     border: 0px;
     padding: 0px;
@@ -29,26 +36,27 @@ box-sizing: border-box;
     border-radius: 40px;
     position: absolute;
     background: #1a1a1a;
+    background: white;
     transition: all 250ms ease-out;
     will-change: transform;
   }
   
   .burger:before {
-    transform: translateY(13px);
+    transform: translateY(15px);
   }
   
   .burger:after {
-    transform: translateY(27px);
+    transform: translateY(29px);
   }
   
   // line transition
   
   .active.burger:before {
-    transform: translateY(20px) rotate(45deg);
+    transform: translateY(22px) rotate(45deg);
   }
   
   .active.burger:after {
-    transform: translateY(20px) rotate(-45deg);
+    transform: translateY(22px) rotate(-45deg);
   } 
 @media(max-width: 1060px){
   display: block;

@@ -5,20 +5,20 @@ import { StaticImage } from "gatsby-plugin-image"
 import Hamburger from "../components/hamburger"
 
 const Wrapper = styled.div`
-// position: fixed;
+position: relative;
 // overflow-x: hidden;
-z-index: 200;
+z-index: 500;
 .navbar {
     top: 0;
     left: 0;
     right: 0;
     z-index: 300;
     position: absolute;
-    background-color: white;
+    // background-color: rgba(255,255,255,.9);
     display: flex;
     // width: 100vw;
-    justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    justify-content: flex-end;
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     z-index: 200;
     min-height: 80px;
     // height: 100vh;
@@ -26,8 +26,10 @@ z-index: 200;
     align-items: center;
     box-sizing: border-box;
     .logo {
+        justify-self: flex-start;
         z-index: 200;
-        margin-right: 100px;
+        margin-left: 10%;
+        margin-right: auto;
         text-align: center;
         width: 260px;
         img {
@@ -47,6 +49,7 @@ z-index: 200;
         }
     }
     .book-button {
+        // margin-right: 10%;
         margin-left: 100px;
         width: 260px;
         a {
@@ -59,7 +62,7 @@ z-index: 200;
             display: block;
             box-sizing: border-box;
             text-align: center;
-            border-radius: 20px;
+            border-radius: 15px;
             text-decoration: none;
             transition: .3s;
             :hover {
@@ -69,47 +72,53 @@ z-index: 200;
     }
 }
 .sidedrawer {
- display: none;   
+    max-width: 580px;
+    transition: .3s;
+    position: fixed;
+    width: 70vw;
+    height: 100vh;
+    z-index: 200;
+    background-color: white;
+    top: 0px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 200px 40px;
+    box-sizing: border-box;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    a {
+        font-size: 30px;
+        padding: 10px;
+        color: black;
+        text-decoration: none;
+    }
 }
-@media(max-width: 1060px){
-    .navbar {
-        position: fixed;
-        justify-content: space-around;
-        width: 100vw;
-        z-index: 500;
-        .middle-content, .book-button {
-            display: none;
-        }
-        .logo {
-            margin-right: unset;
-            margin: 0 20px;
-        }
+.drawertoggle {
+    transform: translateX(100%);
+    box-shadow: unset!important;
+}
+.close-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    // width: 300px;
+    padding: 0!important;
+    p {
+        padding: 0;
+        margin: 0;
+        width: 100px;
     }
-    .drawertoggle {
-        transform: translateX(100%);
-        box-shadow: unset!important;
+    top: 10px;
+    right: calc(10vw - 20px);
+    :hover {
+        cursor: pointer;
     }
-    .sidedrawer {
-        transition: .3s;
-        position: fixed;
-        width: 70vw;
-        height: 100vh;
-        z-index: 200;
-        background-color: white;
-        top: 0px;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        padding: 200px 40px;
-        box-sizing: border-box;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-        // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-        a {
-            font-size: 30px;
-            padding: 10px;
-            color: black;
-            text-decoration: none;
-        }
+}
+@media(max-width: 880px){
+    .book-button {
+        display: none;
     }
 }
 `
@@ -125,17 +134,18 @@ export default function Nav(){
                     <StaticImage src="../images/thoughtfulHQlogo.webp" alt="thoughtfulHQ" />
                     {/* ORDINARY DIGITAL &copy; */}
                 </Link>
-                <div className="middle-content">
+                {/* <div className="middle-content">
                     <Link to="/projects">Work</Link>
                     <Link to="/#services">Services</Link>
                     <Link to="/frequently-asked-questions">FAQ</Link>
-                </div>
+                </div> */}
                 <div className="book-button">
                     <a target="_blank" href="https://calendly.com/thoughtfulhq/30min">Book A Free Discovery Call</a>
                 </div>
                 <Hamburger setActive={() => setActive(!active)} active={active}/>
             </div>
             <div className={active? "sidedrawer" : "sidedrawer drawertoggle"}>
+                <a className="close-btn" onClick={() => setActive(!active)}><p>Close</p><Hamburger setActive={() => setActive(!active)} active={active}/></a>
                 <Link to="/#top" onClick={() => setActive(!active)}>Home</Link>
                 <Link to="/projects">Work</Link>
                 <Link to="/#services" onClick={() => setActive(!active)}>Services</Link>

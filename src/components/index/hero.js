@@ -34,7 +34,7 @@ align-items: center;
 }
 .content-right {
     width: 50%;
-    height: 100%;
+    height: 100vh;
 }
 @media(max-width: 1060px){
     display: grid;
@@ -46,6 +46,7 @@ align-items: center;
     }
     .content-right {
         width: 100%;
+        height: 100%;
     }
 }
 `

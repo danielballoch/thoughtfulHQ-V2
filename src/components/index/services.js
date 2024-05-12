@@ -8,7 +8,7 @@ const Wrapper = styled.div`
 position: relative;
 z-index: 10;
 display: flex;
-padding: 200px 0;
+padding: 200px 0 100px 0;
 background-color: white;
 // background-color: #282617;
 justify-content: center;
@@ -25,8 +25,11 @@ align-items: center;
 	}
 }
 .service-box {
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0 20px;
+    height: 400px;
     opacity: 0;
-    background-color: #f8f8f8;
+    // background-color: #f8f8f8;
     color: black;
     text-decoration: none;
     margin: 0 10px;
@@ -39,15 +42,29 @@ align-items: center;
         padding: 4px;
     }
     .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         min-height: 290px;
         max-width: 440px;
-        padding: 20px;
+        padding: 40px 20px;
         box-sizing: border-box;
+        h2 {
+            font-weight: 200;
+            // text-decoration: underline;
+            // border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
         p {
             font-size: 15px;
+            :first-of-type {
+                padding-top: 20px;
+            }
+            :last-of-type {
+                padding-bottom: 20px;
+            }
         }
         a {
-            font-weight: bold;
+            // font-weight: bold;
             font-size: 17px;
             display: inline-block;
             // background-color: #D9D9D9;
