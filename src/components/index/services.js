@@ -27,7 +27,7 @@ align-items: center;
 .service-box {
     border: 1px solid rgba(0,0,0,0.2);
     padding: 0 20px;
-    height: 400px;
+    min-height: 400px;
     opacity: 0;
     // background-color: #f8f8f8;
     color: black;
