@@ -152,7 +152,7 @@ export default function Services(){
             <a href="#contact" className="service-box service2" onMouseEnter={() => onHoverGood(".service2")} onMouseLeave={() => onLeaveGood(".service2")}>
                 {/* <div className="image"><StaticImage src="../../images/Glacier.png" alt="A dinosaur" /></div> */}
                 <div className="content">
-                    <h2>Eccomerce Stores / Sell Online </h2>
+                    <h2>Online Stores / Eccomerce</h2>
                     <p>We can create an amazing online store on a platform of your choice or using custom code. This includes features like product search, updatable products and stock, simple and secure payment gateways etc.</p>
                     <a href="#contact">Learn More →</a>
                 </div>
