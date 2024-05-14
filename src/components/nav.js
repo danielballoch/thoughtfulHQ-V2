@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 import Hamburger from "../components/hamburger"
+import backgroundimg from "../images/favicon.png"
+
 
 const Wrapper = styled.div`
 position: relative;
@@ -82,13 +84,28 @@ z-index: 500;
     top: 0px;
     right: 0;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 200px 40px;
     box-sizing: border-box;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    // ::before {
+    //     content: "";
+    //     background-image: url(${backgroundimg});
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     position: absolute;
+    //     top: 90px;
+    //     right: 20px;
+    //     bottom: 10px;
+    //     left: 20px;
+    //     opacity: 0.04;
+    // }
+    
     // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     a {
-        font-size: 30px;
+        z-index: 100;
+        font-size: 50px;
         padding: 10px;
         color: black;
         text-decoration: none;
@@ -105,6 +122,7 @@ z-index: 500;
     position: absolute;
     // width: 300px;
     padding: 0!important;
+    font-size: 30px!important;
     p {
         padding: 0;
         margin: 0;
@@ -114,10 +132,29 @@ z-index: 500;
     right: calc(10vw - 20px);
     :hover {
         cursor: pointer;
+        .hamburger {
+            background-color: #635bff!important;
+        }
     }
+}
+.phone {
+    font-size: 20px!important;
+    position: absolute;
+    bottom: 0;
+}
+.email {
+    font-size: 20px!important;
+    position: absolute;
+    bottom: 0;
+    right: 40px;
 }
 @media(max-width: 880px){
     .book-button {
+        display: none;
+    }
+}
+@media(max-width: 755px){
+    .email {
         display: none;
     }
 }
@@ -151,6 +188,8 @@ export default function Nav(){
                 <Link to="/#services" onClick={() => setActive(!active)}>Services</Link>
                 <Link to="/frequently-asked-questions">FAQ</Link>
                 <Link to="/#contact" onClick={() => setActive(!active)}>Contact</Link>
+                <a className="email" href="mailto:daniel@thoughtfulhq.com">daniel@thoughtfulhq.com</a>
+                <a className="phone" href="tel:+64220780868">Call +64 22 078 0868</a>
             </div>
         </Wrapper>
     )
