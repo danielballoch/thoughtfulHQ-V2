@@ -1,9 +1,11 @@
-import React, {useState} from "react"
+import React, { useState, useRef } from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 import Hamburger from "../components/hamburger"
 import backgroundimg from "../images/favicon.png"
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 
 const Wrapper = styled.div`
@@ -164,8 +166,30 @@ z-index: 500;
 
 export default function Nav(){
     const [active, setActive] = useState(false)
+
+
+    // const navref = useRef();
+
+    // useGSAP(
+    //     () => {
+    //         gsap.to(".sidedrawer", {
+    //             scrollTrigger: {
+    //               trigger: ".sidedrawer",
+    //               endTrigger: "max",
+    //               pin: true,
+    //               pinSpacing: false,
+    //               markers: true,
+    //               scrub: true
+    //             },
+    //         })
+    //     },
+    //     { scope: navref }
+    // );
+
     return(
-        <Wrapper id="top">
+        <Wrapper id="top" 
+        // ref={navref}
+        >
             <div className="navbar">
                 <Link to="/#top" className="logo">
                     <StaticImage src="../images/thoughtfulHQlogo.webp" alt="thoughtfulHQ" />

@@ -187,6 +187,10 @@ p {
 
 export default function Features(){
     const featurebox = useRef();
+
+    let mm = gsap.matchMedia();
+   
+
     useGSAP(
         () => {
           let boxes = gsap.utils.toArray('.image');
@@ -217,6 +221,19 @@ export default function Features(){
               },
             });
           });
+          mm.add("(min-width: 900px)", () => {
+
+            gsap.to(".content-left", {
+                scrollTrigger: {
+                  trigger: ".content-left",
+                  start: '50% 38%',
+                  end: '1800px 50%',
+                  pin: true,
+                  scrub: true
+                },
+              })
+
+          })
         },
         { scope: featurebox }
     );

@@ -26,7 +26,7 @@
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
-    "gsap": "^3.12.5",
+    "gsap": "npm:@gsap/business@^3.12.5",
     "node-fetch": "^2.7.0",
     "postmark": "^4.0.2",
     "react": "^18.2.0",
