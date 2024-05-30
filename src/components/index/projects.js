@@ -34,7 +34,7 @@ h2 {
     padding: 20px 0; 
     text-align: center;
     max-width: 360px;
-    margin-top: 20px;
+    margin-top: 40px;
     width: 80vw;
     color: white;
     text-decoration: none;
@@ -44,10 +44,10 @@ h2 {
 }
 .project-toggle {
     transform: scale(1.04);
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px!important;
+    box-shadow: rgb(38, 57, 77) 0px 35px 40px -10px, rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px!important;
 }
 .project {
-    transition: .3s;
+    transition: 1s;
     background-color: white;
     // :hover {
     //     transform: scale(1.05);

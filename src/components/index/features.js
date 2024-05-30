@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useEffect, useRef } from "react"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 import ResponsiveVideo from "../../videos/res.mp4"
@@ -66,13 +66,13 @@ p {
     width: 40%;
     
     .content-large {
-
-        :nth-of-type(3) {
-            border-radius: 0 0 20px 20px;
-        }
-        :first-of-type {
-            border-radius: 20px 20px 0 0;
-        }
+        border-radius: 20px;
+        // :nth-of-type(3) {
+        //     border-radius: 0 0 20px 20px;
+        // }
+        // :first-of-type {
+        //     border-radius: 20px 20px 0 0;
+        // }
         text-align: center;
         padding: 40px;
         margin: 20px;
@@ -190,9 +190,13 @@ export default function Features(){
 
     let mm = gsap.matchMedia();
    
+    useEffect(() => {
+        console.log("update??")
+    },[])
 
     useGSAP(
         () => {
+            console.log("hello")
           let boxes = gsap.utils.toArray('.image');
           const boxAdd = gsap.utils.toArray('.content-small')
           boxes.forEach((box) => {

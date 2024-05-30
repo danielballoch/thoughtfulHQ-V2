@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const Wrapper = styled.div`
 @media(max-width: 1060px){
     flex-direction: column;
-    .content-left {
+    .hero-content-left {
         margin-top: 100px;
         width: 100%!important;
         padding: 20px;
@@ -25,7 +25,7 @@ background-color: white;
 color: black;
 justify-content: center;
 align-items: center;
-.content-left {
+.hero-content-left {
 width: 50%;
 height: 100%;
 display: flex;
@@ -156,7 +156,7 @@ export default function Hero(){
 
     return(
         <Wrapper >
-            <div className="content-left"> 
+            <div className="hero-content-left"> 
                 <div className="text">
                     <h1>New Zealand Based Digital Agency</h1>
                     <p>We’re dedicated to helping good businesses: look <b>professional</b> online, <b>simplify workflows,</b> and sustainably <b>increase profits.</b></p>

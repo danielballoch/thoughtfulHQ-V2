@@ -17,7 +17,8 @@ background-color: white;
 margin: auto;
 z-index: 20;
 h1 {
-  
+  font-weight: 100;
+  font-size: 55px;
   // text-align: center;
   padding-left: 30px;
 }
@@ -150,7 +151,7 @@ const Questions = [
   }
 ]
 
-gsap.registerPlugin(useGSAP);
+// gsap.registerPlugin(useGSAP, Scroll);
 
 const Content = ({question, answer,i}) => {
   const [toggle, setToggle] = useState(true);

@@ -15,9 +15,15 @@ padding: 200px 0;
 margin: auto;
 z-index: 20;
 h1 {
+    font-size: 55px;
+    font-weight: 100;
     margin-bottom: 50px;
     padding: 0 20px;
     text-align: center;
+}
+h3 {
+    font-size: 22px;
+    margin: 0;
 }
 .projects-wrapper {
     display: flex;
@@ -57,6 +63,11 @@ h1 {
 @media(max-width: 1110px){
     .projects-wrapper {
         justify-content: center;
+    }
+}
+@media(max-width: 370px){
+    h1 {
+        font-size: 40px;
     }
 }
 `

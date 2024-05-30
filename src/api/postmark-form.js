@@ -5,7 +5,7 @@ import fetch from "node-fetch"
 // Send an email:
 var client = new postmark.ServerClient(process.env.POSTMARK_AUTH);
 
-//validate token through google
+// validate token through google
 async function validateHuman(token){
   // console.log("validate human running")
 const secret = process.env.GATSBY_RECAPTCHA_SECRET;
@@ -37,7 +37,8 @@ export default async(req, res) => {
       "ReplyTo": "daniel@thoughtfulhq.com",
       "TemplateId" : 34813832,
       "TemplateModel": {
-        "name": req.body.name,
+        "first": req.body.first,
+        "last": req.body.last,
         "email": req.body.email,
         "phone": req.body.phone,
         "message": req.body.message

@@ -7,10 +7,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 
 const Wrapper = styled.div`
-// position:sticky;
-bottom: 0;
-transform: translateY(-304px);
-left: 0;
+// position: absolute;
+// bottom: 0;
+// transform: translateY(-304px);
+// left: 0;
 z-index:0;
 display: flex;
 justify-content: center;
@@ -18,7 +18,7 @@ justify-content: center;
 // background-color: #0a2540;
 // background-color: #f8f8f8;
 color: black;
-background-color: #343a40;
+// background-color: #343a40;
 // color: white;
 .wrap {
     width: 100%;
@@ -145,24 +145,25 @@ display: flex;
 export default function Nav(){
 
     const footer = useRef();
-    const { contextSafe } = useGSAP({scope: footer});
+    // const { contextSafe } = useGSAP({scope: footer});
     
-    useGSAP(
-        () => {
-            gsap.to("#main", {
-                opacity: 1,
-                background: 'white',
-                y: 0,
-              scrollTrigger: {
-                trigger: "#main",
-                start: '304px bottom',
-                end: '608px bottom',
-                scrub: true,
-              },
-            })
-        },
-        { scope: footer }
-    );
+    // useGSAP(
+    //     () => {
+    //         gsap.to("#main", {
+    //             opacity: 1,
+    //             background: 'white',
+    //             y: "end",
+    //           scrollTrigger: {
+    //             trigger: "#main",
+    //             pin: true,
+    //             start: '304px bottom',
+    //             end: '608px bottom',
+    //             scrub: true,
+    //           },
+    //         })
+    //     },
+    //     { scope: footer }
+    // );
 
 
     return(
@@ -186,14 +187,14 @@ export default function Nav(){
                     <div className="section2">
                         <p className="head"><b>Navigation</b></p>
                         <Link to="/projects">Work</Link>
-                        <Link to="/#services">Services</Link>
+                        {/* <Link to="/#services">Services</Link> */}
                         <Link to="/frequently-asked-questions">FAQ</Link>
-                        {/* <Link to="/#contact">Contact</Link> */}
+                        <Link to="/contact">Contact</Link>
                     </div>
                     <div className="section3">
-                        <Link to="/#contact" className="head"><b>Contact</b></Link>
-                        <a href="mailto:daniel@thoughtfulhq.com">e: daniel@thoughtfulhq.com</a>
-                        <a href="tel:+64220780868">m: +64 22 078 0868</a>
+                        <Link to="/contact" className="head"><b>Contact</b></Link>
+                        <a href="mailto:daniel@thoughtfulhq.com">Email: daniel@thoughtfulhq.com</a>
+                        <a href="tel:+64220780868">Phone: +64 22 078 0868</a>
                     </div>
                 </div>
                 <div className="bottom-footer">

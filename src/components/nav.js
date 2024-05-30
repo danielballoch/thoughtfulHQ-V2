@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react"
-import { Link } from "gatsby"
+import React, { useState, useRef, useEffect } from "react"
+import { Link, navigate } from "gatsby"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 import Hamburger from "../components/hamburger"
@@ -8,15 +8,18 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 
+
 const Wrapper = styled.div`
-position: relative;
-// overflow-x: hidden;
+// position: absolute;
+// height: 100vh;
+width: 100vw;
+overflow-x: hidden;
 z-index: 500;
 .navbar {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 300;
+    z-index: 400!important;
     position: absolute;
     // background-color: rgba(255,255,255,.9);
     display: flex;
@@ -77,14 +80,14 @@ z-index: 500;
 }
 .sidedrawer {
     max-width: 580px;
-    transition: .3s;
-    position: fixed;
+    // transition: .3s;
+    position: absolute;
     width: 70vw;
     height: 100vh;
-    z-index: 200;
+    z-index: 400;
     background-color: white;
-    top: 0px;
-    right: 0;
+    // top: 0;
+    right: -80%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -113,10 +116,11 @@ z-index: 500;
         text-decoration: none;
     }
 }
-.drawertoggle {
-    transform: translateX(100%);
-    box-shadow: unset!important;
-}
+// .drawertoggle {
+//     transform: translateX(100%);
+//     right: 0;
+//     box-shadow: unset!important;
+// }
 .close-btn {
     display: flex;
     justify-content: flex-end;
@@ -164,34 +168,58 @@ z-index: 500;
 
 
 
-export default function Nav(){
+export default function Nav({smoother}){
     const [active, setActive] = useState(false)
 
+    // if(window){ console.log("location: ", window.location.hash)}
+   
 
-    // const navref = useRef();
+    const navref = useRef();
+    const { contextSafe } = useGSAP({ scope: navref });
 
-    // useGSAP(
-    //     () => {
-    //         gsap.to(".sidedrawer", {
-    //             scrollTrigger: {
-    //               trigger: ".sidedrawer",
-    //               endTrigger: "max",
-    //               pin: true,
-    //               pinSpacing: false,
-    //               markers: true,
-    //               scrub: true
-    //             },
-    //         })
-    //     },
-    //     { scope: navref }
-    // );
+    const onClickGood = contextSafe(() => {
+        if(!active){
+            setActive(!active);
+            gsap.to('.sidedrawer', { x: "-80vw" });
+        } else {
+            setActive(!active);
+            gsap.to('.sidedrawer', { x: 0 });
+        }
+        
+    });
+
+    // useEffect(()=>{
+    //     console.log("is the navigation running?")
+    //     let location = window.location.hash
+    //     console.log(location)
+    //     if (location === "#contact"){
+    //         smoother.scrollTo("#contact", true)
+    //     }
+        
+    // },[])
+
+    useGSAP(
+        () => {
+            gsap.to(".sidedrawer", {
+                y: 0,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: ".sidedrawer",
+                  start: 0,
+                  end: "max",
+                  pin: true
+                },
+            })
+        },
+        { scope: navref }
+    );
 
     return(
         <Wrapper id="top" 
-        // ref={navref}
+        ref={navref}
         >
             <div className="navbar">
-                <Link to="/#top" className="logo">
+                <Link to="/" className="logo">
                     <StaticImage src="../images/thoughtfulHQlogo.webp" alt="thoughtfulHQ" />
                     {/* ORDINARY DIGITAL &copy; */}
                 </Link>
@@ -201,17 +229,20 @@ export default function Nav(){
                     <Link to="/frequently-asked-questions">FAQ</Link>
                 </div> */}
                 <div className="book-button">
-                    <a target="_blank" href="https://calendly.com/thoughtfulhq/30min">Book A Free Discovery Call</a>
+                    {/* <a target="_blank" href="https://calendly.com/thoughtfulhq/30min">Book A Free Discovery Call</a> */}
+                    <a href="/contact">Book Discovery Call</a>
                 </div>
-                <Hamburger setActive={() => setActive(!active)} active={active}/>
+                {/* <Hamburger setActive={() => setActive(!active)} active={active}/> */}
+                <Hamburger setActive={() => onClickGood()} active={active}/>
             </div>
-            <div className={active? "sidedrawer" : "sidedrawer drawertoggle"}>
-                <a className="close-btn" onClick={() => setActive(!active)}><p>Close</p><Hamburger setActive={() => setActive(!active)} active={active}/></a>
-                <Link to="/#top" onClick={() => setActive(!active)}>Home</Link>
-                <Link to="/projects">Work</Link>
-                <Link to="/#services" onClick={() => setActive(!active)}>Services</Link>
-                <Link to="/frequently-asked-questions">FAQ</Link>
-                <Link to="/#contact" onClick={() => setActive(!active)}>Contact</Link>
+            {/* <div className={active? "sidedrawer" : "sidedrawer drawertoggle"}> */}
+            <div className="sidedrawer">
+                <a className="close-btn" onClick={() => onClickGood()}><p>Close</p><Hamburger setActive={() => setActive(!active)} active={active}/></a>
+                <Link to="/" onClick={() => onClickGood()}>Home</Link>
+                <Link to="/projects" onClick={() => onClickGood()}>Work</Link>
+                {/* <Link to="/" onClick={() => {onClickGood()}}>Services</Link> */}
+                <Link to="/frequently-asked-questions" onClick={() => onClickGood()}>FAQ</Link>
+                <Link to="/contact" onClick={() => onClickGood()}>Contact</Link>
                 <a className="email" href="mailto:daniel@thoughtfulhq.com">daniel@thoughtfulhq.com</a>
                 <a className="phone" href="tel:+64220780868">Call +64 22 078 0868</a>
             </div>
