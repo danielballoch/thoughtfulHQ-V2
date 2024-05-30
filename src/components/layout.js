@@ -5,8 +5,14 @@ import gsap from 'gsap'
 import { ScrollSmoother } from "gsap/ScrollSmoother"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
+import styled from "@emotion/styled"
 
-
+const Wrapper = styled.div`
+#smooth-wrapper {
+  max-width: 100vw;
+  overflow-x: clip;
+}
+`
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
@@ -29,7 +35,7 @@ export default function Layout({children}){
 
 
   return (
-    <div>
+    <Wrapper>
     <div id="smooth-wrapper" ref={main}>
       <div id="smooth-content">
         {/* <Navbar smoother={smoother}/> */}
@@ -38,6 +44,6 @@ export default function Layout({children}){
         <Footer/>
       </div>
     </div>
-    </div>
+    </Wrapper>
   )
 }
