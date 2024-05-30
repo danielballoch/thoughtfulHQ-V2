@@ -13,13 +13,13 @@ const Wrapper = styled.div`
 // position: absolute;
 // height: 100vh;
 width: 100vw;
-overflow-x: hidden;
+// overflow-x: hidden;
 z-index: 500;
 .navbar {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 400!important;
+    z-index: 500!important;
     position: absolute;
     // background-color: rgba(255,255,255,.9);
     display: flex;
@@ -79,15 +79,20 @@ z-index: 500;
     }
 }
 .sidedrawer {
-    max-width: 580px;
+    width: 600px;
+    right: -600px;
+    // width: 600px;
+    // right: -600px;
+    // max-width: 580px;
     // transition: .3s;
     position: absolute;
-    width: 70vw;
+    
     height: 100vh;
-    z-index: 400;
+    z-index: 500;
     background-color: white;
+    
     // top: 0;
-    right: -80%;
+    // right: -80%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -116,11 +121,11 @@ z-index: 500;
         text-decoration: none;
     }
 }
-// .drawertoggle {
-//     transform: translateX(100%);
-//     right: 0;
-//     box-shadow: unset!important;
-// }
+.pin-spacer {
+    display: none;
+    width: 0;
+    // z-index: 100!important;
+}
 .close-btn {
     display: flex;
     justify-content: flex-end;
@@ -164,6 +169,15 @@ z-index: 500;
         display: none;
     }
 }
+@media(max-width: 1050px){
+    .sidedrawer {
+        width: 300px;
+        right: -300px;
+    }
+    .email {
+        display: none;
+    }
+}
 `
 
 
@@ -177,10 +191,22 @@ export default function Nav({smoother}){
     const navref = useRef();
     const { contextSafe } = useGSAP({ scope: navref });
 
+
+    let mm = gsap.matchMedia();
+
+   
+
     const onClickGood = contextSafe(() => {
         if(!active){
             setActive(!active);
-            gsap.to('.sidedrawer', { x: "-80vw" });
+           
+            mm.add("(min-width: 1050px)", () => {
+                gsap.to('.sidedrawer', { x: "-600px" });
+            });
+              
+            mm.add("(max-width: 1049px)", () => {
+                gsap.to('.sidedrawer', { x: "-300px" });
+            });
         } else {
             setActive(!active);
             gsap.to('.sidedrawer', { x: 0 });
@@ -236,7 +262,7 @@ export default function Nav({smoother}){
                 <Hamburger setActive={() => onClickGood()} active={active}/>
             </div>
             {/* <div className={active? "sidedrawer" : "sidedrawer drawertoggle"}> */}
-            <div className="sidedrawer">
+            <div className={active? "sidedrawer" : "sidedrawer toggle"}>
                 <a className="close-btn" onClick={() => onClickGood()}><p>Close</p><Hamburger setActive={() => setActive(!active)} active={active}/></a>
                 <Link to="/" onClick={() => onClickGood()}>Home</Link>
                 <Link to="/projects" onClick={() => onClickGood()}>Work</Link>
