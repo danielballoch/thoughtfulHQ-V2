@@ -16,6 +16,7 @@ width: 100vw;
 overflow-x: clip;
 z-index: 500;
 .navbar {
+    overflow-x: clip;
     top: 0;
     left: 0;
     right: 0;
