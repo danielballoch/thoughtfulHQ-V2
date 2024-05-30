@@ -1,4 +1,5 @@
 import React, { useRef } from "react"
+import { Link } from 'gatsby'
 import styled from "@emotion/styled"
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -140,32 +141,32 @@ export default function Services(){
 
     return(
         <Wrapper id="services" ref={main}>
-            <a href="#contact" className="service-box service1" onMouseEnter={() => onHoverGood(".service1")} onMouseLeave={() => onLeaveGood(".service1")}>
+            <Link to="/contact" className="service-box service1" onMouseEnter={() => onHoverGood(".service1")} onMouseLeave={() => onLeaveGood(".service1")}>
                 {/* <div className="image"><StaticImage src="../../images/Motoschool.png" alt="A dinosaur" /></div> */}
                 <div className="content">
                     <h2>Branding Websites</h2>
                     <p>Want to impress clients, land more jobs, and create a <br/>home-base for future marketing with a new website?</p>
                     <p>We would love to get to know your business and create something which speaks your customers language, shows the services you provide, and makes it a no-brainer to get in touch with you.</p>
-                    <a href="#contact">Learn More →</a>
+                    <a href="/contact">Learn More →</a>
                 </div>
-            </a>
-            <a href="#contact" className="service-box service2" onMouseEnter={() => onHoverGood(".service2")} onMouseLeave={() => onLeaveGood(".service2")}>
+            </Link>
+            <Link to="/contact" className="service-box service2" onMouseEnter={() => onHoverGood(".service2")} onMouseLeave={() => onLeaveGood(".service2")}>
                 {/* <div className="image"><StaticImage src="../../images/Glacier.png" alt="A dinosaur" /></div> */}
                 <div className="content">
                     <h2>Online Stores / Ecommerce</h2>
                     <p>We can create an amazing online store on a platform of your choice or using custom code. This includes features like product search, updatable products and stock, simple and secure payment gateways etc.</p>
-                    <a href="#contact">Learn More →</a>
+                    <a href="/contact">Learn More →</a>
                 </div>
-            </a>
-            <a href="#contact" className="service-box service3" onMouseEnter={() => onHoverGood(".service3")} onMouseLeave={() => onLeaveGood(".service3")}>
+            </Link>
+            <Link to="/contact" className="service-box service3" onMouseEnter={() => onHoverGood(".service3")} onMouseLeave={() => onLeaveGood(".service3")}>
                 {/* <div className="image"><StaticImage src="../../images/CA.png" alt="A dinosaur" /></div> */}
                 <div className="content">
                     <h2>Custom Solutions</h2>
                     <p>If you own a complex business and want to integrate tools that simplify work for your team, we can help.</p>
                     <p>That could mean creating a product builder for your store, price estimator, hooking up CRM, CMS, bookings, finance tracking - whatever the case, we’ve got your back.</p>
-                    <a href="#contact">Learn More →</a>
+                    <a href="/contact">Learn More →</a>
                 </div>
-            </a>
+            </Link>
         </Wrapper>
     )
 }
