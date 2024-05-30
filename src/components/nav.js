@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 // position: absolute;
 // height: 100vh;
 width: 100vw;
-// overflow-x: hidden;
+overflow-x: clip;
 z-index: 500;
 .navbar {
     top: 0;
