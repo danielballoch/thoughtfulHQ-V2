@@ -166,10 +166,10 @@ export default function Hero(){
             // onMouseEnter={() => setPause(true)} onMouseLeave={() => setPause(false)}
             >
                 <div className={image === 0? "track active1" : image === 1? "track active2" : image === 2? "track active3" : "track active4"}>
-                    <StaticImage className={image === 0? "current" : "hide"} src="../../images/manorrealty.jpg" alt="project image" />
-                    <StaticImage className={image === 1? "current" : "hide"} src="../../images/glacierinternational.jpg" alt="project image" />
-                    <StaticImage className={image === 2? "current" : "hide"} src="../../images/centralaero5.jpg" alt="project image" />
-                    <StaticImage className={image === 3? "current" : "hide"} src="../../images/motoschool.jpg" alt="project image" />
+                    <StaticImage className={image === 0? "current" : "hide"} src="../../images/manorrealty.jpg" alt="project image" placeholder="blurred"/>
+                    <StaticImage className={image === 1? "current" : "hide"} src="../../images/glacierinternational.jpg" alt="project image" placeholder="blurred"/>
+                    <StaticImage className={image === 2? "current" : "hide"} src="../../images/centralaero5.jpg" alt="project image" placeholder="blurred"/>
+                    <StaticImage className={image === 3? "current" : "hide"} src="../../images/motoschool.jpg" alt="project image" placeholder="blurred"/>
                 </div>
             </div>
             <div className="next-btn"><button onClick={() => updateImage()}><Demo pause={pause} updateImage={() => updateImage()} max={3} width={100} height={100} radius={20} /></button></div>
