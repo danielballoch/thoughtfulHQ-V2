@@ -101,6 +101,13 @@ export default function Projectspage(){
                             <p>Webflow Conversion + API Integration</p>
                         </div>
                     </a>
+                    <a target="_blank" href="https://www.kokatahiaccomodation.co.nz/" className="project">
+                        <StaticImage className="image" src="../images/project-images/kokatahi3.jpg" alt="target" />
+                        <div className="content">
+                            <h3>Kokatahi Accomodation</h3>
+                            <p>Branding Website</p>
+                        </div>
+                    </a>
                     <a target="_blank" href="https://www.motoschool.co.nz/" className="project">
                         <StaticImage className="image" src="../images/project-images/motoschool.jpg" alt="target" />
                         <div className="content">

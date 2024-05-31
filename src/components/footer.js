@@ -98,7 +98,7 @@ display: flex;
     a {
         font-size: 14px;
         padding: 10px;
-        margin: 10px 0;
+        margin: 40px 0 0 0;
         // color: white;
         color: black;
         text-decoration: none;
@@ -200,7 +200,7 @@ export default function Nav(){
                 <div className="bottom-footer">
                     <Link to="/">© 2024  thoughtfulHQ</Link>
                     <Link to="/terms-and-conditions">Terms & Conditons</Link>
-                    <Link to="#top">Back To The Top</Link>
+                    {/* <Link to="#top">Back To The Top</Link> */}
                 </div>
             </div>
         </Wrapper>

@@ -231,7 +231,7 @@ export default function Features(){
                 scrollTrigger: {
                   trigger: ".content-left",
                   start: '50% 38%',
-                  end: '1800px 50%',
+                  end: '1900px 50%',
                   pin: true,
                   scrub: true
                 },
