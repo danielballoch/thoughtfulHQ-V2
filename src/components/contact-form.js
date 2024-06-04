@@ -37,7 +37,7 @@ form {
         }
     }
     .button-style {
-        margin-top: 20px;
+        margin-top: 40px;
         padding: 20px;
         background-color: black;
         color: white;
