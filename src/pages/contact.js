@@ -105,13 +105,13 @@ export default function Indexpage(){
   return(
     <Layout>
         <Wrapper>
-        <h1>Want to talk about getting a professional website made for your business?</h1>
+        <h1>Want to get a professional website or digital content made for your business?</h1>
         <div className="main">
             <ContactForm/>
             <div className="content-right">
                 <div className="heading"><StaticImage src="../images/DanielBalloch.jpg" alt="Daniel Balloch Profile" /><h2>Hey, I'm Daniel!</h2></div>
                 <p className="paragraph">I would love to hear about your business, challenges, goals and vision for your project. <br/><br/>Reach out now, I'll book a discovery call.</p>
-                <p className="contact-item"><a href="mailto:daniel@thoughtfulhq.com"><img src={email} alt="email icon"/>daniel@thoughtfulhq.com</a></p>
+                <p className="contact-item"><a href="mailto:daniel@tyrocreative.co.nz"><img src={email} alt="email icon"/>daniel@tyrocreative.co.nz</a></p>
                 <p className="contact-item"><a href="tel:+64220780868"><img src={phone} alt="email icon"/>+64 22 078 0868</a></p>
             </div>
         </div>

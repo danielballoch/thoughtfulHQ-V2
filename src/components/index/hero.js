@@ -158,7 +158,7 @@ export default function Hero(){
         <Wrapper >
             <div className="hero-content-left"> 
                 <div className="text">
-                    <h1>New Zealand Based Digital Agency</h1>
+                    <h1>New Zealand Based Creative Agency</h1>
                     <p>We’re dedicated to helping good businesses: look <b>professional</b> online, <b>simplify workflows,</b> and sustainably <b>increase profits.</b></p>
                 </div>  
             </div>

@@ -9,8 +9,8 @@ transition: .3s;
 }
 margin: 0 20px;
 padding: 0 10px;
-border-radius: 15px;
-margin-right: 10%;
+// border-radius: 15px;
+margin-right: calc(25vw - 250px);
 background-color: #000000;
 height: 48px;
 z-index: 200;
@@ -60,6 +60,7 @@ box-sizing: border-box;
   } 
 @media(max-width: 1060px){
   display: block;
+  margin-right: 40px;
 }
 `
 

@@ -12,7 +12,7 @@ export default function Indexpage(){
     <Layout>
           <Hero/>
           <Services/>
-          <Features/>
+          {/* <Features/> */}
           <Projects/>
           <Contact/>
     </Layout>

@@ -101,7 +101,7 @@ export default function Contact(){
                 {/* <a onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} target="_blank" href="https://calendly.com/thoughtfulhq/30min" className="book-button">Book A Free Discovery Call</a> */}
                 <a onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} href="/contact" className="book-button">Book Discovery Call</a>
                 <p className="middle-p">Or</p>
-                <p>Call Daniel at <a  href="tel:+64220780868">+64 22 078 0868</a> / Email <a href="mailto:daniel@thoughtfulhq.com">daniel@thoughtfulhq.com</a></p>
+                <p>Call Daniel at <a  href="tel:+64220780868">+64 22 078 0868</a> / Email <a href="mailto:daniel@tyrocreative.co.nz">daniel@tyrocreative.co.nz</a></p>
             </div>
             <div className={active? "image active" : "image"}>
             <Typewriter

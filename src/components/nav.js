@@ -34,13 +34,19 @@ z-index: 500;
     align-items: center;
     box-sizing: border-box;
     .logo {
-        justify-self: flex-start;
+        display: flex;
+        justify-items: center;
+        align-items: center;
         z-index: 200;
-        margin-left: 10%;
+        height: 120px;
+        margin-left: calc(25vw - 250px);
+        // margin-left: 140px;
         margin-right: auto;
         text-align: center;
-        width: 260px;
+        // width: 260px;
         img {
+            // height: 48px;
+            height: 48px;
             object-fit: contain!important;
         }
         text-decoration: none;
@@ -70,7 +76,7 @@ z-index: 500;
             display: block;
             box-sizing: border-box;
             text-align: center;
-            border-radius: 15px;
+            // border-radius: 15px;
             text-decoration: none;
             transition: .3s;
             :hover {
@@ -140,8 +146,9 @@ z-index: 500;
         margin: 0;
         width: 100px;
     }
-    top: 10px;
-    right: calc(10vw - 20px);
+    top: 36px;
+    // right: calc(10vw - 20px);
+    right: 0;
     :hover {
         cursor: pointer;
         .hamburger {
@@ -159,6 +166,12 @@ z-index: 500;
     position: absolute;
     bottom: 0;
     right: 40px;
+}
+@media(max-width: 1060px){
+  .logo {
+  margin-left: 20px!important;
+  }
+  
 }
 @media(max-width: 880px){
     .book-button {
@@ -247,7 +260,7 @@ export default function Nav({smoother}){
         >
             <div className="navbar">
                 <Link to="/" className="logo">
-                    <StaticImage src="../images/thoughtfulHQlogo.webp" alt="thoughtfulHQ" />
+                    <StaticImage src="../images/tyrocreative1.png" alt="thoughtfulHQ" />
                     {/* ORDINARY DIGITAL &copy; */}
                 </Link>
                 {/* <div className="middle-content">
@@ -270,7 +283,7 @@ export default function Nav({smoother}){
                 {/* <Link to="/" onClick={() => {onClickGood()}}>Services</Link> */}
                 <Link to="/frequently-asked-questions" onClick={() => onClickGood()}>FAQ</Link>
                 <Link to="/contact" onClick={() => onClickGood()}>Contact</Link>
-                <a className="email" href="mailto:daniel@thoughtfulhq.com">daniel@thoughtfulhq.com</a>
+                <a className="email" href="mailto:daniel@tyrocreative.co.nz">daniel@tyrocreative.co.nz</a>
                 <a className="phone" href="tel:+64220780868">Call +64 22 078 0868</a>
             </div>
         </Wrapper>

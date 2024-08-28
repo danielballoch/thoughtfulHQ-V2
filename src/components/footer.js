@@ -15,11 +15,12 @@ z-index:0;
 display: flex;
 justify-content: center;
 // width: 100vw;
+background-color: black;
 // background-color: #0a2540;
 // background-color: #f8f8f8;
-color: black;
+// color: black;
 // background-color: #343a40;
-// color: white;
+color: white;
 .wrap {
     width: 100%;
     display: flex;
@@ -37,18 +38,24 @@ display: flex;
     padding: 0 80px;
     a {
         font-size: 14px;
-        color: black;
+        // color: black;
+        color: white;
         text-decoration: none;
     }
 }
 .section1 {
+    display: flex;
+    // flex-direction: row;
+    // align-items: center;
     padding-left: 0;
-    width: 360px;
+    width: 260px;
 }
 
 .section1 .blurb {
     padding: 10px;
+    height: fit-content;
     font-size: 14px;
+    // max-width: 250px;
 }
 .head {
     font-size: 16px!important;
@@ -56,7 +63,7 @@ display: flex;
     padding: 10px 0!important;
 }
 .section2 {
-    border-left: 1px solid rgba(0,0,0,0.2);
+    border-left: 1px solid rgba(255,255,255,0.2);
     a {
         display: inline-block;
         padding: 5px 0;
@@ -64,7 +71,7 @@ display: flex;
     }
 }
 .section3 {
-    border-left: 1px solid rgba(0,0,0,0.2);
+    border-left: 1px solid rgba(255,255,255,0.2);
     padding-right: 0;
     a {
         display: inline-block;
@@ -73,11 +80,13 @@ display: flex;
     }
 }
 .logo {
-    height: 70px;
+    // height: 140px;
+    // width: 140px;
     // filter: invert(100%);
     margin-left: -8 px;
     img {
-        height: 70px;
+        // height: 140px;
+        // width: 140px;
     }
 }
 .socials-div {
@@ -86,7 +95,7 @@ display: flex;
         padding: 10px;
     }
     img {
-        // filter: invert(100%);
+        filter: invert(100%);
     }
 }
 }
@@ -99,8 +108,8 @@ display: flex;
         font-size: 14px;
         padding: 10px;
         margin: 40px 0 0 0;
-        // color: white;
-        color: black;
+        color: white;
+        // color: black;
         text-decoration: none;
     }
 }
@@ -112,13 +121,10 @@ display: flex;
         overflow: hidden;
         .section1 {
             padding: 0 80px;
-            max-width: 340px;
+            max-width: 270px;
             width: unset;
-            .logo {
-                img {
-                    object-fit: contain!important;
-                }
-            }
+            flex-direction: column;
+            align-items: flex-start;
             // max-width: 400px;
             // width: 90%;
         }
@@ -172,8 +178,10 @@ export default function Nav(){
             <div className="wrap" >
                 <div className="main-footer">
                     <div className="section1">
-                        <Link to="/" className="logo"><StaticImage src="../images/thoughtfulHQlogo.webp" alt="A dinosaur" /></Link>
-                        <div className="blurb">Helping New Zealand businesses look professional online, simplify workflows, and increase profits.</div>
+                        <Link to="/" className="logo">
+                        <StaticImage src="../images/tyrocreative1.png" alt="A dinosaur" />
+                        </Link>
+                        {/* <div className="blurb">Helping New Zealand businesses look professional online, simplify workflows, and increase profits.</div> */}
                         <div className="socials-div">
                             <a target="_blank" href="https://www.facebook.com/thoughtfulHQ"><StaticImage src="../images/fb-icon.svg" alt="A dinosaur" /></a>
                             <a target="_blank" href="https://www.instagram.com/thoughtful_hq/"><StaticImage src="../images/insta-icon.svg" alt="A dinosaur" /></a>
@@ -193,12 +201,13 @@ export default function Nav(){
                     </div>
                     <div className="section3">
                         <Link to="/contact" className="head"><b>Contact</b></Link>
-                        <a href="mailto:daniel@thoughtfulhq.com">Email: daniel@thoughtfulhq.com</a>
-                        <a href="tel:+64220780868">Phone: +64 22 078 0868</a>
+                        <a href="mailto:daniel@thoughtfulhq.co.nz">daniel@tyrocreative.co.nz</a>
+                        <a href="tel:+64220780868">+64 22 078 0868</a>
+                        <Link to="/contact">Book discovery call</Link>
                     </div>
                 </div>
                 <div className="bottom-footer">
-                    <Link to="/">© 2024  thoughtfulHQ</Link>
+                    <Link to="/">© 2024  tyrocreative</Link>
                     <Link to="/terms-and-conditions">Terms & Conditons</Link>
                     {/* <Link to="#top">Back To The Top</Link> */}
                 </div>

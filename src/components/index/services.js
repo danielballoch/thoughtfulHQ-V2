@@ -161,12 +161,21 @@ export default function Services(){
             <Link to="/contact" className="service-box service3" onMouseEnter={() => onHoverGood(".service3")} onMouseLeave={() => onLeaveGood(".service3")}>
                 {/* <div className="image"><StaticImage src="../../images/CA.png" alt="A dinosaur" /></div> */}
                 <div className="content">
+                    <h2>Social Media / Photography</h2>
+                    <p>Want to share your brand and services online but aren't sure where to start?</p>
+                    <p>We offer Content Creation and Social Media Management services to highlight what's special about your business and get more customers in the door! This includes photography, videography, reels, captions, scheduled posts, strategy etc.</p>
+                    {/* <p>This includes photography, videography, reels, captions, scheduled posts, strategy etc.</p> */}
+                    <a href="/contact">Learn More →</a>
+                </div>
+            </Link>
+            {/* <Link to="/contact" className="service-box service3" onMouseEnter={() => onHoverGood(".service3")} onMouseLeave={() => onLeaveGood(".service3")}>
+                <div className="content">
                     <h2>Custom Solutions</h2>
                     <p>If you own a complex business and want to integrate tools that simplify work for your team, we can help.</p>
                     <p>That could mean creating a product builder for your store, price estimator, hooking up CRM, CMS, bookings, finance tracking - whatever the case, we’ve got your back.</p>
                     <a href="/contact">Learn More →</a>
                 </div>
-            </Link>
+            </Link> */}
         </Wrapper>
     )
 }
