@@ -123,7 +123,7 @@ export default function Indexpage(){
 export const Head = () => (
   <>
     <html lang="en" />
-    <title>Contact | thoughtfulHQ</title>
+    <title>Contact | TYRO Creative</title>
     <meta name="description" content="Web Design & Development services for New Zealand business owners. We service Hamilton, Auckland and can also work nationally/internationally."/>
   </>
 )

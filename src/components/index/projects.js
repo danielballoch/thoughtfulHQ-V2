@@ -274,7 +274,7 @@ export default function Projects(){
                 <div className="content">
                     <div className="quote">
                         <h3>Manor Realty</h3>
-                        <p>"Daniel played a pivotal role in the success of our recent project. His expertise in integrating a variety of third-party APIs enabled seamless automatic updates across our client's CRM and website platform. Daniel's excellent communication skills and extensive knowledge made working with him a pleasure, as he effortlessly tackled every task we presented. I highly recommend Daniel and the ThoughtfulHQ team for their exceptional work."</p>
+                        <p>"Daniel played a pivotal role in the success of our recent project. His expertise in integrating a variety of third-party APIs enabled seamless automatic updates across our client's CRM and website platform. Daniel's excellent communication skills and extensive knowledge made working with him a pleasure, as he effortlessly tackled every task we presented. I highly recommend Daniel and the TYRO Creative team for their exceptional work."</p>
                         <p><i>-Josh Sprosen, Digital Lead (Brander)</i></p>
                     </div>
                     <div className="button-div">

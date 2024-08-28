@@ -22,7 +22,7 @@ export default function Indexpage(){
 export const Head = () => (
   <>
     <html lang="en" />
-    <title>Web Design & Development, Hamilton, New Zealand | thoughtfulHQ</title>
+    <title>Web Design & Development, Hamilton, New Zealand | TYRO Creative</title>
     <meta name="description" content="Web Design & Development services for New Zealand business owners. We service Hamilton, Auckland and can also work nationally/internationally."/>
   </>
 )
