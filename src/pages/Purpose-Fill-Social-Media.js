@@ -1,120 +1,215 @@
-import React from "react"
+import React, {useRef} from "react"
 import Layout from "../components/layout"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
-import ContactForm from "../components/contact-form"
-// import email from '../images/contact/appleemail.png'
-// import phone from '../images/contact/applephone.png'
-import email from '../images/contact/send.png'
-import phone from '../images/contact/smartphone.png'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Link } from "gatsby"
 
 
 const Wrapper = styled.div`
-padding-top: 200px;
-padding-bottom: 100px;
-display: flex;
-flex-direction: column;
-width: 90vw;
-max-width: 1220px;
-margin: auto;
-h1 {
-    max-width: 1220px;
-    font-weight: 100;
-    font-size: 55px;
-    color: #222;
-}
-.main {
+padding-top: 150px;
+.content1 {
     display: flex;
-    margin: 50px auto 100px auto;
-}
-.contact {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    h1 {
+        font-size: 50px;
+        margin-top: 0;
+    }
+    .content-left {
     width: 500px;
-    height: 500px;
-    background-color: grey;
-    margin-right: 100px;
-}
-.content-right {
-    width: 420px;
-    border-left: 1px solid rgba(0,0,0,0.1);
-    padding-left: 100px;
-    .paragraph {
-        font-size: 18px;
-        font-weight: 100;
-    }
-    .contact-item {
-        font-size: 18px;
-        font-weight: 600;
-        a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: black;
-            transition: .3s;
-            :hover {
-                color: #635bff;
-            }
-        }
-        img {
-            width: 30px;
-            margin-right: 10px;
-        }
-    }
-    .heading {
-        margin-top: 50px;
-        display: flex;
-        align-items: center;
-        h2 {
-            padding-left: 20px;
-            font-size: 30px;
-            font-weight: 100;
-        }
-        img {
-            height: 100px;
-            width: 100px;
-            border-radius: 10px;
-        }
-    }
-}
-@media(max-width: 1280px){
-    padding-top: 100px;
-    padding-bottom: 50px;
-    .main {
-        flex-direction: column-reverse;
+    margin-right: 60px;
     }
     .content-right {
-        border-left: unset;
-        width: 90vw;
-        max-width: 600px;
-        padding-left: 0;
+    width: 710px;
+    p {
+    color: #7E7575;
+    text-align: center;
     }
-    h1 {
-        max-width: 600px;
-        margin: auto;
-        display: none;
     }
 }
-@media(max-width: 500px){
+.content2 {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    width: 90%;
+    margin: auto;
     h1 {
-        font-size: 34px;
+        font-size: 50px;
+        margin-top: 0;
+    }
+    .content-left {
+    width: 710px;
+    margin-right: 60px;
+    p {
+    color: #7E7575;
+    text-align: center;
+    }
+    }
+    .content-right {
+   
+    position: sticky;
+    top: 10px;
+    width: 500px;
+    
     }
 }
+.content3 {
+font-size: 18px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 1270px;
+  margin: auto;
+  .stats {
+    display: flex;
+    flex-direction: column;;
+    ul {
+      display: flex;
+      flex-direction: row;
+      margin-top: 0;
+      li {
+        width: 33%;
+        font-size: 18px;
+      }
+    }
+  }
+}
+  .content4 {
+   padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  a {
+  transition: .3s;
+  :hover {
+  filter: brightness(75%);
+  }
+  }
+  img {
+  padding: 3px 1.5px;
+  width: 220px;
+  }
+  }
+  .content5 {
+  display: flex;
+  padding-bottom: 100px;
+  justify-content: center;
+    a {
+    text-decoration: none;
+    margin: 0 20px;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      color: white;
+      width: 450px;
+      height: 70px;
+    }
+      .right {
+      background-color: #343A40;
+      }
+  }
 `
 
 
 export default function Indexpage(){
+
+  const contenttopin = useRef();
+    useGSAP(
+        () => {
+            console.log("hello");
+            gsap.to(".content-right", {
+              scrollTrigger: {
+                trigger: ".content-right",
+                pin: true,
+                start: "200 center",
+                end: "+=900",
+                scrub: true,
+              },
+            })
+        },
+        { scope: contenttopin }
+    );
+
   return(
     <Layout>
         <Wrapper>
-        <h1>Want to get a professional website or digital content made for your business?</h1>
-        <div className="main">
-            <ContactForm/>
-            <div className="content-right">
-                <div className="heading"><StaticImage src="../images/DanielBalloch.jpg" alt="Daniel Balloch Profile" /><h2>Hey, I'm Daniel!</h2></div>
-                <p className="paragraph">I would love to hear about your business, challenges, goals and vision for your project. <br/><br/>Reach out now, I'll book a discovery call.</p>
-                <p className="contact-item"><a href="mailto:daniel@tyrocreative.co.nz"><img src={email} alt="email icon"/>daniel@tyrocreative.co.nz</a></p>
-                <p className="contact-item"><a href="tel:+64220780868"><img src={phone} alt="email icon"/>+64 22 078 0868</a></p>
+            <div className="content1"> 
+                <div className="content-left">
+                    <h1>Fresh Social Media </h1>
+                    <h2>Creating Content for Waikato Locals - Purpose Fill Waste Management </h2>
+                    <p><b>Brief:</b> Paul and Anne’s goal is to make Purpose Fill the best Waste Management business in New Zealand.</p>
+                    <p>They’re already providing high quality services, at great prices, and with excellent customer service, but struggle finding time to keep their Social Media at the standard they want.</p>
+                    <p>After already doing some work on www.purposefill.co.nz Anne asked me about helping here too and I was excited to with the opportunity! </p>
+                </div>
+                <div className="content-right">
+                    <StaticImage src="../images/projects/purposefill/Directors2.jpg" alt="A dinosaur" />
+                    <p>*Purpose Fill Owners Paul & Anne with some of the team</p>
+                </div>
             </div>
-        </div>
+            <div ref={contenttopin} className="content2"> 
+                <div className="content-left">
+                    <StaticImage src="../images/projects/purposefill/Frame.png" alt="A dinosaur" />
+                    <p>*Social Media Research & Post Creation</p>
+                </div>
+                <div className="content-right">
+                    <p><b>Process:</b> First I researched local competitors, similar international companies, adjacent businesses and other brands with great social media. I also dug into the Purpose Fill website and all content already online around their services and brand.</p>
+                    <p>Then I did a ride along photography/videography session with one of their friendly truck drivers.</p>
+                    <p>This gave me a base of knowledge and content to create NEW posts which would: </p>
+                    <ul>
+                      <li>Give Purpose Fill a professional online presence.  </li>
+                      <li>Indirectly show they are credible, responsive, reliable and value their customers.</li>
+                      <li>Advertise products and services simply with clear next steps and calls to action.</li>
+                    </ul>
+                    <p>Posts were created with a mix of Adobe Suite products and Figma before being uploaded to the company google drive, drafted & scheduled on their Meta Social Media account after review.</p>
+                </div>
+            </div>
+            <div className="content3">
+              <p><b>Initial Results:</b></p>
+              <div className="stats">
+                <div>
+                  <ul>
+                    <li>9 Photo/Carousal Posts</li>
+                    <li>4 Reel Posts</li>
+                    <li>111 Likes/Reactions</li>
+                  </ul>
+                </div>
+                <div >
+                  <ul>
+                    <li>555 Average reel view count</li>
+                    <li><b>4631 Unique views (reach)</b></li>
+                    <li><b>Increased Content Interaction rate by 83.5%</b></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="content4">
+              <a target="_blank" href="https://www.instagram.com/p/DArZECFqvPu/"><StaticImage src="../images/projects/purposefill/1.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/DAHcxT5Bc41/"><StaticImage src="../images/projects/purposefill/2.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/DAAQqqTCP1L/"><StaticImage src="../images/projects/purposefill/3.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_jZmPrvc8T/?img_index=1"><StaticImage src="../images/projects/purposefill/4.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_cNi20sI5M/?img_index=1"><StaticImage src="../images/projects/purposefill/5.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_RYEvrp9-i/"><StaticImage src="../images/projects/purposefill/6.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_1bJ3QAaYn/"><StaticImage src="../images/projects/purposefill/7.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_vKWKZMySi/?img_index=1"><StaticImage src="../images/projects/purposefill/8.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_uPF4uMtmk/"><StaticImage src="../images/projects/purposefill/9.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_KL_Zlo5ag/?img_index=1"><StaticImage src="../images/projects/purposefill/10.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C-_Wbh1tprj/"><StaticImage src="../images/projects/purposefill/11.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C-4KaicNn-o/"><StaticImage src="../images/projects/purposefill/12.png" alt="A dinosaur" /></a>
+            </div>
+            <div className="content5">
+              <Link to="/contact"><div className="btn">Book Discovery Call</div></Link>
+              <Link to="/projects"><div className="btn right">Explore All Projects</div></Link>
+            </div>
         </Wrapper>
     </Layout>
   )
@@ -123,7 +218,7 @@ export default function Indexpage(){
 export const Head = () => (
   <>
     <html lang="en" />
-    <title>Contact | TYRO Creative</title>
+    <title>Purpose Fill Social Media | TYRO Creative</title>
     <meta name="description" content="Web Design & Development services for New Zealand business owners. We service Hamilton, Auckland and can also work nationally/internationally."/>
   </>
 )

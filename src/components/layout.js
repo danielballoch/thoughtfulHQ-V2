@@ -11,6 +11,7 @@ const Wrapper = styled.div`
 #smooth-wrapper {
   max-width: 100vw;
   overflow-x: clip;
+  
 }
 `
 
@@ -25,7 +26,7 @@ export default function Layout({children}){
     () => {
       // create the smooth scroller FIRST!
       smoother.current = ScrollSmoother.create({
-        smooth: 1, // seconds it takes to "catch up" to native scroll position
+        smooth: 2, // seconds it takes to "catch up" to native scroll position
         effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
       });
     },

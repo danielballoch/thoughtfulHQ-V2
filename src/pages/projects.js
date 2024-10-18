@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
@@ -80,14 +81,15 @@ export default function Projectspage(){
             <div className="wrap">
                 <h1>Explore Our Recent Client Projects</h1>
                 <div className="projects-wrapper">
-                    <a target="_blank" href="https://www.instagram.com/purposefill.skips/" className="project">
+                    {/* <a target="_blank" href="https://www.instagram.com/purposefill.skips/" className="project"> */}
+                    <Link to="/Purpose-Fill-Social-Media" className="project">
                         {/* <div className="image"></div> */}
                         <StaticImage className="image" src="../images/project-images/purposefill2.png" alt="target" />
                         <div className="content">
                             <h3>Purpose Fill</h3>
                             <p>Social Media</p>
                         </div>
-                    </a>
+                    </Link>
                     <a target="_blank" href="https://www.glacier.nz/" className="project">
                         {/* <div className="image"></div> */}
                         <StaticImage className="image" src="../images/project-images/glacierinternational.jpg" alt="target" />
