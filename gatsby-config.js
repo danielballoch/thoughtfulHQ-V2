@@ -32,7 +32,14 @@ module.exports = {
         avifOptions: {},
       }
     }
-  },{
+  },
+  {
+    resolve: `gatsby-plugin-facebook-pixel`,
+    options: {
+      pixelId: "pixel id here",
+    },
+  },
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",

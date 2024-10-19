@@ -20,6 +20,7 @@
     "dotenv": "^16.4.5",
     "encoding": "^0.1.13",
     "gatsby": "^5.13.2",
+    "gatsby-plugin-facebook-pixel": "^1.0.8",
     "gatsby-plugin-google-gtag": "^5.13.1",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
