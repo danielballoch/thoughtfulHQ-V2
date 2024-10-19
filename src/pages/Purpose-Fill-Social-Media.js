@@ -133,7 +133,6 @@ export default function Indexpage(){
                 pin: true,
                 start: "225px center",
                 end: "1100px center",
-                markers: true,
                 scrub: true,
               },
             })
