@@ -131,8 +131,9 @@ export default function Indexpage(){
               scrollTrigger: {
                 trigger: ".content-right",
                 pin: true,
-                start: "200 center",
-                end: "+=900",
+                start: "225px center",
+                end: "1100px center",
+                markers: true,
                 scrub: true,
               },
             })
@@ -162,15 +163,17 @@ export default function Indexpage(){
                     <p>*Social Media Research & Post Creation</p>
                 </div>
                 <div className="content-right">
-                    <p><b>Process:</b> First I researched local competitors, similar international companies, adjacent businesses and other brands with great social media. I also dug into the Purpose Fill website and all content already online around their services and brand.</p>
-                    <p>Then I did a ride along photography/videography session with one of their friendly truck drivers.</p>
-                    <p>This gave me a base of knowledge and content to create NEW posts which would: </p>
-                    <ul>
-                      <li>Give Purpose Fill a professional online presence.  </li>
-                      <li>Indirectly show they are credible, responsive, reliable and value their customers.</li>
-                      <li>Advertise products and services simply with clear next steps and calls to action.</li>
-                    </ul>
-                    <p>Posts were created with a mix of Adobe Suite products and Figma before being uploaded to the company google drive, drafted & scheduled on their Meta Social Media account after review.</p>
+                    <div className="content-pin-wrap">
+                      <p><b>Process:</b> First I researched local competitors, similar international companies, adjacent businesses and other brands with great social media. I also dug into the Purpose Fill website and all content already online around their services and brand.</p>
+                      <p>Then I did a ride along photography/videography session with one of their friendly truck drivers.</p>
+                      <p>This gave me a base of knowledge and content to create NEW posts which would: </p>
+                      <ul>
+                        <li>Give Purpose Fill a professional online presence.  </li>
+                        <li>Indirectly show they are credible, responsive, reliable and value their customers.</li>
+                        <li>Advertise products and services simply with clear next steps and calls to action.</li>
+                      </ul>
+                      <p>Posts were created with a mix of Adobe Suite products and Figma before being uploaded to the company google drive, drafted & scheduled on their Meta Social Media account after review.</p>
+                    </div>
                 </div>
             </div>
             <div className="content3">
