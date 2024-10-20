@@ -173,7 +173,7 @@ z-index: 500;
 }
 @media(max-width: 1060px){
     .logo {
-        margin-left: 0px!important;
+        margin-left: 20px!important;
     }
 }
 @media(max-width: 880px){
