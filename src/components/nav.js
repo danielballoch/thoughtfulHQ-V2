@@ -168,10 +168,11 @@ z-index: 500;
     right: 40px;
 }
 @media(max-width: 1060px){
-  .logo {
-  margin-left: 20px!important;
-  }
-  
+    .navbar(
+        .logo {
+            margin-left: 20px!important;
+        }
+    )
 }
 @media(max-width: 880px){
     .book-button {
