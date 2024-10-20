@@ -38,15 +38,15 @@ z-index: 500;
         justify-content: flex-start;
         align-items: center;
         z-index: 200;
-        height: 120px;
+        height: 48px;
         margin-left: calc(25vw - 250px);
         // margin-left: 140px;
         margin-right: auto!important;
         text-align: center;
         // width: 260px;
         img {
-            // height: 48px;
             height: 48px;
+            // height: 48px;
             object-fit: contain!important;
         }
         text-decoration: none;
