@@ -25,7 +25,7 @@ z-index: 500;
     // background-color: rgba(255,255,255,.9);
     display: flex;
     // width: 100vw;
-    justify-content: flex-end;
+    justify-content: space-between;
     // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     z-index: 200;
     min-height: 80px;
@@ -41,7 +41,7 @@ z-index: 500;
         height: 120px;
         margin-left: calc(25vw - 250px);
         // margin-left: 140px;
-        margin-right: auto;
+        margin-right: auto!important;
         text-align: center;
         // width: 260px;
         img {

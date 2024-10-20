@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 
 const Wrapper = styled.div`
 position: relative;
-
 .wrap {
     margin: auto;
     max-width: 1110px;
