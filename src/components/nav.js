@@ -52,6 +52,9 @@ z-index: 500;
         text-decoration: none;
         color: black;
         font-size: 24px;
+        @media(max-width: 1060px){
+        margin-left: 40px;
+        }
     }
     .middle-content {
         a {
@@ -168,11 +171,9 @@ z-index: 500;
     right: 40px;
 }
 @media(max-width: 1060px){
-    .navbar(
-        .logo {
-            margin-left: 20px!important;
-        }
-    )
+    .logo {
+        margin-left: 20px!important;
+    }
 }
 @media(max-width: 880px){
     .book-button {
