@@ -35,7 +35,7 @@ z-index: 500;
     box-sizing: border-box;
     .logo {
         display: flex;
-        justify-items: center;
+        // justify-items: center;
         align-items: center;
         z-index: 200;
         height: 120px;
