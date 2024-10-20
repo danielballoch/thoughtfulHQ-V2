@@ -35,7 +35,7 @@ z-index: 500;
     box-sizing: border-box;
     .logo {
         display: flex;
-        // justify-items: center;
+        justify-content: flex-start;
         align-items: center;
         z-index: 200;
         height: 120px;
@@ -53,7 +53,7 @@ z-index: 500;
         color: black;
         font-size: 24px;
         @media(max-width: 1060px){
-        margin-left: 40px;
+        margin-left: 20px;
         }
     }
     .middle-content {
