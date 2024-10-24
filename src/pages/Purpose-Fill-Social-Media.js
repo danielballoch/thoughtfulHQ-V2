@@ -160,13 +160,14 @@ object-fit: contain!important;
 }
 
 .content3 {
-padding: 100px 10px;
+width: 90%;
+padding: 100px 0;
   .stats {
     ul{
       display: flex;
       flex-direction: column;
       li {
-        width: 100%;
+        width: fit-content;
       }
     }
   }
@@ -174,7 +175,7 @@ padding: 100px 10px;
 
 .content4 {
 a {
-width: 50%;
+max-width: 50%;
 }
 img {
 width: unset;
