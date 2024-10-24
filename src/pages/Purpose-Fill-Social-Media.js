@@ -52,7 +52,6 @@ padding-top: 150px;
     }
     }
     .content-right2 {
-   
     position: sticky;
     top: 10px;
     width: 500px;
@@ -62,11 +61,10 @@ padding-top: 150px;
 .content3 {
   // max-width: 1200px;
 font-size: 18px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 100px;
   display: flex;
   flex-direction: column;
-  width: 1270px;
+  // width: 1270px;
   margin: auto;
   .stats {
     display: flex;
@@ -122,6 +120,79 @@ font-size: 18px;
       background-color: #343A40;
       }
   }
+.content2-mobile {
+display: none;
+}
+@media(max-width: 1050px){
+.content1 {
+  margin-top: 50px;
+  flex-direction: column;
+     .content-left {
+    width: 100%;
+    margin-right: 0;
+    }
+    .content-right {
+    width: 100%;
+    }
+}
+.content2 {
+display: none;
+}
+.content2-mobile {
+padding-top: 50px;
+display: flex;
+width: 90%;
+margin: auto;
+flex-direction: column-reverse;
+.content2-left-mobile {
+padding-top: 50px;
+.gatsby-image-wrapper {
+width: 100%!important;
+}
+img {
+object-fit: contain!important;
+}
+ p {
+    color: #7E7575;
+    text-align: center;
+    }
+}
+}
+
+.content3 {
+padding: 100px 10px;
+  .stats {
+    ul{
+      display: flex;
+      flex-direction: column;
+      li {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.content4 {
+a {
+width: 50%;
+}
+img {
+width: unset;
+}
+}
+
+.content5 {
+display: flex;
+flex-direction: column;
+.btn {
+width: unset;
+}
+.right {
+margin-top: 20px;
+}
+}
+
+}
 `
 
 
@@ -136,7 +207,8 @@ export default function Indexpage(){
                 trigger: ".content-right2",
                 pin: true,
                 start: "225px center",
-                end: "1100px center",
+                // end: "1100px center",
+                end: "bottom-=220px center",
                 scrub: true,
               },
             })
@@ -167,6 +239,26 @@ export default function Indexpage(){
                 </div>
                 <div className="content-right2">
                     <div className="content-pin-wrap">
+                      <p><b>Process:</b> First I researched local competitors, similar international companies, adjacent businesses and other brands with great social media. I also dug into the Purpose Fill website and all content already online around their services and brand.</p>
+                      <p>Then I did a ride along photography/videography session with one of their friendly truck drivers.</p>
+                      <p>This gave me a base of knowledge and content to create NEW posts which would: </p>
+                      <ul>
+                        <li>Give Purpose Fill a professional online presence.  </li>
+                        <li>Indirectly show they are credible, responsive, reliable and value their customers.</li>
+                        <li>Advertise products and services simply with clear next steps and calls to action.</li>
+                      </ul>
+                      <p>Posts were created with a mix of Adobe Suite products and Figma before being uploaded to the company google drive, drafted & scheduled on their Meta Social Media account after review.</p>
+                    </div>
+                </div>
+            </div>
+            {/* mobile content 2  */}
+            <div className="content2-mobile"> 
+                <div className="content2-left-mobile">
+                    <StaticImage src="../images/projects/purposefill/Frame.png" alt="A dinosaur" />
+                    <p>*Social Media Research & Post Creation</p>
+                </div>
+                <div className="content2-right-mobile">
+                    <div>
                       <p><b>Process:</b> First I researched local competitors, similar international companies, adjacent businesses and other brands with great social media. I also dug into the Purpose Fill website and all content already online around their services and brand.</p>
                       <p>Then I did a ride along photography/videography session with one of their friendly truck drivers.</p>
                       <p>This gave me a base of knowledge and content to create NEW posts which would: </p>
