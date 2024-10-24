@@ -179,6 +179,7 @@ max-width: 50%;
 }
 img {
 width: unset;
+object-fit: contain!important;
 }
 }
 
