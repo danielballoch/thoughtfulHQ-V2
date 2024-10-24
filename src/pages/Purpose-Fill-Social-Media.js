@@ -43,7 +43,7 @@ padding-top: 150px;
         font-size: 50px;
         margin-top: 0;
     }
-    .content-left {
+    .content-left2 {
     width: 710px;
     margin-right: 60px;
     p {
@@ -51,7 +51,7 @@ padding-top: 150px;
     text-align: center;
     }
     }
-    .content-right {
+    .content-right2 {
    
     position: sticky;
     top: 10px;
@@ -60,6 +60,7 @@ padding-top: 150px;
     }
 }
 .content3 {
+  // max-width: 1200px;
 font-size: 18px;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -82,6 +83,8 @@ font-size: 18px;
   }
 }
   .content4 {
+  // max-width: 900px;
+  // margin: auto;
    padding-bottom: 100px;
   display: flex;
   justify-content: center;
@@ -98,6 +101,7 @@ font-size: 18px;
   }
   }
   .content5 {
+  
   display: flex;
   padding-bottom: 100px;
   justify-content: center;
@@ -127,9 +131,9 @@ export default function Indexpage(){
     useGSAP(
         () => {
             console.log("hello");
-            gsap.to(".content-right", {
+            gsap.to(".content-right2", {
               scrollTrigger: {
-                trigger: ".content-right",
+                trigger: ".content-right2",
                 pin: true,
                 start: "225px center",
                 end: "1100px center",
@@ -142,7 +146,7 @@ export default function Indexpage(){
 
   return(
     <Layout>
-        <Wrapper>
+        <Wrapper ref={contenttopin}>
             <div className="content1"> 
                 <div className="content-left">
                     <h1>Fresh Social Media </h1>
@@ -156,12 +160,12 @@ export default function Indexpage(){
                     <p>*Purpose Fill Owners Paul & Anne with some of the team</p>
                 </div>
             </div>
-            <div ref={contenttopin} className="content2"> 
-                <div className="content-left">
+            <div className="content2"> 
+                <div className="content-left2">
                     <StaticImage src="../images/projects/purposefill/Frame.png" alt="A dinosaur" />
                     <p>*Social Media Research & Post Creation</p>
                 </div>
-                <div className="content-right">
+                <div className="content-right2">
                     <div className="content-pin-wrap">
                       <p><b>Process:</b> First I researched local competitors, similar international companies, adjacent businesses and other brands with great social media. I also dug into the Purpose Fill website and all content already online around their services and brand.</p>
                       <p>Then I did a ride along photography/videography session with one of their friendly truck drivers.</p>
