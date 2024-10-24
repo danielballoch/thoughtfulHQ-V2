@@ -45,23 +45,17 @@ export default async(req, res) => {
       },
       "MessageStream": "outbound"
     }
-    return client.sendEmailWithTemplate(message).then(
-      () => {
-        console.log("customer-support-sent")
-        message.To = "daniel@thoughtfulhq.com"
-        message.ReplyTo = req.body.email
-        client.sendEmailWithTemplate(message)
-      }
-    ).then(
-      () => {
-        console.log("both-emails-sent")
-        res.status(200).json({
-          message: "This is updated",
-        })
-      }
-    )
+    await client.sendEmailWithTemplate(message)
+    console.log("customer-support-sent")
+    message.To = "daniel@thoughtfulhq.com"
+    message.ReplyTo = req.body.email
+    await client.sendEmailWithTemplate(message)
+    console.log("both-emails-sent")
+    return res.status(200).json({
+      message: "Form send",
+    })
   } catch (err) {
     console.log(err)
-    return res.status(500).json({ message: "There was an error", error: err })
+    return res.status(500).json({ message: "There was a form error", error: err })
   }
 }
