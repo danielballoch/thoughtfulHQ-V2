@@ -1,5 +1,5 @@
 import React, {useRef} from "react"
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 import gsap from 'gsap'
@@ -88,13 +88,13 @@ font-size: 18px;
   justify-content: center;
   flex-wrap: wrap;
   a {
+    padding: 1.5px;
   transition: .3s;
   :hover {
   filter: brightness(75%);
   }
   }
   img {
-  padding: 3px 1.5px;
   width: 220px;
   }
   }
@@ -175,10 +175,11 @@ padding: 100px 0;
 
 .content4 {
 a {
-max-width: 50%;
+max-width: 49%;
+height: fit-content;
 }
 img {
-width: unset;
+width: 100%;
 object-fit: contain!important;
 }
 }
@@ -230,13 +231,13 @@ export default function Indexpage(){
                     <p>After already doing some work on www.purposefill.co.nz Anne asked me about helping here too and I was excited to with the opportunity! </p>
                 </div>
                 <div className="content-right">
-                    <StaticImage src="../images/projects/purposefill/Directors2.jpg" alt="A dinosaur" />
-                    <p>*Purpose Fill Owners Paul & Anne with some of the team</p>
+                    <StaticImage src="../../images/projects/purposefill/Directors2.jpg" alt="A dinosaur" />
+                    <p>*Purpose Fill Owners Paul & Anne with Truck Driver Glen</p>
                 </div>
             </div>
             <div className="content2"> 
                 <div className="content-left2">
-                    <StaticImage src="../images/projects/purposefill/Frame.png" alt="A dinosaur" />
+                    <StaticImage src="../../images/projects/purposefill/Frame.png" alt="A dinosaur" />
                     <p>*Social Media Research & Post Creation</p>
                 </div>
                 <div className="content-right2">
@@ -256,7 +257,7 @@ export default function Indexpage(){
             {/* mobile content 2  */}
             <div className="content2-mobile"> 
                 <div className="content2-left-mobile">
-                    <StaticImage src="../images/projects/purposefill/Frame.png" alt="A dinosaur" />
+                    <StaticImage src="../../images/projects/purposefill/Frame.png" alt="A dinosaur" />
                     <p>*Social Media Research & Post Creation</p>
                 </div>
                 <div className="content2-right-mobile">
@@ -293,18 +294,18 @@ export default function Indexpage(){
               </div>
             </div>
             <div className="content4">
-              <a target="_blank" href="https://www.instagram.com/p/DArZECFqvPu/"><StaticImage src="../images/projects/purposefill/1.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/DAHcxT5Bc41/"><StaticImage src="../images/projects/purposefill/2.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/DAAQqqTCP1L/"><StaticImage src="../images/projects/purposefill/3.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_jZmPrvc8T/?img_index=1"><StaticImage src="../images/projects/purposefill/4.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_cNi20sI5M/?img_index=1"><StaticImage src="../images/projects/purposefill/5.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_RYEvrp9-i/"><StaticImage src="../images/projects/purposefill/6.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_1bJ3QAaYn/"><StaticImage src="../images/projects/purposefill/7.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_vKWKZMySi/?img_index=1"><StaticImage src="../images/projects/purposefill/8.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_uPF4uMtmk/"><StaticImage src="../images/projects/purposefill/9.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_KL_Zlo5ag/?img_index=1"><StaticImage src="../images/projects/purposefill/10.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C-_Wbh1tprj/"><StaticImage src="../images/projects/purposefill/11.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C-4KaicNn-o/"><StaticImage src="../images/projects/purposefill/12.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/DArZECFqvPu/"><StaticImage src="../../images/projects/purposefill/1.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/DAHcxT5Bc41/"><StaticImage src="../../images/projects/purposefill/2.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/DAAQqqTCP1L/"><StaticImage src="../../images/projects/purposefill/3.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_jZmPrvc8T/?img_index=1"><StaticImage src="../../images/projects/purposefill/4.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_cNi20sI5M/?img_index=1"><StaticImage src="../../images/projects/purposefill/5.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_RYEvrp9-i/"><StaticImage src="../../images/projects/purposefill/6.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_1bJ3QAaYn/"><StaticImage src="../../images/projects/purposefill/7.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_vKWKZMySi/?img_index=1"><StaticImage src="../../images/projects/purposefill/8.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_uPF4uMtmk/"><StaticImage src="../../images/projects/purposefill/9.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_KL_Zlo5ag/?img_index=1"><StaticImage src="../../images/projects/purposefill/10.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C-_Wbh1tprj/"><StaticImage src="../../images/projects/purposefill/11.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C-4KaicNn-o/"><StaticImage src="../../images/projects/purposefill/12.png" alt="A dinosaur" /></a>
             </div>
             <div className="content5">
               <Link to="/contact"><div className="btn">Book Discovery Call</div></Link>

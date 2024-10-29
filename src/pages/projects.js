@@ -81,7 +81,7 @@ export default function Projectspage(){
                 <h1>Explore Our Recent Client Projects</h1>
                 <div className="projects-wrapper">
                     {/* <a target="_blank" href="https://www.instagram.com/purposefill.skips/" className="project"> */}
-                    <Link to="/Purpose-Fill-Social-Media" className="project">
+                    <Link to="/projects/Purpose-Fill-Social-Media" className="project">
                         {/* <div className="image"></div> */}
                         <StaticImage className="image" src="../images/project-images/PurposeFill2.png" alt="target" />
                         <div className="content">
