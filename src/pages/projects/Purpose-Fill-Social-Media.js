@@ -52,10 +52,13 @@ padding-top: 150px;
     }
     }
     .content-right2 {
-    position: sticky;
-    top: 10px;
+  
     width: 500px;
     
+    }
+    .content-pin-wrap {
+      position: sticky;
+      top: calc(50% - 180px);
     }
 }
 .content3 {
@@ -201,27 +204,29 @@ margin-top: 20px;
 
 export default function Indexpage(){
 
-  const contenttopin = useRef();
-    useGSAP(
-        () => {
-            console.log("hello");
-            gsap.to(".content-right2", {
-              scrollTrigger: {
-                trigger: ".content-right2",
-                pin: true,
-                start: "225px center",
-                // end: "1100px center",
-                end: "bottom-=220px center",
-                scrub: true,
-              },
-            })
-        },
-        { scope: contenttopin }
-    );
+  // const contenttopin = useRef();
+    // useGSAP(
+    //     () => {
+    //         console.log("hello");
+    //         gsap.to(".content-right2", {
+    //           scrollTrigger: {
+    //             trigger: ".content-right2",
+    //             pin: true,
+    //             start: "225px center",
+    //             // end: "1100px center",
+    //             end: "bottom-=220px center",
+    //             scrub: true,
+    //           },
+    //         })
+    //     },
+    //     { scope: contenttopin }
+    // );
 
   return(
     <Layout>
-        <Wrapper ref={contenttopin}>
+        <Wrapper 
+        // ref={contenttopin}
+        >
             <div className="content1"> 
                 <div className="content-left">
                     <h1>Fresh Social Media </h1>

@@ -103,6 +103,23 @@ button {
     background: rgba(0,0,0,0);
     border: none;
 }
+.loading-bar {
+position: absolute;
+left: 50%;
+bottom: 0;
+width: 50%;
+height: 10px;
+background-color: black;
+animation: progressBar 5s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+opacity: 0.5;
+}
+
+@keyframes progressBar {
+  0% { width: 0; }
+  100% { width: 50%; }
+}
 `
 
 const Demo = ({ max, width, height, radius, updateImage, pause }) => {
@@ -115,10 +132,10 @@ const Demo = ({ max, width, height, radius, updateImage, pause }) => {
         // };
       }, 10);
       if (seconds > max - 0.01){setSeconds(0); updateImage()}
-      
+    //   console.log(seconds)
     }, [seconds, max, pause]);
     
-    const countdown = seconds % (max + .01);
+    const countdown = seconds % (max + 0.01);
     
     const circumference = 2 * Math.PI * radius;
     const offset = (max - countdown) / max * circumference;
@@ -153,6 +170,12 @@ export default function Hero(){
         if(image < 3){setImage(image + 1)}
         else {setImage(0)}
     }
+    
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //           updateImage()
+    //     }, 5000);
+    //   }, [image]);
 
     return(
         <Wrapper >
@@ -171,8 +194,10 @@ export default function Hero(){
                     <StaticImage className={image === 2? "current" : "hide"} src="../../images/centralaero5.jpg" alt="project image" placeholder="blurred"/>
                     <StaticImage className={image === 3? "current" : "hide"} src="../../images/motoschool.jpg" alt="project image" placeholder="blurred"/>
                 </div>
+                
             </div>
-            <div className="next-btn"><button onClick={() => updateImage()}><Demo pause={pause} updateImage={() => updateImage()} max={3} width={100} height={100} radius={20} /></button></div>
+            {/* <div className="loading-bar"></div> */}
+            <div className="next-btn"><button onClick={() => updateImage()}><Demo pause={pause} updateImage={() => updateImage()} max={5} width={100} height={100} radius={20} /></button></div>
         </Wrapper>
     )
 }

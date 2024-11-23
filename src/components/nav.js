@@ -96,7 +96,7 @@ z-index: 500;
     // right: -600px;
     // max-width: 580px;
     // transition: .3s;
-    position: absolute;
+    position: fixed;
     
     height: 100vh;
     z-index: 500;
@@ -134,7 +134,7 @@ z-index: 500;
 }
 .pin-spacer {
     display: none;
-    width: 0;
+    width: 0px;
     // z-index: 100!important;
 }
 .close-btn {
@@ -241,21 +241,21 @@ export default function Nav({smoother}){
         
     // },[])
 
-    useGSAP(
-        () => {
-            gsap.to(".sidedrawer", {
-                y: 0,
-                ease: "none",
-                scrollTrigger: {
-                  trigger: ".sidedrawer",
-                  start: 0,
-                  end: "max",
-                  pin: true
-                },
-            })
-        },
-        { scope: navref }
-    );
+    // useGSAP(
+    //     () => {
+    //         gsap.to(".sidedrawer", {
+    //             y: 0,
+    //             ease: "none",
+    //             scrollTrigger: {
+    //               trigger: ".sidedrawer",
+    //               start: 0,
+    //               end: "max",
+    //               pin: true
+    //             },
+    //         })
+    //     },
+    //     { scope: navref }
+    // );
 
     return(
         <Wrapper id="top" 
