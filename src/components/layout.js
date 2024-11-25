@@ -6,6 +6,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
 import styled from "@emotion/styled"
+import { ReactLenis, useLenis } from 'lenis/react'
 
 const Wrapper = styled.div` 
 overflow-x: clip;
@@ -21,6 +22,10 @@ overflow-x: clip;
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Layout({children}){
+
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  })
 
   const main = useRef();
   // const smoother = useRef();
@@ -40,14 +45,12 @@ export default function Layout({children}){
 
   return (
     <Wrapper>
-    <div id="smooth-wrapper" ref={main}>
-      <div id="smooth-content">
+    <ReactLenis root>
         {/* <Navbar smoother={smoother}/> */}
         <Navbar/>
         <main>{children}</main>
         <Footer/>
-      </div>
-    </div>
+    </ReactLenis>
     </Wrapper>
   )
 }

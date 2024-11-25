@@ -44,7 +44,7 @@ h2 {
 }
 .project-toggle {
     transform: scale(1.04);
-    box-shadow: rgb(38, 57, 77) 0px 35px 40px -10px, rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px!important;
+    // box-shadow: rgb(38, 57, 77) 0px 35px 40px -10px, rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px!important;
 }
 .project {
     transition: 1s;
