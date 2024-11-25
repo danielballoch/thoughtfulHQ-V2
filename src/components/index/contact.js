@@ -2,8 +2,29 @@ import React, {useState} from "react"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 import Typewriter from 'typewriter-effect';
+import Button from "../contact-btn"
 
 const Wrapper = styled.div`
+@keyframes noise-background {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(50px, 30px, 0);
+  }
+  40% {
+    transform: translate3d(10px, 50px, 0);
+  }
+  60% {
+    transform: translate3d(30px, 20px, 0);
+  }
+  80% {
+    transform: translate3d(50px, 0, 0);
+  }
+  100% {
+    transform: translate3d(100px, 0, 0);
+  }
+}
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -15,22 +36,38 @@ const Wrapper = styled.div`
 		background-position: 0% 50%;
 	}
 }
+// background: #093740 url("https://assets.codepen.io/5817405/noise_2.png");
+// background-blend-mode: brighten;
+// animation: noise-background 0.5s steps(1) infinite;
+overflow: clip;
+:before {
+  position: absolute;
+  inset: -100px;
+  z-index: -1;
+  display: block;
+//   background: rgba(0,0,0,0.5) url("https://assets.codepen.io/5817405/noise_2.png");
+//   background-blend-mode: overlay;
+//   animation: noise-background 0.5s steps(1) infinite;
+  content: "";
+}
 position: relative;
 z-index: 10;
 display: flex;
-height: 100vh;
+height: 110vh;
 justify-content: center;
 color: white;
-background: linear-gradient(-45deg, #000000, #211a23, #000000);
-background-size: 400% 400%;
-animation: gradient 30s ease infinite;
+background-color: black;
+opacity: 1;
+// background: linear-gradient(-45deg, #000000, #211a23, #000000);
+// background-size: 400% 400%;
+// animation: gradient 30s ease infinite;
 align-items: center;
 .content {
     width: 700px;
     padding: 50px;
     text-align: center;
     h3 {
-        font-size: 42px;
+        font-size: 46px;
         margin-top: 0;
     }
     .middle-p {
@@ -112,9 +149,10 @@ export default function Contact(){
                 <StaticImage src="../../images/PhoneIcon.png" alt="Phone silhouette" />
             </div> */}
             <div className="content">
-                <h3>Want to have a chat?</h3>
+                <h3>Want to learn more?</h3>
                 {/* <a onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} target="_blank" href="https://calendly.com/thoughtfulhq/30min" className="book-button">Book A Free Discovery Call</a> */}
-                <a onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} href="/contact" className="book-button">Book Discovery Call</a>
+                {/* <a onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} href="/contact" className="book-button">Book Discovery Call</a> */}
+                <Button/>
                 <p className="middle-p">Or</p>
                 <p>Call Daniel at <a  href="tel:+64220780868">+64 22 078 0868</a> / Email <a href="mailto:daniel@tyrocreative.co.nz">daniel@tyrocreative.co.nz</a></p>
             </div>
