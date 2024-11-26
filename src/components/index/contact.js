@@ -156,9 +156,10 @@ export default function Contact(){
                 backgroundColor: "black",
               scrollTrigger: {
                 trigger: ".background",
-                start: '10% 50%',
+                toggleActions: "play none none reverse",
+                start: '35% 50%',
                 end: '40% 50%',
-                scrub: true,
+                // scrub: true,
                 // markers: true
               },
             });
@@ -166,9 +167,10 @@ export default function Contact(){
                 color: "white",
               scrollTrigger: {
                 trigger: ".background",
-                start: '10% 50%',
+                toggleActions: "play none none reverse",
+                start: '35% 50%',
                 end: '40% 50%',
-                scrub: true,
+                // scrub: true,
                 // markers: true
               },
             });
