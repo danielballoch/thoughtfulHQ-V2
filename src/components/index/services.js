@@ -131,7 +131,7 @@ export default function Services(){
                 trigger: box,
                 start: '50% bottom',
                 end: 'top 50%',
-                scrub: true,
+                // scrub: true,
               },
             });
           });

@@ -1,8 +1,11 @@
-import React, {useState} from "react"
+import React, {useState, useRef} from "react"
 import styled from "@emotion/styled"
 import { StaticImage } from "gatsby-plugin-image"
 import Typewriter from 'typewriter-effect';
 import Button from "../contact-btn"
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
 
 const Wrapper = styled.div`
 @keyframes noise-background {
@@ -63,6 +66,7 @@ opacity: 1;
 // animation: gradient 30s ease infinite;
 align-items: center;
 .content {
+    color: black;
     width: 700px;
     padding: 50px;
     text-align: center;
@@ -131,41 +135,79 @@ align-items: center;
         display: none;
     }
 }
-    
+.background {
+width: 100%;
+height: 100%;
+background-color: white;
+display: flex;
+height: 110vh;
+justify-content: center;
+align-items: center;
+} 
+
 `
 
 export default function Contact(){
     const [active, setActive] = useState(false);
+    const contactref = useRef();
+    useGSAP(
+        () => {
+            gsap.to(".background", {
+                backgroundColor: "black",
+              scrollTrigger: {
+                trigger: ".background",
+                start: '10% 50%',
+                end: '40% 50%',
+                scrub: true,
+                // markers: true
+              },
+            });
+            gsap.to(".content", {
+                color: "white",
+              scrollTrigger: {
+                trigger: ".background",
+                start: '10% 50%',
+                end: '40% 50%',
+                scrub: true,
+                // markers: true
+              },
+            });
+        },
+        { scope: contactref }
+    )
+
     return(
-        <Wrapper id="contact">
-            {/* <div className={active? "image active" : "image"}>
-                <Typewriter
-                options={{
-                    strings: ['Loading your website...'],
-                    autoStart: true,
-                    loop: true,
-                }}
-                />
-                <StaticImage src="../../images/PhoneIcon.png" alt="Phone silhouette" />
-            </div> */}
-            <div className="content">
-                <h3>Want to learn more?</h3>
-                {/* <a onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} target="_blank" href="https://calendly.com/thoughtfulhq/30min" className="book-button">Book A Free Discovery Call</a> */}
-                {/* <a onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} href="/contact" className="book-button">Book Discovery Call</a> */}
-                <Button/>
-                <p className="middle-p">Or</p>
-                <p>Call Daniel at <a  href="tel:+64220780868">+64 22 078 0868</a> / Email <a href="mailto:daniel@tyrocreative.co.nz">daniel@tyrocreative.co.nz</a></p>
+        <Wrapper id="contact" ref={contactref}>
+            <div className="background">
+                {/* <div className={active? "image active" : "image"}>
+                    <Typewriter
+                    options={{
+                        strings: ['Loading your website...'],
+                        autoStart: true,
+                        loop: true,
+                    }}
+                    />
+                    <StaticImage src="../../images/PhoneIcon.png" alt="Phone silhouette" />
+                </div> */}
+                <div className="content">
+                    <h3>Want to learn more?</h3>
+                    {/* <a onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} target="_blank" href="https://calendly.com/thoughtfulhq/30min" className="book-button">Book A Free Discovery Call</a> */}
+                    {/* <a onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} href="/contact" className="book-button">Book Discovery Call</a> */}
+                    <Button/>
+                    <p className="middle-p">Or</p>
+                    <p>Call Daniel at <a  href="tel:+64220780868">+64 22 078 0868</a> / Email <a href="mailto:daniel@tyrocreative.co.nz">daniel@tyrocreative.co.nz</a></p>
+                </div>
+                {/* <div className={active? "image active" : "image"}>
+                    <Typewriter
+                    options={{
+                        strings: ['Loading your website...'],
+                        autoStart: true,
+                        loop: true,
+                    }}
+                    />
+                    <StaticImage src="../../images/PhoneIcon.png" alt="Phone silhouette" />
+                </div> */}
             </div>
-            {/* <div className={active? "image active" : "image"}>
-                <Typewriter
-                options={{
-                    strings: ['Loading your website...'],
-                    autoStart: true,
-                    loop: true,
-                }}
-                />
-                <StaticImage src="../../images/PhoneIcon.png" alt="Phone silhouette" />
-            </div> */}
         </Wrapper>
     )
 }

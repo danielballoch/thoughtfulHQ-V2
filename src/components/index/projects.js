@@ -20,7 +20,7 @@ flex-direction: column;
 justify-content: center;
 background-color: white;
 align-items: center;
-padding-top: 200px;
+padding-top: 150px;
 padding-bottom: 200px;
 .animate-text {
     opacity: 0;
