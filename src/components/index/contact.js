@@ -122,7 +122,7 @@ align-items: center;
     }
 }
 @media(max-width: 860px){
-    height: 50vh;
+    // height: 100vh;
 
     scroll-margin-block-start: 250px;
 

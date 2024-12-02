@@ -90,11 +90,25 @@ display: flex;
     }
 }
 .socials-div {
+    margin-left: 6px;
+    margin-top: 20px;
     a {
+        transition: all .3s;
         display: inline-block;
-        padding: 10px;
+        // padding: 6px;
+        :hover {
+             filter: invert(100%);
+        }
+        // width: 54px;
+        // height: 26px;
+        margin-right: 14px;
+        border: solid 2px black;
+        border-radius: 50px;
     }
     img {
+        
+        width: 30px;
+        height: 30px;
         filter: invert(100%);
     }
 }
@@ -183,9 +197,9 @@ export default function Nav(){
                         </Link>
                         {/* <div className="blurb">Helping New Zealand businesses look professional online, simplify workflows, and increase profits.</div> */}
                         <div className="socials-div">
-                            <a target="_blank" href="https://www.facebook.com/thoughtfulHQ"><StaticImage src="../images/fb-icon.svg" alt="A dinosaur" /></a>
-                            <a target="_blank" href="https://www.instagram.com/thoughtful_hq/"><StaticImage src="../images/insta-icon.svg" alt="A dinosaur" /></a>
-                            <a target="_blank" href="https://www.linkedin.com/company/thoughtfulhq/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B85NHyayhTnyWSqzr%2FU4dQw%3D%3D"><StaticImage src="../images/linkedin-icon.svg" alt="A dinosaur" /></a>
+                            <a target="_blank" href="https://www.facebook.com/thoughtfulHQ"><StaticImage src="../images/icons/Facebook.png" alt="Facebook Logo" /></a>
+                            <a target="_blank" href="https://www.instagram.com/thoughtful_hq/"><StaticImage src="../images/icons/Instagram.png" alt="Instagram Logo" /></a>
+                            <a target="_blank" href="https://www.linkedin.com/company/thoughtfulhq/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B85NHyayhTnyWSqzr%2FU4dQw%3D%3D"><StaticImage src="../images/icons/Linkedin.png" alt="Linkedin Logo" /></a>
                         </div>
                     </div>
                     {/* <div className="section2">
