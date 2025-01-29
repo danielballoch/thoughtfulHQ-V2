@@ -9,6 +9,7 @@ const Wrapper = styled.div`
 position: relative;
 z-index: 10;
 display: flex;
+flex-wrap: wrap;
 padding: 200px 0 100px 0;
 background-color: white;
 // background-color: #282617;
@@ -26,6 +27,7 @@ align-items: center;
 	}
 }
 .service-box {
+    // width: 20%;
     border: 1px solid rgba(0,0,0,0.2);
     padding: 0 20px;
     min-height: 400px;
@@ -146,15 +148,15 @@ export default function Services(){
                 <div className="content">
                     <h2>Branding Websites</h2>
                     <p>Want to impress clients, land more jobs, and create a home-base for future marketing with a new website?</p>
-                    <p>We would love to get to know your business and create something which speaks your customers language, shows the services you provide, and makes it a no-brainer to get in touch with you.</p>
+                    <p>We would love to get to know your business and create something which speaks your customers language, shows the services you provide, and makes it a no-brainer to get in touch.</p>
                     <a href="/contact">Learn More →</a>
                 </div>
             </Link>
             <Link to="/contact" className="service-box service2" onMouseEnter={() => onHoverGood(".service2")} onMouseLeave={() => onLeaveGood(".service2")}>
                 {/* <div className="image"><StaticImage src="../../images/Glacier.png" alt="A dinosaur" /></div> */}
                 <div className="content">
-                    <h2>Online Stores / Ecommerce</h2>
-                    <p>We can create an amazing online store on a platform of your choice or using custom code. This includes features like product search, updatable products and stock, simple and secure payment gateways etc.</p>
+                    <h2>Ecommerce Websites</h2>
+                    <p>Take your store online with our professional ecommerce solutions. We design sleek, responsive websites that not only look great but are optimized for performance and conversions.</p>
                     <a href="/contact">Learn More →</a>
                 </div>
             </Link>
@@ -162,17 +164,17 @@ export default function Services(){
                 {/* <div className="image"><StaticImage src="../../images/CA.png" alt="A dinosaur" /></div> */}
                 <div className="content">
                     <h2>Social Media / Photography</h2>
-                    <p>Want to share your brand and services online but aren't sure where to start?</p>
-                    <p>We offer Content Creation and Social Media Management services to highlight what's special about your business and get more customers in the door! This includes photography, videography, reels, captions, scheduled posts, strategy etc.</p>
+                    <p>Want to get your business on brand and looking slick across the socials? We offer Content Creation and Social Media Management services to highlight what's special about your business and get more customers in the door!</p>
+                    <p>This includes photography, videography, reels, captions, scheduled posts, strategy etc.</p>
                     {/* <p>This includes photography, videography, reels, captions, scheduled posts, strategy etc.</p> */}
                     <a href="/contact">Learn More →</a>
                 </div>
             </Link>
-            {/* <Link to="/contact" className="service-box service3" onMouseEnter={() => onHoverGood(".service3")} onMouseLeave={() => onLeaveGood(".service3")}>
+            {/* <Link to="/contact" className="service-box service4" onMouseEnter={() => onHoverGood(".service4")} onMouseLeave={() => onLeaveGood(".service4")}>
                 <div className="content">
-                    <h2>Custom Solutions</h2>
-                    <p>If you own a complex business and want to integrate tools that simplify work for your team, we can help.</p>
-                    <p>That could mean creating a product builder for your store, price estimator, hooking up CRM, CMS, bookings, finance tracking - whatever the case, we’ve got your back.</p>
+                    <h2>Custom Development</h2>
+                    <p>Many businesses depend on repetitive, headache causing tasks and you might have the sense some of these can be automated.</p>
+                    <p> If you want to figure out what can be off-loaded to software to save time, money and stress, or are interested in other services such as API integration, CMS, CRM setup get in touch!</p>
                     <a href="/contact">Learn More →</a>
                 </div>
             </Link> */}

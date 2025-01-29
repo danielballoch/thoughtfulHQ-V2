@@ -292,7 +292,7 @@ export default function Indexpage(){
                 <div >
                   <ul>
                     <li>555 Average reel view count</li>
-                    <li><b>4631 Unique views (reach)</b></li>
+                    <li><b>4631 Unique views (organic reach)</b></li>
                     <li><b>Increased Content Interaction rate by 83.5%</b></li>
                   </ul>
                 </div>

@@ -69,9 +69,9 @@ z-index: 500;
     .book-button {
         // margin-right: 10%;
         margin-left: 100px;
-        width: 260px;
+        // width: 260px;
         a {
-            width: 260px;
+            // width: 260px;
             margin: auto;
             background-color: black;
             color: white;

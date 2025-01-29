@@ -38,6 +38,7 @@ align-items: center;
             font-size: 55px;
             font-weight: 300;
             color: #222;
+            margin-left: -2px;
         }
         p {
             font-size: 24px;
@@ -110,9 +111,7 @@ bottom: 0;
 width: 50%;
 height: 10px;
 background-color: black;
-animation: progressBar 5s;
-animation-iteration-count: infinite;
-animation-timing-function: linear;
+animation: progressBar 5s linear infinite;
 opacity: 0.5;
 }
 
@@ -124,13 +123,11 @@ opacity: 0.5;
 
 const Demo = ({ max, width, height, radius, updateImage, pause }) => {
     const [seconds, setSeconds] = useState(0);
+
+    
     
     useEffect(() => {
-      setTimeout(() => {
-        // if(!pause){
-            setSeconds(s => s + 0.01)
-        // };
-      }, 10);
+      setTimeout(() => {setSeconds(s => s + 0.01)}, 10);
       if (seconds > max - 0.01){setSeconds(0); updateImage()}
     //   console.log(seconds)
     }, [seconds, max, pause]);
@@ -171,18 +168,18 @@ export default function Hero(){
         else {setImage(0)}
     }
     
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //           updateImage()
-    //     }, 5000);
-    //   }, [image]);
+    useEffect(() => {
+        setTimeout(() => {
+              updateImage()
+        }, 3000);
+      }, [image]);
 
     return(
         <Wrapper >
             <div className="hero-content-left"> 
                 <div className="text">
                     <h1>New Zealand Based Creative Agency</h1>
-                    <p>We’re dedicated to helping good businesses: look <b>professional</b> online, <b>simplify workflows,</b> and sustainably <b>increase profits.</b></p>
+                    <p>We're dedicated to helping good businesses: look <b>professional</b> online, <b>simplify work,</b> and <b>increase profits.</b></p>
                 </div>  
             </div>
             <div className="content-right" 
@@ -197,7 +194,7 @@ export default function Hero(){
                 
             </div>
             {/* <div className="loading-bar"></div> */}
-            <div className="next-btn"><button onClick={() => updateImage()}><Demo pause={pause} updateImage={() => updateImage()} max={5} width={100} height={100} radius={20} /></button></div>
+            {/* <div className="next-btn"><button><Demo pause={pause} updateImage={() => updateImage()} max={5} width={100} height={100} radius={20} /></button></div> */}
         </Wrapper>
     )
 }

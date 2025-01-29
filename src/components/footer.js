@@ -95,21 +95,18 @@ display: flex;
     a {
         transition: all .3s;
         display: inline-block;
-        // padding: 6px;
-        :hover {
-             filter: invert(100%);
-        }
-        // width: 54px;
-        // height: 26px;
         margin-right: 14px;
-        border: solid 2px black;
+        border: solid 2px white;
         border-radius: 50px;
+        filter: invert(100%);
+        :hover {
+            border: solid 2px white;
+             filter: invert(0%);
+        }
     }
     img {
-        
         width: 30px;
         height: 30px;
-        filter: invert(100%);
     }
 }
 }

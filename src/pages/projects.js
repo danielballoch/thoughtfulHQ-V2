@@ -44,12 +44,13 @@ h3 {
         object-fit: cover!important;
         transition: .3s;
         transition-timing-function: ease-out;
-        filter: brightness(.3);
+       transform: scale(1.05);
+        filter: brightness(.7);
     }
     :hover {
         img {
-            transform: scale(1.1);
-            filter: brightness(.7);
+            transform: scale(1);
+             filter: brightness(.3);
         }
         
     }
