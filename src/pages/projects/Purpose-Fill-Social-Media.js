@@ -348,7 +348,7 @@ export default function Indexpage(){
                 <div>
                   <ul>
                     <li>11 Posts (Carousals/Reels)</li>
-                    <li><b>Over 13,100+ views (paid ads)</b></li>
+                    <li><b>Over 13,100+ views (Paid Ads)</b></li>
                     <li>5 More Employees Shown</li>
                   </ul>
                 </div>
