@@ -12,7 +12,6 @@ module.exports = {
   plugins: [ 
     "gatsby-plugin-image", 
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-instagram-embed", 
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
