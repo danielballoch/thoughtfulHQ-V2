@@ -356,18 +356,18 @@ export default function Indexpage(){
             </div>
 
             <div className="content4">
-              <a target="_blank" href="https://www.instagram.com/tyrocreativenz/"><StaticImage src="../../images/projects/purposefill/secondshoot/shoot2_5.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDqeIE3vcaF/"><StaticImage src="../../images/projects/purposefill/secondshoot/shoot2_7.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDYclA_o5Fl/"><StaticImage src="../../images/projects/purposefill/secondshoot/shoot2_8.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DC7leyrp7i5/"><StaticImage src="../../images/projects/purposefill/secondshoot/shoot2_2.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/reel/DC0ZhpNB2-9/"><StaticImage src="../../images/projects/purposefill/secondshoot/shoot2_10Update.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DCiX3sMiIhB/"><StaticImage src="../../images/projects/purposefill/secondshoot/shoot2_3.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDfom6ns94S/"><StaticImage src="../../images/projects/purposefill/secondshoot/shoot2_4.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DCpj69CKEFZ/"><StaticImage src="../../images/projects/purposefill/secondshoot/shoot2_6.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDGbAXYM7jW/"><StaticImage src="../../images/projects/purposefill/secondshoot/shoot2_11.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDxqKH9tEG3/"><StaticImage src="../../images/projects/purposefill/secondshoot/shoot2_1.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/reel/DDNnH9Hiz94/"><StaticImage src="../../images/projects/purposefill/secondshoot/shoot2_9Update.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/tyrocreativenz/"><StaticImage src="../../images/projects/purposefill/secondshoot/shoot2_12.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/tyrocreativenz/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_5.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDqeIE3vcaF/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_7.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDYclA_o5Fl/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_8.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DC7leyrp7i5/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_2.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/reel/DC0ZhpNB2-9/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_10Update.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DCiX3sMiIhB/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_3.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDfom6ns94S/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_4.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DCpj69CKEFZ/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_6.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDGbAXYM7jW/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_11.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDxqKH9tEG3/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_1.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/reel/DDNnH9Hiz94/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_9Update.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/tyrocreativenz/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_12.png" alt="A dinosaur" /></a>
             </div>
 
             <div className="content5">
