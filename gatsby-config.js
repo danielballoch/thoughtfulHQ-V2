@@ -9,7 +9,11 @@ module.exports = {
     title: `thoughtfulhq`,
     siteUrl: `https://www.thoughtfulhq.com`
   },
-  plugins: [ "gatsby-plugin-image", "gatsby-plugin-sitemap", {
+  plugins: [ 
+    "gatsby-plugin-image", 
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-instagram-embed", 
+  {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/favicon.png"
