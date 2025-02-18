@@ -90,6 +90,7 @@ font-size: 18px;
 }
   .content4 {
   max-width: 1400px;
+  // max-width: 700px;
   margin: auto;
    padding-bottom: 100px;
   display: flex;
@@ -241,13 +242,13 @@ export default function Indexpage(){
                     <p>After already doing some work on <a target="_blank" href="https://www.purposefill.co.nz">www.purposefill.co.nz</a> Anne asked me about helping here too and I was excited to with the opportunity! </p>
                 </div>
                 <div className="content-right">
-                    <StaticImage src="../../images/projects/purposefill/Directors2.jpg" alt="A dinosaur" />
+                    <StaticImage src="../../images/projects/purposefill/Directors2.jpg" alt="Purpose Fill Owners Paul & Anne with Truck Driver Glen" />
                     <p>*Purpose Fill Owners Paul & Anne with Truck Driver Glen</p>
                 </div>
             </div>
             <div className="content2"> 
                 <div className="content-left2">
-                    <StaticImage src="../../images/projects/purposefill/Frame.png" alt="A dinosaur" />
+                    <StaticImage src="../../images/projects/purposefill/Frame.png" alt="Social Media Research & Post Creation" />
                     <p>*Social Media Research & Post Creation</p>
                 </div>
                 <div className="content-right2">
@@ -267,7 +268,7 @@ export default function Indexpage(){
             {/* mobile content 2  */}
             <div className="content2-mobile"> 
                 <div className="content2-left-mobile">
-                    <StaticImage src="../../images/projects/purposefill/Frame.png" alt="A dinosaur" />
+                    <StaticImage src="../../images/projects/purposefill/Frame.png" alt="Social Media Research & Post Creation" />
                     <p>*Social Media Research & Post Creation</p>
                 </div>
                 <div className="content2-right-mobile">
@@ -304,18 +305,18 @@ export default function Indexpage(){
               </div>
             </div>
             <div className="content4">
-              <a target="_blank" href="https://www.instagram.com/p/DArZECFqvPu/"><StaticImage src="../../images/projects/purposefill/1.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/DAHcxT5Bc41/"><StaticImage src="../../images/projects/purposefill/2.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/DAAQqqTCP1L/"><StaticImage src="../../images/projects/purposefill/3.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_jZmPrvc8T/?img_index=1"><StaticImage src="../../images/projects/purposefill/4.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_cNi20sI5M/?img_index=1"><StaticImage src="../../images/projects/purposefill/5.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_RYEvrp9-i/"><StaticImage src="../../images/projects/purposefill/6.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_1bJ3QAaYn/"><StaticImage src="../../images/projects/purposefill/7.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/reel/DA9aoZgv72R/"><StaticImage src="../../images/projects/purposefill/8Update.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_uPF4uMtmk/"><StaticImage src="../../images/projects/purposefill/9.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C_KL_Zlo5ag/?img_index=1"><StaticImage src="../../images/projects/purposefill/10.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C-_Wbh1tprj/"><StaticImage src="../../images/projects/purposefill/11.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/p/C-4KaicNn-o/"><StaticImage src="../../images/projects/purposefill/12.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/DArZECFqvPu/"><StaticImage src="../../images/projects/purposefill/1.png" alt="Purpose Bag held up by truck in Reel" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/DAHcxT5Bc41/"><StaticImage src="../../images/projects/purposefill/2.png" alt="Purpose Bag Joke/Meme Reel with dog centre screen" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/DAAQqqTCP1L/"><StaticImage src="../../images/projects/purposefill/3.png" alt="Skip Bin for any job post" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_jZmPrvc8T/?img_index=1"><StaticImage src="../../images/projects/purposefill/4.png" alt="Depot overview/waste management carousel post with trucks and sunset" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_cNi20sI5M/?img_index=1"><StaticImage src="../../images/projects/purposefill/5.png" alt="Purpose Fill team appreciation post with three employees" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_RYEvrp9-i/"><StaticImage src="../../images/projects/purposefill/6.png" alt="Commercial Tyre Collection Reel at The Tyre Savers" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_1bJ3QAaYn/"><StaticImage src="../../images/projects/purposefill/7.png" alt="Building Site Purpose Bag Pickup Post" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/reel/DA9aoZgv72R/"><StaticImage src="../../images/projects/purposefill/8Update.png" alt="Plasterboard Bag Commercial/Building site pickup" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_uPF4uMtmk/"><StaticImage src="../../images/projects/purposefill/9.png" alt="Client Review Post (5 Stars from Kimberly)" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C_KL_Zlo5ag/?img_index=1"><StaticImage src="../../images/projects/purposefill/10.png" alt="Cost Effective Plasterboard Collection Carousel post with three Plasterboard bags shown" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C-_Wbh1tprj/"><StaticImage src="../../images/projects/purposefill/11.png" alt="Home Purpose Bag photo infront of collection truck" /></a>
+              <a target="_blank" href="https://www.instagram.com/p/C-4KaicNn-o/"><StaticImage src="../../images/projects/purposefill/12.png" alt="Same Day Rubbish Bag Collection post - three bins with bag being thrown into truck" /></a>
             </div>
 
             <div className="content5">
@@ -337,7 +338,7 @@ export default function Indexpage(){
                 <p>Check out the results below!</p>
               </div>
               <div className="content-right">
-                    <StaticImage src="../../images/projects/purposefill/Angel.png" alt="A dinosaur" />
+                    <StaticImage src="../../images/projects/purposefill/Angel.png" alt="Purpose Fill digger operator Angel smiling for camera" />
                     <p>*Purpose Fill employee Angel who was very friendly!</p>
                 </div>
             </div>
@@ -356,18 +357,18 @@ export default function Indexpage(){
             </div>
 
             <div className="content4">
-              <a target="_blank" href="https://www.instagram.com/tyrocreativenz/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_5.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDqeIE3vcaF/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_7.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDYclA_o5Fl/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_8.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DC7leyrp7i5/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_2.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/reel/DC0ZhpNB2-9/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_10Update.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DCiX3sMiIhB/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_3.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDfom6ns94S/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_4.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DCpj69CKEFZ/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_6.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDGbAXYM7jW/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_11.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDxqKH9tEG3/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_1.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/purposefill.skips/reel/DDNnH9Hiz94/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_9Update.png" alt="A dinosaur" /></a>
-              <a target="_blank" href="https://www.instagram.com/tyrocreativenz/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_12.png" alt="A dinosaur" /></a>
+              <a target="_blank" href="https://www.instagram.com/tyrocreativenz/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_5.png" alt="Purpose Fill Skip Bin at Akarana Timbers/Urban Homes building site" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDqeIE3vcaF/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_7.png" alt="Skip Bin Pickup from a beautiful home in Tamahere" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDYclA_o5Fl/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_8.png" alt="Recycling line & Purpose Fill Employee" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DC7leyrp7i5/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_2.png" alt="Purpose Fill Gantry Truck Operator Josh leaning against truck with smile " /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/reel/DC0ZhpNB2-9/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_10Update.png" alt="Skip Bin Pickup from Tamahere Home (Reel)" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DCiX3sMiIhB/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_3.png" alt="Purpose Fill Material Sorter Robin with saftey gear on" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDfom6ns94S/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_4.png" alt="Purpose Fill Material Sorter Sonni with protective gear on" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DCpj69CKEFZ/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_6.png" alt="Truck Driver dropping off Skip Bin to home in Hamilton (carosel)" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDGbAXYM7jW/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_11.png" alt="Skip Bin Collection from JCC Build Site (picturing employees, skip, signage & truck)" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDxqKH9tEG3/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_1.png" alt="Purpose Fill digger operator Angel smiling for camera (scaled down)" /></a>
+              <a target="_blank" href="https://www.instagram.com/purposefill.skips/reel/DDNnH9Hiz94/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_9Update.png" alt="Truck Driver dropping off Skip Bin to home in Hamilton (reel)" /></a>
+              <a target="_blank" href="https://www.instagram.com/tyrocreativenz/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_12.png" alt="Screenshot of paid Meta Ad with 13.1k views using TYRO Creative video" /></a>
             </div>
 
             <div className="content5">
