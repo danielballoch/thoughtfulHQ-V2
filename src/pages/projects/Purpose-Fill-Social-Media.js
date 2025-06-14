@@ -349,7 +349,7 @@ export default function Indexpage(){
                 <div>
                   <ul>
                     <li>11 Posts (Carousals/Reels)</li>
-                    <li><b>Over 13,100+ views (Paid Ads)</b></li>
+                    <li><b>Over 49,200+ views (Paid Ads)</b></li>
                     <li>5 More Employees Shown</li>
                   </ul>
                 </div>
@@ -368,7 +368,7 @@ export default function Indexpage(){
               <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDGbAXYM7jW/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_11.png" alt="Skip Bin Collection from JCC Build Site (picturing employees, skip, signage & truck)" /></a>
               <a target="_blank" href="https://www.instagram.com/purposefill.skips/p/DDxqKH9tEG3/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_1.png" alt="Purpose Fill digger operator Angel smiling for camera (scaled down)" /></a>
               <a target="_blank" href="https://www.instagram.com/purposefill.skips/reel/DDNnH9Hiz94/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_9Update.png" alt="Truck Driver dropping off Skip Bin to home in Hamilton (reel)" /></a>
-              <a target="_blank" href="https://www.instagram.com/tyrocreativenz/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_12.png" alt="Screenshot of paid Meta Ad with 13.1k views using TYRO Creative video" /></a>
+              <a target="_blank" href="https://www.instagram.com/tyrocreativenz/"><StaticImage src="../../images/projects/purposefill/secondshoot/Shoot2_12update.png" alt="Screenshot of paid Meta Ad with 13.1k views using TYRO Creative video" /></a>
             </div>
 
             <div className="content5">

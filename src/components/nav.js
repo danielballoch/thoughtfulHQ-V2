@@ -70,8 +70,10 @@ z-index: 500;
         // margin-right: 10%;
         margin-left: 100px;
         // width: 260px;
+        
         a {
             // width: 260px;
+            border-radius: 50px;
             margin: auto;
             background-color: black;
             color: white;
@@ -263,7 +265,7 @@ export default function Nav({smoother}){
         >
             <div className="navbar">
                 <Link to="/" className="logo">
-                    <StaticImage src="../images/tyrocreative1.png" alt="thoughtfulHQ" />
+                    <StaticImage src="../images/TYRO_Logo.png" alt="thoughtfulHQ" />
                     {/* ORDINARY DIGITAL &copy; */}
                 </Link>
                 {/* <div className="middle-content">

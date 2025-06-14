@@ -89,6 +89,9 @@ display: flex;
         // width: 140px;
     }
 }
+.logo-invert {
+filter: invert(100%);
+}
 .socials-div {
     margin-left: 6px;
     margin-top: 20px;
@@ -189,8 +192,8 @@ export default function Nav(){
             <div className="wrap" >
                 <div className="main-footer">
                     <div className="section1">
-                        <Link to="/" className="logo">
-                        <StaticImage src="../images/tyrocreative1.png" alt="A dinosaur" />
+                        <Link to="/" className="logo logo-invert">
+                        <StaticImage src="../images/TYRO_Logo.png" alt="TYRO Creative Logo" />
                         </Link>
                         {/* <div className="blurb">Helping New Zealand businesses look professional online, simplify workflows, and increase profits.</div> */}
                         <div className="socials-div">

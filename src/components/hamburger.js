@@ -7,8 +7,9 @@ transition: .3s;
 :hover {
   background: #635bff;
 }
-margin: 0 20px;
+margin: 0 10px;
 padding: 0 10px;
+border-radius: 50px;
 // border-radius: 15px;
 margin-right: calc(25vw - 250px);
 background-color: #000000;
