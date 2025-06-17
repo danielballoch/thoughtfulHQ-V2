@@ -80,8 +80,9 @@ display: flex;
     }
 }
 .logo {
+    margin-top: 20px;
     // height: 140px;
-    // width: 140px;
+    width: 140px;
     // filter: invert(100%);
     margin-left: -8 px;
     img {

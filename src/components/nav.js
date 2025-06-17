@@ -39,7 +39,7 @@ z-index: 500;
         justify-content: flex-start;
         align-items: center;
         z-index: 200;
-        height: 48px!important;
+        // height: 48px!important;
         margin-left: calc(25vw - 250px);
         // margin-left: 140px;
         margin-right: auto!important;
@@ -47,7 +47,7 @@ z-index: 500;
         // width: 260px;
         img {
             // height: 48px;
-            height: 48px;
+            height: 28px;
             // object-fit: contain!important;
         }
         text-decoration: none;
