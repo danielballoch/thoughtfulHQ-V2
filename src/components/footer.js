@@ -199,7 +199,7 @@ export default function Nav(){
                         {/* <div className="blurb">Helping New Zealand businesses look professional online, simplify workflows, and increase profits.</div> */}
                         <div className="socials-div">
                             <a target="_blank" href="https://www.facebook.com/thoughtfulHQ"><StaticImage src="../images/icons/Facebook.png" alt="Facebook Logo" /></a>
-                            <a target="_blank" href="https://www.instagram.com/thoughtful_hq/"><StaticImage src="../images/icons/Instagram.png" alt="Instagram Logo" /></a>
+                            <a target="_blank" href="https://www.instagram.com/tyrocreativenz/"><StaticImage src="../images/icons/Instagram.png" alt="Instagram Logo" /></a>
                             <a target="_blank" href="https://www.linkedin.com/company/thoughtfulhq/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B85NHyayhTnyWSqzr%2FU4dQw%3D%3D"><StaticImage src="../images/icons/Linkedin.png" alt="Linkedin Logo" /></a>
                         </div>
                     </div>
@@ -218,11 +218,11 @@ export default function Nav(){
                         <Link to="/contact" className="head"><b>Contact</b></Link>
                         <a href="mailto:daniel@thoughtfulhq.co.nz">daniel@tyrocreative.co.nz</a>
                         <a href="tel:+64220780868">+64 22 078 0868</a>
-                        <Link to="/contact">Book discovery call</Link>
+                        <Link to="/contact">Book Discovery Call</Link>
                     </div>
                 </div>
                 <div className="bottom-footer">
-                    <Link to="/">© 2024  tyrocreative</Link>
+                    <Link to="/">© 2024  TYRO Creative</Link>
                     <Link to="/terms-and-conditions">Terms & Conditons</Link>
                     {/* <Link to="#top">Back To The Top</Link> */}
                 </div>
